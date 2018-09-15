@@ -1,0 +1,17 @@
+$corall: #ee6762;
+$white: #ffffff;
+$green: #139253;
+$font-family: "Source Sans Pro", sans-serif;
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background:$corall;
+    font-family: $font-family;
+}
+
+@import "Header", "Footer", "Body";

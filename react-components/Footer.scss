@@ -1,0 +1,17 @@
+footer {
+    background-color: $green;
+    color: $white;
+    text-align: center;
+    height: 4rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 4rem;
+
+    img {
+        height: 2.5rem;
+        width: 2.5rem;
+        vertical-align: middle;
+        padding-bottom: 0.5rem;
+        margin-left: -0.5rem;
+    }
+}
