@@ -15,7 +15,7 @@ body {
 
 .hero-text {
     text-align: left;
-    padding-left: 0 16px 0 96px;
+    padding: 0 16px 0 96px;
     max-width: 896px;
 }
 
