@@ -2,6 +2,7 @@
 sketch/
 Non-Site/
 unsanctioned/
+node_modules/
 
 # Sophie's files
 _dev-diary.md

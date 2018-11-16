@@ -2,14 +2,16 @@ import React from 'react';
 import { render } from 'react-dom';
 import Header from './Header';
 import Footer from './Footer'
-import Body from './Body'
+import Profiles from './Profiles'
+import Sidebar from './Sidebar'
 
 const HtmlBody = (
-    <div className="root">
+    <>
         <Header />
-        <Body />
+        <Sidebar />
+        <Profiles />
         <Footer />
-    </ div>
+    </>
 );
 
-render(HtmlBody, document.querySelector('#root'));
+render(HtmlBody, document.getElementById('root'));

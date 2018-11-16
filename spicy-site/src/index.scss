@@ -1,4 +1,4 @@
-$corall: #ee6762;
+$corall: #ff5555;
 $white: #ffffff;
 $green: #139253;
 $font-family: "Source Sans Pro", sans-serif;
@@ -7,11 +7,15 @@ $font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;
 }
 
+#root {
+    display: flex;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background:$corall;
+    background:$white;
     font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
-@import "Header", "Footer", "Body";

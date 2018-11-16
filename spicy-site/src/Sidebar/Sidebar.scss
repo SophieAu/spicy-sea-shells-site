@@ -1,0 +1,27 @@
+@import '../index.scss';
+
+.sidebar {
+    display: flex;
+    background: #ee6762;
+    flex-direction: column;
+    padding: 32px;
+    color: white;
+    width: 288px;
+    position: fixed;
+    height: 100%;}
+
+.sidebar-text {
+    font-size: 30px;
+}
+
+
+.sidebar-footer {
+    font-size: 20px;
+    position: absolute;
+    bottom: 90px;
+}
+
+.sidebar-logo img {
+    width: 256px;
+    padding: 16px;
+}
