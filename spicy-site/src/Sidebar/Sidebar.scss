@@ -1,9 +1,14 @@
 @import '../index.scss';
 
+.sidebar-wrapper {
+    width: $sidebar-width;
+    flex: 0 0 $sidebar-width;
+}
+
 .sidebar {
     position: fixed;
-    width: $sidebar-width;
     height: 100%;
+    width: inherit;
 
     background: $header-bg;
     color: $header-footer-text;
