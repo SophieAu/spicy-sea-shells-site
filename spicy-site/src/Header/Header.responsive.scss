@@ -1,0 +1,51 @@
+@media (max-width: $midscreen-breakpoint) {
+    .header-text p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+
+    .header {
+        padding: 1rem;
+        height: 9rem;
+    }
+
+    .header-logo img {
+        height: 9rem;
+    }
+
+    .header-text {
+        p {
+            padding-top: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            line-height: 2.25rem;
+        }
+    }
+
+}
+
+@media (max-width: $small-tablet-breakpoint) {
+    .header-text .blog-cta {
+        display: none;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .header-text {
+        padding-left: 0;
+
+        .intro {
+            display: none;
+        }
+
+        h1 {
+            // 9rem+2rem=11rem logo, 1rem left
+            width: calc(100vw - 12rem);
+        }
+    }
+}

@@ -3,7 +3,7 @@ import { FooterText } from '../miniFragments.js'
 import './Footer.scss';
 
 const Footer = () => (
-    <footer class="footer">
+    <footer className="footer">
         <FooterText />
     </footer>
 );

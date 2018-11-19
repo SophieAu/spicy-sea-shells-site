@@ -1,6 +1,35 @@
 @import '../index.scss';
 
-.spicy-profiles {
-    background: url(/texture_bg.jpg);
-    width: calc(100vw - 354px);    
+.body {
+    background: repeat url(/img/bg_pattern.png);
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 32.5rem);
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: $midscreen-breakpoint) {
+    .body {
+        grid-template-columns: repeat(2, 30rem);
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .body{
+        grid-template-columns: repeat(3, 16rem);
+    }
+}
+
+@media (max-width: $small-tablet-breakpoint) {
+    .body{
+        grid-template-columns: repeat(2, 16rem);
+    }
+}
+
+@media (max-width: $small-mobile-breakpoint) {
+    .body{
+        grid-template-columns: repeat(1, 16rem);
+    }
 }

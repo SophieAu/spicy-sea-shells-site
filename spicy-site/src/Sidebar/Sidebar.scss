@@ -1,27 +1,43 @@
 @import '../index.scss';
 
 .sidebar {
-    display: flex;
-    background: #ee6762;
-    flex-direction: column;
-    padding: 32px;
-    color: white;
-    width: 288px;
     position: fixed;
-    height: 100%;}
+    width: $sidebar-width;
+    height: 100%;
 
-.sidebar-text {
-    font-size: 30px;
+    background: $header-bg;
+    color: $header-footer-text;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.sidebar-header {
+    padding: 2rem;
+
+    .sidebar-logo img {
+        width: 16rem;
+        padding: 1rem;
+    }
+
+    .sidebar-text {
+        font-size: 1.875rem;
+    }
+}
 
 .sidebar-footer {
-    font-size: 20px;
-    position: absolute;
-    bottom: 90px;
-}
+    width: 100%;
+    padding-bottom: 0.75rem;
 
-.sidebar-logo img {
-    width: 256px;
-    padding: 16px;
+    p {
+        text-align: center;
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    img {
+        margin-left: -0.5rem;
+        vertical-align: middle;
+    }
 }

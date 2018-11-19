@@ -3,19 +3,24 @@ import './ProfileCard.scss';
 
 
 export default class ProfileCard extends React.Component {
-  getSocialMedia = () => Object.keys(this.props.info.socialMedia).map(({platform, url},i) => (<a key={i} href={url}><img src={platform + ".svg"} alt={"logo of " + platform} /></a>))
+  getSocialMedia = () => Object.entries(this.props.info.socialMedia).map((entry,i) => <a key={i} href={entry[1]}><img src={"/img/social-media/" + entry[0] + ".svg"} alt={"logo of " + entry[0]} /></a>)
 
   render = ({name, image, city, bio, socialMedia} = this.props.info) => (
     <div className="card">
       <div className="image">
-        <img src={process.env.PUBLIC_URL + "/img/" + image} alt={name}/>
+        <img src={process.env.PUBLIC_URL + "/img/profiles/" + image} alt={name}/>
       </div>
       <div className="profile">
-        <h4>{city}</h4>
-        <h2>{name}</h2>
-        <p>{bio}</p>
-        <div className="socialMedia">
+        <div className="info">
+          <h4>{city}</h4>
+          <h2>{name}</h2>
+          <p>{bio}</p>
+        </div>
+        <div className="social-media">
+          <hr />
+          <div className="links">
           {this.getSocialMedia()}
+        </div>
         </div>
       </div>
     </div>

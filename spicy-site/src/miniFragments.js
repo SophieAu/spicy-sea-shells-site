@@ -18,5 +18,5 @@ export const Logo = () => (
 )
 
 export const FooterText = () => (
-    <p className="footer-text">Made with <img src="assets/chili_transparent_rotated.png" alt="a chili" /> by the Spicy Sea Shells</p>
+    <p className="footer-text">Made with <img src="img/chili.svg" alt="a chili" /> by the Spicy Sea Shells</p>
 )

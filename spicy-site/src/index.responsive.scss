@@ -1,0 +1,22 @@
+@media (min-width: $widescreen-breakpoint) {
+
+    .footer,
+    .header {
+        display: none;
+    }
+
+    .body {
+        padding-left: $sidebar-width;
+    }
+}
+
+
+@media (max-width: $widescreen-breakpoint) {
+    #root {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
