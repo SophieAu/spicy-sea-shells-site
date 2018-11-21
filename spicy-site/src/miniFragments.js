@@ -6,7 +6,7 @@ export const Title = () => (
 );
 
 export const Intro = () => (
-    <p className="intro">Who are we? We are a collective of software developers, business analysts and quality analysts who met on a training course by ThoughtWorks.</p>
+    <p className="intro"><span className="intro-extended">Who are we? </span>We are a collective of software developers, business analysts and quality analysts <span className="intro-extended"> who met on a training course by ThoughtWorks</span>.</p>
 );
 
 export const BlogCallToAction = () => (

@@ -30,7 +30,7 @@
 }
 
 @media (max-width: $small-tablet-breakpoint) {
-    .header-text .blog-cta {
+    .header-text .intro-extended {
         display: none;
     }
 }
@@ -39,13 +39,15 @@
     .header-text {
         padding-left: 0;
 
-        .intro {
-            display: none;
-        }
-
         h1 {
             // 9rem+2rem=11rem logo, 1rem left
             width: calc(100vw - 12rem);
         }
+    }
+}
+
+@media (max-width: $small-mobile-breakpoint) {
+    .header-text .intro {
+        display: none;
     }
 }
