@@ -7,8 +7,11 @@ export default class ProfileCard extends React.Component {
 
   render = ({name, image, city, bio, socialMedia} = this.props.info) => (
     <div className="card">
-      <div className="image">
-        <img src={process.env.PUBLIC_URL + "/img/profiles/" + image} alt={name}/>
+      <div className="image-side">
+        <img src={process.env.PUBLIC_URL + "/img/profiles/" + image + "_tall.jpg"} alt={name}/>
+      </div>
+      <div className="image-top">
+        <img src={process.env.PUBLIC_URL + "/img/profiles/" + image + "_wide.jpg"} alt={name}/>
       </div>
       <div className="profile">
         <div className="info">

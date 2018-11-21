@@ -1,88 +1,101 @@
-[{"name": "Andrei Cartan",
-  "image": "andrei.jpg",
-  "city": "Manchester, United Kingdom",
-  "bio": "Andrei is Andrei",
-  "socialMedia": {
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"
-  }
-},
-{"name": "Jean Bauer",
-  "image": "jean.jpg",
-  "city": "Porto Alegre, Brazil",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+[{
+    "name": "Andrei Cartan",
+    "image": "andrei",
+    "city": "Manchester, United Kingdom",
+    "bio": "Andrei is Andrei",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-
-{"name": "Elloise Przybylo",
-  "image": "ellie.jpg",
-  "city": "Brisbane, Australia",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Jean Bauer",
+    "image": "jean",
+    "city": "Porto Alegre, Brazil",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-{"name": "Marina Tassi",
-  "image": "marina.jpg",
-  "city": "New York City, NY, USA",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Elloise Przybylo",
+    "image": "ellie",
+    "city": "Brisbane, Australia",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-
-
-  {"name": "Nimish Singh",
-  "image": "nimish.jpg",
-  "city": "Gurgaon, India",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Marina Tassi",
+    "image": "marina",
+    "city": "New York City, NY, USA",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-
-  {"name": "Kaushik Neelichetty",
-  "image": "kaushik.jpg",
-  "city": "Chennai, India",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Nimish Singh",
+    "image": "nimish",
+    "city": "Gurgaon, India",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-
-  {"name": "Kamalashree Nagaraj",
-  "image": "kamala.jpg",
-  "city": "Bangalore, India",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Kaushik Neelichetty",
+    "image": "kaushik",
+    "city": "Chennai, India",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-  {"name": "Jackie Robinson",
-  "image": "jackie.jpg",
-  "city": "Dallas, TX, USA",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Kamalashree Nagaraj",
+    "image": "kamala",
+    "city": "Bangalore, India",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-  {"name": "Sophie Au",
-  "image": "sophie.jpg",
-  "city": "Berlin, Germany",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"}
+  {
+    "name": "Jackie Robinson",
+    "image": "jackie",
+    "city": "Dallas, TX, USA",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   },
-  {"name": "Hugh Vidler",
-  "image": "hugh.jpg",
-  "city": "Sydney, Australia",
-  "bio": "", 
-  "socialMedia":{
-    "github": "github.com/Acartan",
-    "website": "somewhere.com"
-  }
+  {
+    "name": "Sophie Au",
+    "image": "sophie",
+    "city": "Berlin, Germany",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
+    "name": "Hugh Vidler",
+    "image": "hugh",
+    "city": "Sydney, Australia",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
   }
 ]
