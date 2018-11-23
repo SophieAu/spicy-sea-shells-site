@@ -1,4 +1,4 @@
-@media (min-width: $widescreen-breakpoint) {
+@media (min-width: $widescreen-breakpoint + 1px) {
 
     .footer,
     .header {
