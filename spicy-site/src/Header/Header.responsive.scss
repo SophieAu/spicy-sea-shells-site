@@ -1,5 +1,5 @@
 @media (max-width: $midscreen-breakpoint) {
-    .header-text p {
+    .header-text > p {
         font-size: 1.5rem;
     }
 }
@@ -11,7 +11,7 @@
         height: 9rem;
     }
 
-    .header-logo img {
+    .header-logo > img {
         height: 9rem;
     }
 
@@ -30,7 +30,7 @@
 }
 
 @media (max-width: $small-tablet-breakpoint) {
-    .header-text .intro-extended {
+    .header-text > .intro-extended {
         display: none;
     }
 }
@@ -47,7 +47,7 @@
 }
 
 @media (max-width: $small-mobile-breakpoint) {
-    .header-text .intro {
+    .header-text > .intro {
         display: none;
     }
 }
