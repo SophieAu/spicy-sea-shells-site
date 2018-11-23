@@ -1,4 +1,27 @@
 [{
+    "name": "Sophie Au",
+    "image": "sophie",
+    "city": "Berlin, Germany",
+    "bio": "Andrei is Andrei",
+    "socialMedia": {
+      "github": "https://github.com/SophieAu",
+      "website": "https://sophieau.github.io",
+      "twitter": "https://twitter.com/SolviAu",
+      "dribbble": "https://dribbble.com/solviau"
+    }
+  },
+  {
+    "name": "Jean Bauer",
+    "image": "jean",
+    "city": "Porto Alegre, Brazil",
+    "bio": "",
+    "bioExt": "",
+    "socialMedia": {
+      "github": "https://github.com/jeanbauer",
+      "website": "somewhere.com"
+    }
+  },
+  {
     "name": "Andrei Cartan",
     "image": "andrei",
     "city": "Manchester, United Kingdom",
@@ -9,39 +32,9 @@
     }
   },
   {
-    "name": "Jean Bauer",
-    "image": "jean",
-    "city": "Porto Alegre, Brazil",
-    "bio": "",
-    "socialMedia": {
-      "github": "github.com/Acartan",
-      "website": "somewhere.com"
-    }
-  },
-  {
-    "name": "Elloise Przybylo",
-    "image": "ellie",
-    "city": "Brisbane, Australia",
-    "bio": "",
-    "socialMedia": {
-      "github": "github.com/Acartan",
-      "website": "somewhere.com"
-    }
-  },
-  {
-    "name": "Marina Tassi",
-    "image": "marina",
-    "city": "New York City, NY, USA",
-    "bio": "",
-    "socialMedia": {
-      "github": "github.com/Acartan",
-      "website": "somewhere.com"
-    }
-  },
-  {
-    "name": "Nimish Singh",
-    "image": "nimish",
-    "city": "Gurgaon, India",
+    "name": "Kamalashree Nagaraj",
+    "image": "kamala",
+    "city": "Bangalore, India",
     "bio": "",
     "socialMedia": {
       "github": "github.com/Acartan",
@@ -59,9 +52,9 @@
     }
   },
   {
-    "name": "Kamalashree Nagaraj",
-    "image": "kamala",
-    "city": "Bangalore, India",
+    "name": "Elloise Przybylo",
+    "image": "ellie",
+    "city": "Brisbane, Australia",
     "bio": "",
     "socialMedia": {
       "github": "github.com/Acartan",
@@ -79,15 +72,23 @@
     }
   },
   {
-    "name": "Sophie Au",
-    "image": "sophie",
-    "city": "Berlin, Germany",
+    "name": "Nimish Singh",
+    "image": "nimish",
+    "city": "Gurgaon, India",
     "bio": "",
     "socialMedia": {
-      "github": "https://github.com/SophieAu",
-      "website": "https://sophieau.github.io",
-      "twitter": "https://twitter.com/SolviAu",
-      "dribbble": "https://dribbble.com/solviau"
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
+    "name": "Marina Tassi",
+    "image": "marina",
+    "city": "New York City, NY, USA",
+    "bio": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
     }
   },
   {
