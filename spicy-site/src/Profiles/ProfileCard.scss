@@ -1,72 +1,95 @@
 @import '../index.scss';
 
+$card-border-radius: 0.75rem;
+$tall-card-width: 18rem;
+
+/* ------- COMMON STYLING ------- */
 .card {
-    height: 20rem;
-    width: 32.5rem;
     background: white;
     margin: 2rem 0;
-    border-radius: 0.75rem;
+    border-radius: $card-border-radius;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.30), 0 16px 20px 0 rgba(0, 0, 0, 0.14);
 
     display: flex;
 
-    .image-side {
+    >.image>img {
         display: block;
+    }
+}
 
-        img {
-            display: block;
-            width: 10rem;
-            height: 20rem;
-            border-radius: 0.75rem 0 0 0.75rem;
+.card>.profile {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: end;
+
+    .info {
+        height: 100%;
+
+        .city {
+            font-size: 1rem;
+            color: #A3A3A3;
+            font-weight: $regular;
+            margin: 0;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: $semi-bold;
+            margin-bottom: 0;
         }
     }
 
-    .image-top {
-        display: none;
+    .social-media {
+
+        hr {
+            border: none;
+            border-top: 1px solid #FFDEDE;
+            margin: 0 0 1em 0;
+        }
+
+        img {
+            height: 1.5rem;
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+
+/* --------- WIDE CARD -------- */
+.card {
+    height: 20rem;
+    width: 32.5rem;
+    flex-direction: row;
+
+    .image {
+        &.-side {
+            display: block;
+
+            img {
+                width: 10rem;
+                height: 20rem;
+                border-radius: $card-border-radius 0 0 $card-border-radius;
+            }
+        }
+
+        &.-top {
+            display: none;
+        }
+
     }
 
     .profile {
         padding: 2rem 2rem 1.5rem;
+        height: calc(100% - 3.5rem);
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-        justify-content: end;
 
-        .info {
-            height: 100%;
-
-            h4 {
-                font-size: 1rem;
-                color: #A3A3A3;
-                font-weight: $regular;
-                margin: 0;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                font-weight: $semi-bold;
-                margin-top: 0.5rem;
-                margin-bottom: 0;
-            }
+        .info>.name {
+            margin-top: 0.5rem;
         }
 
-        .social-media {
-
-            hr {
-                border: none;
-                border-top: 1px solid #FFDEDE;
-                margin: 0 0 1em 0;
-            }
-
-            img {
-                height: 1.5rem;
-                vertical-align: text-bottom;
-            }
-
-            a {
-                padding-right: 1.5rem;
-            }
+        .social-media a {
+            padding-right: 1.5rem;
         }
     }
 }
@@ -78,51 +101,48 @@
     }
 }
 
-$tall-card-width: 18rem;
+
 @media (max-width: $tablet-breakpoint) {
     .card {
         height: 28rem;
         width: $tall-card-width;
-
         flex-direction: column;
 
-
-        .image-top {
-            display: block;
-
-            img {
+        .image {
+            &.-top {
                 display: block;
-                height: 11.25rem;
-                width: $tall-card-width;
-                border-radius: 0.75rem 0.75rem 0 0;
-            }
-        }
 
-        .image-side {
-            display: none;
+                img {
+                    height: 11.25rem;
+                    width: $tall-card-width;
+                    border-radius: $card-border-radius $card-border-radius 0 0;
+                }
+            }
+
+            &.-side {
+                display: none;
+            }
         }
 
         .profile {
             padding: 0.75rem 1.5rem 1rem;
             height: 100%;
             width: $tall-card-width - 3rem;
-            display: flex;
-            flex-direction: column;
-            align-content: space-between;
-            justify-content: end;
 
             .info {
+                height: 100%;
                 text-align: center;
 
-                h2 {
+                .name {
                     margin-top: 0.25rem;
                 }
-                .extended-bio {
+
+                .bio .-extended {
                     display: none;
                 }
             }
 
-            .social-media .links {
+            .social-media>.links {
                 display: flex;
                 justify-content: space-evenly;
 
