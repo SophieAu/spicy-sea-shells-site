@@ -4,32 +4,7 @@
     background: repeat url(/img/bg_pattern.png);
     width: 100%;
 
-    display: grid;
-    grid-template-columns: repeat(2, 32.5rem);
+    display: flex;
+    flex-flow: wrap;
     justify-content: space-evenly;
-}
-
-
-@media (max-width: $midscreen-breakpoint) {
-    .body {
-        grid-template-columns: repeat(2, 30rem);
-    }
-}
-
-@media (max-width: $tablet-breakpoint) {
-    .body{
-        grid-template-columns: repeat(3, 16rem);
-    }
-}
-
-@media (max-width: $small-tablet-breakpoint) {
-    .body{
-        grid-template-columns: repeat(2, 16rem);
-    }
-}
-
-@media (max-width: $small-mobile-breakpoint) {
-    .body{
-        grid-template-columns: repeat(1, 16rem);
-    }
 }
