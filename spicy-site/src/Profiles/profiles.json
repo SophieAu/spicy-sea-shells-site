@@ -3,6 +3,7 @@
     "image": "sophie",
     "city": "Berlin, Germany",
     "bio": "Sophie is a full-stack developer and web designer with a passion for user experience design and agile consulting.",
+    "bioExt": "When she is not coding or designing, Sophie can be found exploring Berlin.",
     "socialMedia": {
       "github": "https://github.com/SophieAu",
       "website": "https://sophieau.github.io",
@@ -26,6 +27,7 @@
     "image": "andrei",
     "city": "Manchester, United Kingdom",
     "bio": "Andrei is Andrei",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -36,6 +38,7 @@
     "image": "kamala",
     "city": "Bangalore, India",
     "bio": "",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -46,6 +49,7 @@
     "image": "kaushik",
     "city": "Chennai, India",
     "bio": "",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -56,6 +60,7 @@
     "image": "ellie",
     "city": "Brisbane, Australia",
     "bio": "Ellie is a technical Business Analyst with an Information Technology degree specializing in the development of web based applications.",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -66,6 +71,7 @@
     "image": "jackie",
     "city": "Dallas, TX, USA",
     "bio": "",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -76,6 +82,7 @@
     "image": "nimish",
     "city": "Gurgaon, India",
     "bio": "",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -86,6 +93,7 @@
     "image": "marina",
     "city": "New York City, NY, USA",
     "bio": "",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
@@ -96,6 +104,7 @@
     "image": "hugh",
     "city": "Sydney, Australia",
     "bio": "",
+    "bioExt": "",
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
