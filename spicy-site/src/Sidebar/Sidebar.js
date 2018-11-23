@@ -5,7 +5,7 @@ import './Sidebar.scss';
 const Sidebar = () => (
   <header className="sidebar-wrapper">
     <div className="sidebar">
-      <div className="sidebar-header">
+      <div className="sidear-body">
         <div className="sidebar-logo">
           <Logo />
         </div>
