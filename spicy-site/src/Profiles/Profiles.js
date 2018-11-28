@@ -7,9 +7,5 @@ export default class Profiles extends React.Component {
   profileCards = () =>
     profiles.map((profile, i) => <ProfileCard key={i} info={profile} />);
 
-  render = () => (
-    <>
-      <main className="body">{this.profileCards()}</main>
-    </>
-  );
+  render = () => <main className="body">{this.profileCards()}</main>;
 }
