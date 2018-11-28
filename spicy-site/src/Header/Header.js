@@ -1,6 +1,6 @@
-import React from 'react';
-import { Title, Intro, BlogCallToAction, Logo } from '../miniFragments.js'
-import './Header.scss';
+import React from "react";
+import { Title, Intro, BlogCallToAction, Logo } from "../miniFragments.js";
+import "./Header.scss";
 
 const Header = () => (
   <header className="header">
