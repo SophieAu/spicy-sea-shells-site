@@ -1,0 +1,23 @@
+@import '../index.scss';
+
+footer {
+    background-color: $footer-bg;
+    color: $header-footer-text;
+    text-align: center;
+    height: 4rem;
+    font-weight: $light;
+    font-size: 1.25rem;
+    line-height: 4rem;
+
+    p {
+        margin: 0;
+
+        img {
+            display: inline-block;
+            height: 2.5rem;
+            vertical-align: middle;
+            padding-bottom: 0.5rem;
+            margin-left: -0.5rem;
+        }
+    }
+}
