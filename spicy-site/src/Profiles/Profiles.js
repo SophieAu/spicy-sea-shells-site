@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileCard from "./ProfileCard";
-import profiles from "./profiles.json";
+import profiles from "../profiles.json";
 import "./Profiles.scss";
 
 export default () => (
