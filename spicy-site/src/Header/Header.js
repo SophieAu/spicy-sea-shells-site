@@ -2,7 +2,7 @@ import React from "react";
 import { Title, Intro, BlogCallToAction, Logo } from "../miniFragments.js";
 import "./Header.scss";
 
-const Header = () => (
+export default () => (
   <header className="header">
     <div className="header-text">
       <Title />
@@ -14,5 +14,3 @@ const Header = () => (
     </div>
   </header>
 );
-
-export default Header;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfilePicture = ({ name }) => (
+export default ({ name }) => (
   <>
     <div className="image -side">
       <img
@@ -16,5 +16,3 @@ const ProfilePicture = ({ name }) => (
     </div>
   </>
 );
-
-export default ProfilePicture;

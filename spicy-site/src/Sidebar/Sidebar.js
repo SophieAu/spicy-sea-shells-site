@@ -2,7 +2,7 @@ import React from "react";
 import { Intro, BlogCallToAction, Logo, FooterText } from "../miniFragments.js";
 import "./Sidebar.scss";
 
-const Sidebar = () => (
+export default () => (
   <header className="sidebar-wrapper">
     <div className="sidebar">
       <div className="sidebar-body">
@@ -20,5 +20,3 @@ const Sidebar = () => (
     </div>
   </header>
 );
-
-export default Sidebar;
