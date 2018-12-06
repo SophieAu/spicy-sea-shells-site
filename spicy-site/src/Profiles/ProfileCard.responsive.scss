@@ -35,8 +35,15 @@ $tall-card-width: 18rem;
                     margin-top: 0.25rem;
                 }
 
-                .bio .-extended {
-                    display: none;
+                .bio {
+                    &.-long {
+                        display: none;
+                    }
+            
+                    &.-short {
+                        display: block;
+                    }
+            
                 }
             }
 

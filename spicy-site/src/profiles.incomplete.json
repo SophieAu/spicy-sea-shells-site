@@ -26,12 +26,47 @@
     }
   },
   {
+    "name": "Andrei Cartan",
+    "image": "andrei",
+    "city": "Manchester, United Kingdom",
+    "bio": "Andrei is Andrei",
+    "bioShort": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
+    "name": "Kamalashree Nagaraj",
+    "image": "kamala",
+    "city": "Bangalore, India",
+    "bio": "",
+    "bioShort": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
+    "name": "Kaushik Neelichetty",
+    "image": "kaushik",
+    "city": "Chennai, India",
+    "bio": "",
+    "bioShort": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
     "name": "Elloise Przybylo",
     "image": "ellie",
     "city": "Brisbane, Australia",
     "bio": "I'm a technical Business Analyst living in Brisbane, Australia with an Information Technology degree that specialises in the development of web based applications.",
     "bioShort": "I'm a technical Business Analyst living in Brisbane, Australia with an Information Technology degree that specialises in the development of web based applications.",
     "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
     }
   },
   {
@@ -43,8 +78,41 @@
     "socialMedia": {
       "facebook": "https://www.facebook.com/jackie.robinson.7",
       "instagram": "https://www.instagram.com/jakalak/",
-      "linkedin": "https://www.linkedin.com/in/jackierobinsonm/",
+      "linkedin": "https://www.instagram.com/jakalak/",
       "github": "https://github.com/jackierobinson"
+    }
+  },
+  {
+    "name": "Nimish Singh",
+    "image": "nimish",
+    "city": "Gurgaon, India",
+    "bio": "",
+    "bioShort": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
+    "name": "Marina Tassi",
+    "image": "marina",
+    "city": "New York City, NY, USA",
+    "bio": "",
+    "bioShort": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
+    }
+  },
+  {
+    "name": "Hugh Vidler",
+    "image": "hugh",
+    "city": "Sydney, Australia",
+    "bio": "",
+    "bioShort": "",
+    "socialMedia": {
+      "github": "github.com/Acartan",
+      "website": "somewhere.com"
     }
   }
 ]

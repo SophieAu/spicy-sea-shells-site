@@ -37,6 +37,10 @@ $card-border-radius: 0.75rem;
             font-weight: $semi-bold;
             margin-bottom: 0;
         }
+
+        p {
+            margin: 1rem 0 0;
+        }
     }
 
     .social-media {
@@ -89,6 +93,17 @@ $card-border-radius: 0.75rem;
 
         .social-media a {
             padding-right: 1.5rem;
+        }
+
+        .bio {
+            &.-long {
+                display: block;
+            }
+    
+            &.-short {
+                display: none;
+            }
+    
         }
     }
 }

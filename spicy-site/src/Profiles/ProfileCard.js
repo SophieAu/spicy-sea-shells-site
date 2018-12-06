@@ -4,11 +4,11 @@ import ProfilePicture from "./ProfilePicture";
 import InfoBox from "./InfoBox";
 import SocialMedia from "./SocialMedia";
 
-export default ({ info: { name, image, city, bio, bioExt, socialMedia } }) => (
+export default ({ info: { name, image, city, bio, bioShort, socialMedia } }) => (
   <div className="card">
     <ProfilePicture name={image} />
     <div className="profile">
-      <InfoBox city={city} name={name} bio={bio} bioExt={bioExt} />
+      <InfoBox city={city} name={name} bio={bio} bioShort={bioShort} />
       <SocialMedia socialMedia={socialMedia} />
     </div>
   </div>
