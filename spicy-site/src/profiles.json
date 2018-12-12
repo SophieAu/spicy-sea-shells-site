@@ -3,12 +3,11 @@
     "name": "Sophie Au",
     "image": "sophie",
     "city": "Berlin, Germany",
-    "bio": "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I can be found exploring Berlin's neighbourhoods and hipster coffee shops.",
+    "bio": "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I can be found exploring Berlin's hipster coffee shops.",
     "bioShort": "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I'm exploring Berlin.",
     "socialMedia": {
       "github": "https://github.com/SophieAu",
       "website": "https://sophieau.github.io",
-      "twitter": "https://twitter.com/SolviAu",
       "dribbble": "https://dribbble.com/solviau",
       "linkedin": "https://www.linkedin.com/in/sophie-au"
     }
@@ -39,8 +38,8 @@
     "name": "Jackie Robinson",
     "image": "jackie",
     "city": "Dallas, TX, USA",
-    "bio": "Hi, I'm Jackie Robinson. I'm a software developer from Slidell, Louisiana. Fun Fact 1: I'm an identical twin. Fun Fact 2: I'm not named after the baseball player. I love Android. I have serious obsession with music. Did I mention I love Android?",
-    "bioShort": "I'm a software developer from Slidell, Louisiana. Fun Fact: I'm an identical twin. I love Android. I have serious obsession with music. Did I mention I love Android?",
+    "bio": "Hi, I'm Jackie, a software developer from Slidell, Louisiana. Fun Facts: I'm an identical twin. Fun Fact 2: I'm not named after the baseball player. I love Android. I have serious obsession with music. Did I mention I love Android?",
+    "bioShort": "I'm a software developer from Slidell, Louisiana. Fun Facts: I'm an identical twin. I love Android. I have serious obsession with music. Did I mention I love Android?",
     "socialMedia": {
       "facebook": "https://www.facebook.com/jackie.robinson.7",
       "instagram": "https://www.instagram.com/jakalak/",
