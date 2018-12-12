@@ -4,7 +4,7 @@ export default ({ socialMedia }) => (
   <div className="social-media">
     <hr />
     <div className="links">
-      {Object.entries(socialMedia).map((entry, i) => (
+      {Object.entries(socialMedia).sort().map((entry, i) => (
         <a key={i} href={entry[1]}>
           <img
             src={"/img/social-media/" + entry[0] + ".svg"}
