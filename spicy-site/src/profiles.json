@@ -56,5 +56,19 @@
     "socialMedia": {
       "github": "https://github.com/KamalashreeNagaraj",
       "facebook": "https://www.facebook.com/kamalashreen"
+    }
+  },
+  {
+    "name": "Andrei Cartan",
+    "image": "andrei",
+    "city": "Manchester, United Kingdom",
+    "bio": "I'm a tennis fan with a big passion for trains, lately discovered DevOps which I am very interested in mastering. AWS and Terraform fan and doing AR in iOS as a hobby. Pushing to launch my first mobile app and speak at a conference.",
+    "bioShort": "Tennis fan with a big passion for trains and DevOps (Terraform and AWS). Doing AR in iOS as a hobby. Pushing to launch my first mobile app and speak at a conference.",
+    "socialMedia": {
+      "instagram": "https://www.instagram.com/justakid94",
+      "linkedin": "https://www.linkedin.com/in/andreialexandrucartan",
+      "twitter": "https://twitter.com/justakid94",
+      "website": "https://andreicartan.com"
+    }
   }
 ]
