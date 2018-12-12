@@ -46,5 +46,15 @@
       "linkedin": "https://www.linkedin.com/in/jackierobinsonm/",
       "github": "https://github.com/jackierobinson"
     }
+  },
+  {
+    "name": "Kamalashree Nagaraj",
+    "image": "kamala",
+    "city": "Bangalore, India",
+    "bio": "I'm a full-stack developer with a passion for back-end development, data analytics and agile consulting. When I'm not coding, you can find me, the gardener, the gamer or the artist!",
+    "bioShort": "I'm a full-stack developer with a passion for back-end development, data analytics and agile consulting. When not coding, you can find me, the gardener, the gamer, the artist!",
+    "socialMedia": {
+      "github": "https://github.com/KamalashreeNagaraj",
+      "facebook": "https://www.facebook.com/kamalashreen"
   }
 ]
