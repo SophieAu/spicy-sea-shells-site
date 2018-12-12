@@ -1,53 +1,5 @@
 [
   {
-    "name": "Sophie Au",
-    "image": "sophie",
-    "city": "Berlin, Germany",
-    "bio": "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I can be found exploring Berlin's neighbourhoods and hipster coffee shops.",
-    "bioShort": "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I'm exploring Berlin.",
-    "socialMedia": {
-      "github": "https://github.com/SophieAu",
-      "website": "https://sophieau.github.io",
-      "twitter": "https://twitter.com/SolviAu",
-      "dribbble": "https://dribbble.com/solviau",
-      "linkedin": "https://www.linkedin.com/in/sophie-au"
-    }
-  },
-  {
-    "name": "Jean Bauer",
-    "image": "jean",
-    "city": "Porto Alegre, Brazil",
-    "bio": "I’m a twenty-three-years-old consultant developer focused on building web solutions for real-life problems, most of the time using JavaScript. I'm currently working for ThoughtWorks.",
-    "bioShort": "I’m a consultant developer focused on building web solutions for real-life problems, most of the time using JavaScript. I'm currently working for ThoughtWorks.",
-    "socialMedia": {
-      "github": "https://github.com/jeanbauer",
-      "twitter": "https://twitter.com/jeanbauerr",
-      "medium": "https://medium.com/@jeanbauer/"
-    }
-  },
-  {
-    "name": "Andrei Cartan",
-    "image": "andrei",
-    "city": "Manchester, United Kingdom",
-    "bio": "Andrei is Andrei",
-    "bioShort": "",
-    "socialMedia": {
-      "github": "github.com/Acartan",
-      "website": "somewhere.com"
-    }
-  },
-  {
-    "name": "Kamalashree Nagaraj",
-    "image": "kamala",
-    "city": "Bangalore, India",
-    "bio": "",
-    "bioShort": "",
-    "socialMedia": {
-      "github": "github.com/Acartan",
-      "website": "somewhere.com"
-    }
-  },
-  {
     "name": "Kaushik Neelichetty",
     "image": "kaushik",
     "city": "Chennai, India",
@@ -56,30 +8,6 @@
     "socialMedia": {
       "github": "github.com/Acartan",
       "website": "somewhere.com"
-    }
-  },
-  {
-    "name": "Elloise Przybylo",
-    "image": "ellie",
-    "city": "Brisbane, Australia",
-    "bio": "I'm a technical Business Analyst living in Brisbane, Australia with an Information Technology degree that specialises in the development of web based applications.",
-    "bioShort": "I'm a technical Business Analyst living in Brisbane, Australia with an Information Technology degree that specialises in the development of web based applications.",
-    "socialMedia": {
-      "github": "github.com/Acartan",
-      "website": "somewhere.com"
-    }
-  },
-  {
-    "name": "Jackie Robinson",
-    "image": "jackie",
-    "city": "Dallas, TX, USA",
-    "bio": "Hi, I'm Jackie Robinson. I'm a software developer from Slidell, Louisiana. Fun Fact 1: I'm an identical twin. Fun Fact 2: I'm not named after the baseball player. I love Android. I have serious obsession with music. Did I mention I love Android?",
-    "bioShort": "I'm a software developer from Slidell, Louisiana. Fun Fact: I'm an identical twin. I love Android. I have serious obsession with music. Did I mention I love Android?",
-    "socialMedia": {
-      "facebook": "https://www.facebook.com/jackie.robinson.7",
-      "instagram": "https://www.instagram.com/jakalak/",
-      "linkedin": "https://www.instagram.com/jakalak/",
-      "github": "https://github.com/jackierobinson"
     }
   },
   {
