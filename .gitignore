@@ -1,8 +1,3 @@
 .DS_Store
-sketch/
-Non-Site/
-unsanctioned/
+_non-code/
 node_modules/
-
-# Sophie's files
-_dev-diary.md
