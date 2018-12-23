@@ -25,10 +25,16 @@ const ProfileCard = ({
 const ProfilePicture = ({ name }) => (
   <>
     <div className="image -side">
-      <img src={'/images/profiles/' + name + '_tall.jpg'} alt={name} />
+      <img
+        src={require('../../images/profiles/' + name + '_tall.jpg')}
+        alt={name}
+      />
     </div>
     <div className="image -top">
-      <img src={'/images/profiles/' + name + '_wide.jpg'} alt={name} />
+      <img
+        src={require('../../images/profiles/' + name + '_wide.jpg')}
+        alt={name}
+      />
     </div>
   </>
 )
@@ -51,7 +57,7 @@ const SocialMedia = ({ socialMedia }) => (
         .map((entry, i) => (
           <a key={i} href={entry[1]}>
             <img
-              src={'/images/social-media/' + entry[0] + '.svg'}
+              src={require('../../images/social-media/' + entry[0] + '.svg')}
               alt={'logo of ' + entry[0]}
             />
           </a>
