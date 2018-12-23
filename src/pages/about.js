@@ -1,10 +1,10 @@
-import React from "react";
-import Header from "../components/About/Header.js";
-import Footer from "../components/Footer.js";
-import Profiles from "../components/About/Profiles.js";
-import Sidebar from "../components/About/Sidebar.js";
-import "../styles/main.scss";
-import "../styles/about.scss";
+import React from 'react'
+import Header from '../components/About/Header.js'
+import Footer from '../components/Footer.js'
+import Profiles from '../components/About/Profiles.js'
+import Sidebar from '../components/About/Sidebar.js'
+import '../styles/main.scss'
+import '../styles/about.scss'
 
 const App = () => (
   <div id="about">
@@ -13,6 +13,6 @@ const App = () => (
     <Profiles />
     <Footer />
   </div>
-);
+)
 
-export default App;
+export default App

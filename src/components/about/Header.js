@@ -1,6 +1,6 @@
-import React from "react";
-import { Title, Intro, BlogCallToAction, Logo } from "../miniFragments.js";
-import "./Header.scss";
+import React from 'react'
+import { Title, Intro, BlogCallToAction, Logo } from '../miniFragments.js'
+import './Header.scss'
 
 export default () => (
   <header className="header">
@@ -13,4 +13,4 @@ export default () => (
       <Logo />
     </div>
   </header>
-);
+)

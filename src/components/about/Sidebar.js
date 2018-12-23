@@ -1,6 +1,6 @@
-import React from "react";
-import { Intro, BlogCallToAction, Logo, FooterText } from "../miniFragments.js";
-import "./Sidebar.scss";
+import React from 'react'
+import { Intro, BlogCallToAction, Logo, FooterText } from '../miniFragments.js'
+import './Sidebar.scss'
 
 export default () => (
   <header className="sidebar-wrapper">
@@ -19,4 +19,4 @@ export default () => (
       </div>
     </div>
   </header>
-);
+)
