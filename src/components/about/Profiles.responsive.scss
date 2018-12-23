@@ -1,0 +1,60 @@
+$tall-card-width: 18rem;
+
+@media (max-width: $tablet-breakpoint) {
+    #about>.body>.card {
+        height: 28rem;
+        width: $tall-card-width;
+        flex-direction: column;
+
+        .image {
+            &.-top {
+                display: block;
+
+                img {
+                    height: 11.25rem;
+                    width: $tall-card-width;
+                    border-radius: $card-border-radius $card-border-radius 0 0;
+                }
+            }
+
+            &.-side {
+                display: none;
+            }
+        }
+
+        .profile {
+            padding: 0.75rem 1.5rem 1rem;
+            height: 100%;
+            width: $tall-card-width - 3rem;
+
+            .info {
+                height: 100%;
+                text-align: center;
+
+                .name {
+                    margin-top: 0.25rem;
+                }
+
+                .bio {
+                    &.-long {
+                        display: none;
+                    }
+            
+                    &.-short {
+                        display: block;
+                    }
+            
+                }
+            }
+
+            .social-media>.links {
+                display: flex;
+                justify-content: space-evenly;
+
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

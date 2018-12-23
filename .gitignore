@@ -1,3 +1,14 @@
-.DS_Store
 _non-code/
+
+# dotenv environment variables file
+.env
+
+# gatsby files
+.cache/
+public
 node_modules/
+yarn.lock
+package-lock.json
+
+# Mac files
+.DS_Store
