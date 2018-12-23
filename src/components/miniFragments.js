@@ -1,5 +1,7 @@
 import React from 'react'
 import './miniFragments.scss'
+import chili from '../images/chili.svg'
+import logo from '../images/logo.png'
 
 export const Title = () => <h1>Spicy Sea Shells</h1>
 
@@ -21,12 +23,10 @@ export const BlogCallToAction = () => (
   </p>
 )
 
-export const Logo = () => (
-  <img src="/logo.png" alt="Spicy Sea Shells logo" />
-);
+export const Logo = () => <img src={logo} alt="Spicy Sea Shells logo" />
 
 export const FooterText = () => (
   <p className="footer-text">
-    Made with <img src="/chili.svg" alt="a chili" /> by the Spicy Sea Shells
+    Made with <img src={chili} alt="a chili" /> by the Spicy Sea Shells
   </p>
 )
