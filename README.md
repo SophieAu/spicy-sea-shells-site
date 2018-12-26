@@ -6,7 +6,7 @@
   Spicy Sea Shells Website
 </h1>
 
-This is the website for the Spicy Sea Shells, built with Gatsby.
+This is the website for the Spicy Sea Shells, built with [Gatsby](https://www.gatsbyjs.org/).
 
 ## 🚀 Quick start
 
