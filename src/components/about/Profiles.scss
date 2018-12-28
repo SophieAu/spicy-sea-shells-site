@@ -13,7 +13,7 @@ $card-border-radius: 0.75rem;
 
 /* ------- COMMON STYLING ------- */
 #about > .body > .card {
-  background: white;
+  background: $card-bg;
   margin: 2rem 0;
   border-radius: $card-border-radius;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 16px 20px 0 rgba(0, 0, 0, 0.14);
@@ -34,7 +34,7 @@ $card-border-radius: 0.75rem;
 
       .city {
         font-size: 1rem;
-        color: #a3a3a3;
+        color: $non-highlight-text;
         font-weight: $regular;
         margin: 0;
       }
@@ -54,11 +54,12 @@ $card-border-radius: 0.75rem;
   .social-media {
     hr {
       border: none;
-      border-top: 1px solid #ffdede;
+      border-top: 1px solid $primary-dim;
       margin: 0 0 1em 0;
     }
 
     img {
+      color: $black;
       height: 1.5rem;
       vertical-align: text-bottom;
     }
