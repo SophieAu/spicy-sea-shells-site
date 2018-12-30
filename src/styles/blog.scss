@@ -1,3 +1,40 @@
-#blog {
-    flex-direction: column;
+@import '../styles/variables';
+
+
+//     </div>
+//     <div className="posts">
+//       <h1>Latest</h1>
+
+.body {
+    padding-top: 3.5rem;
+}
+
+.blog-home {
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .hero-section {
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+    .hero-text {
+      font-size: 1.5rem;
+
+      a {
+        text-transform: uppercase;
+        font-weight: $bold;
+      }
+    }
+  }
+
+  .posts {
+      padding-top: 1rem;
+      h1 {
+          font-size: 3rem;
+      }
+  }
 }

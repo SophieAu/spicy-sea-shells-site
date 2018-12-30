@@ -1,20 +1,29 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Header from '../components/blog/Header.js'
-import Footer from '../components/Footer.js'
-import Body from '../components/blog/Body.js'
-import BodyWrapper from '../components/blog/BodyWrapper.js'
+import PostList from '../components/blog/PostList.js'
+import Wrapper from '../components/blog/Wrapper.js'
 import '../styles/main.scss'
 import '../styles/blog.scss'
 
 export default ({ data }) => (
-  <div id="blog">
-    <Header />
-    <BodyWrapper>
-      <Body posts={data.allMarkdownRemark.edges} />
-    </BodyWrapper>
-    <Footer />
-  </div>
+  <Wrapper>
+    <div className="blog-home">
+      <div className="hero-section">
+        <h1>Spicy Blog</h1>
+        <div className="hero-text">
+          <p>
+            We're the <a href="/about">Spicy Sea Shells</a> and this is our
+            blog.
+          </p>
+          <p>Some text about what we're writing about in this blog and maybe something about us as a group. I don't know. Think of something.</p>
+        </div>
+      </div>
+      <div className="posts">
+        <h1>Latest</h1>
+        <PostList posts={data.allMarkdownRemark.edges} />
+      </div>
+    </div>
+  </Wrapper>
 )
 
 export const query = graphql`
@@ -26,10 +35,11 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "YYYY-MM-DD")
+            author
+            date(formatString: "DD MMMM YYYY")
             slug
           }
-          excerpt
+          excerpt(pruneLength: 280)
         }
       }
     }

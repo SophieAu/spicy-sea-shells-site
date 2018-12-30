@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+#blog {
+  flex-direction: column;
+
+  > .body-wrapper {
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+
+    > .body {
+      min-height: 100%;
+      width: 100%;
+      max-width: $content-width - 8rem;
+      padding: 3.5rem 4rem;
+
+      background: $card-bg;
+    }
+  }
+}
