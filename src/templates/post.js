@@ -31,7 +31,7 @@ const HelmetData = ({ post }) => (
     <meta
       name="description"
       content={
-        'Homepage of the Spicy Sea Shells | Blogpost about ' +
+        'Blog of the Spicy Sea Shells | Blogpost about ' +
         post.frontmatter.title
       }
     />
