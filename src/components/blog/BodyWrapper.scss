@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+#blog > .body-wrapper {
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  
+  .article {
+    min-height: 100%;
+    width: 100%;
+    max-width: $content-width - 8rem;
+    padding: 4rem;
+
+    background: $card-bg;
+  }
+}

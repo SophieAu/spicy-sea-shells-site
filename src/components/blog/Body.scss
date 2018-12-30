@@ -1,18 +1,10 @@
 @import '../../styles/variables';
 
-#blog > .body-wrapper {
+#blog .list-body {
+  min-height: 100%;
   width: 100%;
-  flex-grow: 1;
+  max-width: $content-width - 8rem;
+  padding: 4rem;
 
-  display: flex;
-  justify-content: center;
-  
-  .body {
-    min-height: 100%;
-    width: 100%;
-    max-width: $content-width - 8rem;
-    padding: 4rem;
-
-    background: $card-bg;
-  }
+  background: $card-bg;
 }

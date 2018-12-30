@@ -6,7 +6,7 @@ import Sidebar from '../components/About/Sidebar.js'
 import '../styles/main.scss'
 import '../styles/about.scss'
 
-const App = () => (
+export default () => (
   <div id="about">
     <Header />
     <Sidebar />
@@ -14,5 +14,3 @@ const App = () => (
     <Footer />
   </div>
 )
-
-export default App
