@@ -1,0 +1,39 @@
+@import '../styles/variables';
+
+.article {
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  .meta {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.5rem;
+    font-weight: $light;
+    p {
+      margin: 0;
+      padding: 1rem 0 2rem;
+    }
+  }
+  .post-body {
+    font-size: 1.25rem;
+
+    code {
+      font-size: 1rem;
+    }
+    pre {
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 16px 20px 0 rgba(0, 0, 0, 0.14);
+    }
+
+    pre.line-numbers {
+      font-size: 1rem;        
+      padding-top: 1rem;
+
+      .line-numbers-rows {
+        border-right: none;
+        padding: 1rem;
+      }
+    }
+  }
+}
