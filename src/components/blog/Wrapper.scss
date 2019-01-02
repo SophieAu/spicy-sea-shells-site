@@ -12,7 +12,7 @@
 
     > .body {
       min-height: calc(100% - 7rem);
-      width: 100%;
+      width: calc(100% - 8rem);
       max-width: $content-width - 8rem;
       padding: 3.5rem 4rem;
 
