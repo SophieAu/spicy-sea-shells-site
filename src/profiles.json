@@ -70,5 +70,16 @@
       "twitter": "https://twitter.com/justakid94",
       "website": "https://andreicartan.com"
     }
+  },
+  {
+    "name": "Nimish Singh",
+    "image": "nimish",
+    "city": "Gurgaon, India",
+    "bio": "I enjoy looking through different technologies and tools (not limited to any one domain as of now). I am a sincere guy who thrives in a team environment. I also enjoy making pencil sketches and reading books.",
+    "bioShort": "I enjoy looking through different technologies and tools. I am a sincere guy who thrives in a team environment. I also enjoy making pencil sketches and reading books.",
+    "socialMedia": {
+      "github": "https://www.github.com/Nimish-Singh",
+      "linkedin": "https://www.linkedin.com/in/nimish-singh"
+    }
   }
 ]
