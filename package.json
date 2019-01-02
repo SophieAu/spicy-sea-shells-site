@@ -1,7 +1,7 @@
 {
   "name": "spicy-sea-shells-site",
   "private": true,
-  "description": "A blog for the Dpicy Sea Shells",
+  "description": "A blog for the Spicy Sea Shells",
   "version": "0.1.0",
   "author": "Sophie Au <sophie@sophieau.com>",
   "dependencies": {
