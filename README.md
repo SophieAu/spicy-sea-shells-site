@@ -1,6 +1,5 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-    <img alt="Gatsby" src="/src/images/logo.png" width="80" />
+    <img alt="Spicy Sea Shells" src="/src/images/logo.png" width="80" />
 </p>
 <h1 align="center">
   Spicy Sea Shells Website
