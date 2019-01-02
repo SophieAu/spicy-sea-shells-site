@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import 'prismjs/themes/prism-okaidia.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import Wrapper from '../components/blog/Wrapper.js'
+import '../styles/main.scss'
 import './post.scss'
 
 export default ({ data: { markdownRemark: post } }) => (
