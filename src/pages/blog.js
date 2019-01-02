@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import PostList from '../components/blog/PostList.js'
 import Wrapper from '../components/blog/Wrapper.js'
+import { Intro } from '../components/miniFragments.js'
 import '../styles/main.scss'
 import '../styles/blog.scss'
 
@@ -26,10 +27,7 @@ export default ({ data }) => (
               We're the <a href="/about">Spicy Sea Shells</a> and this is our
               blog.
             </p>
-            <p>
-              Some text about what we're writing about in this blog and maybe
-              something about us as a group. I don't know. Think of something.
-            </p>
+            <Intro />
           </div>
         </div>
         <div className="posts">
