@@ -1,17 +1,17 @@
 ---
 title:  "Introduction to Golang [Part I]"
 date:   2019-01-06 11:35:00
-slug: "intro-to-golang"
+slug: "introduction-to-golang"
 author: "Kamalashree N"
 ---
 
-Working for one of the clients here at ThoughtWorks, I found myself working a lot on Golang. **Go** has been a great language to work on but it never felt that way the first time I started on it. To begin with, it has a strange syntax, as opposed to most other *strongly typed languages*. The [Golang tour](tour.golang.org/) is a great place to start with. 
+Working for one of the clients here at ThoughtWorks, I found myself working a lot on Golang. **Go** has been a great language to work on but it never felt that way the first time I started on it. To begin with, it has a strange syntax, as opposed to most other *strongly typed languages*. The [Golang tour](https://tour.golang.org/) is a great place to start with. 
 
-Over the next few articles, I will walk you through the basic **Setup** and **CRUD operations** in Golang using **PostgreSQL** database. You can find the repository [here](github.com/KamalashreeNagaraj/Goex).
+Over the next few articles, I will walk you through the basic **Setup** and **CRUD operations** in Golang using **PostgreSQL** database. You can find the repository [here](https://github.com/KamalashreeNagaraj/Goex).
 
 ## Server setup 
 
-As part of this project, I will be using [Mux](github.com/gorilla/mux) as a request router and dispatcher for matching incoming requests to their respective handler. 
+As part of this project, I will be using [Mux](https://github.com/gorilla/mux) as a request router and dispatcher for matching incoming requests to their respective handler. 
 
 Let's start with `/ping`, the basic health-check route. 
 
