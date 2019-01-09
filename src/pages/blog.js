@@ -24,8 +24,7 @@ export default ({ data }) => (
           <h1>Spicy Blog</h1>
           <div className="hero-text">
             <p>
-              We're the <a href="/about">Spicy Sea Shells</a> and this is our
-              blog.
+              We're the <a href="/about">Spicy Sea Shells</a> and this is our blog.
             </p>
             <Intro />
           </div>

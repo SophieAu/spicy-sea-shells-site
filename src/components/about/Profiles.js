@@ -10,9 +10,7 @@ export default () => (
   </main>
 )
 
-const ProfileCard = ({
-  info: { name, image, city, bio, bioShort, socialMedia },
-}) => (
+const ProfileCard = ({ info: { name, image, city, bio, bioShort, socialMedia } }) => (
   <div className="card">
     <ProfilePicture name={image} />
     <div className="profile">
@@ -25,16 +23,10 @@ const ProfileCard = ({
 const ProfilePicture = ({ name }) => (
   <>
     <div className="image -side">
-      <img
-        src={require('../../images/profiles/' + name + '_tall.jpg')}
-        alt={name}
-      />
+      <img src={require('../../images/profiles/' + name + '_tall.jpg')} alt={name} />
     </div>
     <div className="image -top">
-      <img
-        src={require('../../images/profiles/' + name + '_wide.jpg')}
-        alt={name}
-      />
+      <img src={require('../../images/profiles/' + name + '_wide.jpg')} alt={name} />
     </div>
   </>
 )

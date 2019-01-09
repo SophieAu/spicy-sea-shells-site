@@ -17,10 +17,7 @@ export default ({ data: { markdownRemark: post } }) => (
           <p className="author">By {post.frontmatter.author}</p>
           <p className="date">{post.frontmatter.date}</p>
         </div>
-        <div
-          className="post-body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Wrapper>
   </>
@@ -31,10 +28,7 @@ const HelmetData = ({ post }) => (
     <title>{post.frontmatter.title} | Spicy Sea Shells</title>
     <meta
       name="description"
-      content={
-        'Blog of the Spicy Sea Shells | Blogpost about ' +
-        post.frontmatter.title
-      }
+      content={'Blog of the Spicy Sea Shells | Blogpost about ' + post.frontmatter.title}
     />
   </Helmet>
 )

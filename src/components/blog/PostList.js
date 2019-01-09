@@ -7,9 +7,7 @@ export default ({ posts }) => (
       <li key={node.id}>
         <div className="title">
           <h2>
-            <a href={'/article/' + node.frontmatter.slug}>
-              {node.frontmatter.title}
-            </a>
+            <a href={'/article/' + node.frontmatter.slug}>{node.frontmatter.title}</a>
           </h2>
         </div>
         <div className="meta">
