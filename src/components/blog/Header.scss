@@ -20,9 +20,8 @@ $header-height: 6rem;
   }
 
   .header-logo {
-    display: block;
-
     img {
+      display: block;
       height: $header-height;
       width: auto;
     }
