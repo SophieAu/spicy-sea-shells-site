@@ -4,8 +4,22 @@ import { graphql } from 'gatsby'
 import 'prismjs/themes/prism-okaidia.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import Wrapper from '../components/blog/Wrapper.js'
+import commentBox from 'commentbox.io'
 import '../styles/main.scss'
 import './post.scss'
+
+class CommentBox extends React.Component {
+  componentDidMount() {
+    this.removeCommentBox = commentBox('5655957052850176-proj')
+  }
+  componentWillUnmount() {
+    this.removeCommentBox()
+  }
+
+  render() {
+    return <div className="commentbox" />
+  }
+}
 
 export default ({ data: { markdownRemark: post } }) => (
   <>
@@ -19,6 +33,7 @@ export default ({ data: { markdownRemark: post } }) => (
         </div>
         <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+      <CommentBox />
     </Wrapper>
   </>
 )
