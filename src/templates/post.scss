@@ -5,6 +5,9 @@
     font-size: 3rem;
     margin: 0;
   }
+  a {
+    color: $black;
+  }
   .meta {
     display: flex;
     justify-content: space-between;
@@ -16,12 +19,13 @@
       padding: 1rem 0 2rem;
     }
   }
+  .crosspost {
+    padding-bottom: 2rem; 
+    font-size: 1.25rem;
+    font-style: italic;
+  }
   .post-body {
     font-size: 1.25rem;
-
-    a {
-      color: $black;
-    }
 
     code {
       font-size: 1rem;

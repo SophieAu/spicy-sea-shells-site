@@ -8,30 +8,13 @@ import commentBox from 'commentbox.io'
 import '../styles/main.scss'
 import './post.scss'
 
-class CommentBox extends React.Component {
-  componentDidMount() {
-    this.removeCommentBox = commentBox('5655957052850176-proj')
-  }
-  componentWillUnmount() {
-    this.removeCommentBox()
-  }
-
-  render() {
-    return <div className="commentbox" />
-  }
-}
-
 export default ({ data: { markdownRemark: post } }) => (
   <>
     <HelmetData post={post} />
     <Wrapper>
       <div className="post">
-        <h1>{post.frontmatter.title}</h1>
-        <div className="meta">
-          <p className="author">By {post.frontmatter.author}</p>
-          <p className="date">{post.frontmatter.date}</p>
-        </div>
-        <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Frontmatter frontmatter={post.frontmatter} />
+        <PostBody body={post.html} />
       </div>
       <CommentBox />
     </Wrapper>
@@ -48,6 +31,42 @@ const HelmetData = ({ post }) => (
   </Helmet>
 )
 
+const Frontmatter = ({ frontmatter }) => (
+  <>
+    <h1>{frontmatter.title}</h1>
+    <div className="meta">
+      <p className="author">By {frontmatter.author}</p>
+      <p className="date">{frontmatter.date}</p>
+    </div>
+    {!!frontmatter.crosspost && (
+      <Crosspost url={frontmatter.crosspost.url} site={frontmatter.crosspost.site} />
+    )}
+  </>
+)
+
+const Crosspost = ({ site, url }) => (
+  <div className="crosspost">
+    This is a crosspost from <a href={url}>{site}</a>.
+  </div>
+)
+
+const PostBody = ({ body }) => (
+  <div className="post-body" dangerouslySetInnerHTML={{ __html: body }} />
+)
+
+class CommentBox extends React.Component {
+  componentDidMount() {
+    this.removeCommentBox = commentBox('5655957052850176-proj')
+  }
+  componentWillUnmount() {
+    this.removeCommentBox()
+  }
+
+  render() {
+    return <div className="commentbox" />
+  }
+}
+
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
@@ -56,6 +75,10 @@ export const query = graphql`
         author
         date(formatString: "DD MMMM YYYY")
         slug
+        crosspost {
+          url
+          site
+        }
       }
       html
     }
