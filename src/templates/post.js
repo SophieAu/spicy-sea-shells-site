@@ -39,14 +39,19 @@ const Frontmatter = ({ frontmatter }) => (
       <p className="date">{frontmatter.date}</p>
     </div>
     {!!frontmatter.crosspost && (
-      <Crosspost url={frontmatter.crosspost.url} site={frontmatter.crosspost.site} />
+      <Crosspost
+        url={frontmatter.crosspost.url}
+        site={frontmatter.crosspost.site}
+        prefix={!!frontmatter.crosspost.prefix}
+      />
     )}
   </>
 )
 
-const Crosspost = ({ site, url }) => (
+const Crosspost = ({ site, url, prefix }) => (
   <div className="crosspost">
-    This is a crosspost from <a href={url}>{site}</a>.
+    This is a crosspost from {prefix && 'the '}
+    <a href={url}>{site}</a>.
   </div>
 )
 
@@ -78,6 +83,7 @@ export const query = graphql`
         crosspost {
           url
           site
+          prefix
         }
       }
       html
