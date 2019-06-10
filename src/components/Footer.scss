@@ -21,3 +21,10 @@ footer {
         }
     }
 }
+
+
+@media all and (max-width: $small-mobile-breakpoint) {
+    footer {
+        font-size: 1rem;
+    }
+}

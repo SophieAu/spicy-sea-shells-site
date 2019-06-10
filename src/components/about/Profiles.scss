@@ -28,7 +28,7 @@ $card-border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    justify-content: end;
+    justify-content: flex-end;
 
     .info {
       height: 100%;
@@ -45,10 +45,14 @@ $card-border-radius: 0.75rem;
         font-weight: $semi-bold;
         margin-bottom: 0;
       }
+    }
 
-      p {
-        margin: 1rem 0 0;
-      }
+    .bio.-short {
+      margin: 1rem 0.5rem 0;
+    }
+
+    .bio.-long {
+      margin: 1rem 0 0;
     }
   }
 

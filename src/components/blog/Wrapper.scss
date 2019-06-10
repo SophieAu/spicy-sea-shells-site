@@ -20,3 +20,11 @@
     }
   }
 }
+
+
+@media all and (max-width: $small-tablet-breakpoint) {
+  #blog > .body-wrapper > .body {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+}

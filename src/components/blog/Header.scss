@@ -41,7 +41,7 @@
 
       li {
         margin: 0;
-        padding: 0 0 0 4rem;
+        padding: 0;
       }
     }
 
@@ -51,6 +51,27 @@
       color: inherit;
       text-decoration: none;
       line-height: $blog-header-height;
+    }
+  }
+}
+
+@media all and (max-width: $mobile-breakpoint) {
+  #blog > .header-wrapper > .header {
+    height: 4rem;
+
+    .header-logo {
+      img {
+        height: 4rem;
+      }
+    }
+
+    .header-nav {
+      ul {
+        justify-content: center;
+      }
+      a {
+        line-height: 4rem;
+      }
     }
   }
 }

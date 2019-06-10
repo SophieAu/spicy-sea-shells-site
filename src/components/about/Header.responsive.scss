@@ -27,24 +27,26 @@
   }
 }
 
-@media (max-width: $small-tablet-breakpoint) {
+@media all and (max-width: $small-tablet-breakpoint) {
   #about > .header > .header-text > .intro-extended {
     display: none;
   }
 }
 
-@media (max-width: $mobile-breakpoint) {
-  #about > .header > .header-text {
-    padding-left: 0;
-
-    h1 {
-      // 9rem+2rem=11rem logo, 1rem left
-      width: calc(100vw - 12rem);
+@media all and (max-width: $mobile-breakpoint) {
+  #about > .header {
+    .header-logo {
+      img {
+        height: 4rem;
+      }
+    }
+    .header-text {
+      padding-left: 0;
     }
   }
 }
 
-@media (max-width: $small-mobile-breakpoint) {
+@media all and (max-width: $small-mobile-breakpoint) {
   #about > .header > .header-text > .intro {
     display: none;
   }
