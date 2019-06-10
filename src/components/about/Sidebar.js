@@ -7,11 +7,11 @@ export default () => (
     <div className="sidebar">
       <div className="sidebar-body">
         <div className="sidebar-logo">
-          <Logo />
+          <Logo className="logo" />
         </div>
         <div className="sidebar-text">
-          <Intro />
-          <BlogCallToAction />
+          <Intro className="intro" />
+          <BlogCallToAction className="blog-cta" />
         </div>
       </div>
       <div className="sidebar-footer">

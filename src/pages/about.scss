@@ -1,6 +1,6 @@
 @import '../variables';
 
-@media (min-width: $widescreen-breakpoint + 1px) {
+@media (min-width: $widescreen-breakpoint) {
   #about {
     .footer,
     .header {
@@ -9,7 +9,7 @@
   }
 }
 
-@media (max-width: $widescreen-breakpoint) {
+@media (max-width: $widescreen-breakpoint - 1) {
   #about {
     flex-direction: column;
 

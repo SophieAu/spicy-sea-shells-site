@@ -1,53 +1,61 @@
-@media (max-width: $midscreen-breakpoint) {
-  #about > .header > .header-text > p {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: $tablet-breakpoint) {
+@media all and (min-width: $desktop-breakpoint) and (max-width: $widescreen-breakpoint - 1) {
   #about > .header {
-    padding: 1rem;
-    height: 9rem;
-
-    .header-logo > img {
-      height: 9rem;
-    }
-
-    .header-text {
-      p {
-        padding-top: 0.75rem;
-        font-size: 1.25rem;
-      }
-
-      h1 {
-        font-size: 2.25rem;
-        line-height: 2.25rem;
-      }
-    }
+    --logo-height: 12rem;
+    --header-font-size: 3.5rem;
+    --info-font-size: 1.75rem;
+    --outside-padding: 2rem;
   }
 }
 
-@media all and (max-width: $small-tablet-breakpoint) {
-  #about > .header > .header-text > .intro-extended {
-    display: none;
-  }
-}
-
-@media all and (max-width: $mobile-breakpoint) {
+@media all and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint - 1) {
   #about > .header {
-    .header-logo {
-      img {
-        height: 4rem;
-      }
-    }
-    .header-text {
-      padding-left: 0;
-    }
+    --logo-height: 9rem;
+    --header-font-size: 2.25rem;
+    --info-font-size: 1.25rem;
+    --outside-padding: 1rem;
   }
 }
 
-@media all and (max-width: $small-mobile-breakpoint) {
-  #about > .header > .header-text > .intro {
-    display: none;
+@media all and (min-width: $mobile-breakpoint) {
+  .logo {
+    grid-area: 1 / 2 / 4 / 3;
+  }
+  .intro {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .blog-cta {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
+@media all and (max-width: $mobile-breakpoint - 1) {
+  #about > .header {
+    --logo-height: 3.5rem;
+    --header-font-size: 2.25rem;
+    --info-font-size: 1.25rem;
+    --outside-padding: 1rem;
+
+    .logo {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .intro {
+      grid-area: 2 / 1 / 3 / 3;
+
+      .-extended {
+        display: none;
+      }
+    }
+    .blog-cta {
+      grid-area: 3 / 1 / 4 / 3;
+    }
+
+    @media (max-width: $small-mobile-breakpoint - 1) {
+      .intro {
+        display: none;
+      }
+      .blog-cta {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+    }
   }
 }
