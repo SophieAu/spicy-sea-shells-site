@@ -1,20 +1,18 @@
 @import 'variables';
 
 @media (min-width: $widescreen-breakpoint + 1px) {
-
-    #about>.footer,
-    #about>.header {
-        display: none;
-    }
+  #about > .footer,
+  #about > .header {
+    display: none;
+  }
 }
 
-
 @media (max-width: $widescreen-breakpoint) {
-    #about {
-        flex-direction: column;
-    }
+  #about {
+    flex-direction: column;
+  }
 
-    #about>.sidebar-wrapper {
-        display: none;
-    }
+  #about > .sidebar-wrapper {
+    display: none;
+  }
 }

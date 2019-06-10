@@ -1,27 +1,27 @@
-@import "variables";
+@import 'variables';
 
 :root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: $card-bg;
-    font-family: $font-family;
-    color: $black;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background: $card-bg;
+  font-family: $font-family;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-#blog, #about {
-    min-height: 100vh;
-    background: repeat url(../images/bg_pattern.png);
+#blog,
+#about {
+  min-height: 100vh;
+  background: repeat url(../images/bg_pattern.png);
 
-    display: flex;
+  display: flex;
 }
