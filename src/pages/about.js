@@ -4,8 +4,7 @@ import Header from '../components/about/Header.js'
 import Footer from '../components/Footer.js'
 import Profiles from '../components/about/Profiles.js'
 import Sidebar from '../components/about/Sidebar.js'
-import '../styles/main.scss'
-import '../styles/about.scss'
+import './about.scss'
 
 export default () => (
   <>

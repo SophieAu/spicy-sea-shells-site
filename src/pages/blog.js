@@ -4,8 +4,7 @@ import { graphql } from 'gatsby'
 import PostList from '../components/blog/PostList.js'
 import Wrapper from '../components/blog/Wrapper.js'
 import { Intro } from '../components/miniFragments.js'
-import '../styles/main.scss'
-import '../styles/blog.scss'
+import './blog.scss'
 
 export default ({ data }) => (
   <>

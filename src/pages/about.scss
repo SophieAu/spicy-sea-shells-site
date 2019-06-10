@@ -1,0 +1,21 @@
+@import '../variables';
+@import '../main';
+
+@media (min-width: $widescreen-breakpoint + 1px) {
+  #about {
+    .footer,
+    .header {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $widescreen-breakpoint) {
+  #about {
+    flex-direction: column;
+
+    .sidebar-wrapper {
+      display: none;
+    }
+  }
+}
