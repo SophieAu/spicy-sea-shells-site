@@ -5,6 +5,7 @@ import PostList from '../components/blog/PostList.js'
 import Wrapper from '../components/blog/Wrapper.js'
 import { Intro } from '../components/miniFragments.js'
 import './blog.scss'
+import '../main.scss'
 
 export default ({ data }) => (
   <>

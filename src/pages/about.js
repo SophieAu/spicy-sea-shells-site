@@ -5,6 +5,7 @@ import Footer from '../components/Footer.js'
 import Profiles from '../components/about/Profiles.js'
 import Sidebar from '../components/about/Sidebar.js'
 import './about.scss'
+import '../main.scss'
 
 export default () => (
   <>

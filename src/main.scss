@@ -21,7 +21,7 @@ code {
 #blog,
 #about {
   min-height: 100vh;
-  background: repeat url(../images/bg_pattern.png);
+  background: repeat url(./images/bg_pattern.png);
 
   display: flex;
 }
@@ -29,4 +29,9 @@ code {
 // RESET
 p {
   margin: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
 }

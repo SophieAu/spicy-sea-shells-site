@@ -5,7 +5,7 @@ import 'prismjs/themes/prism-okaidia.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import Wrapper from '../components/blog/Wrapper.js'
 import commentBox from 'commentbox.io'
-// import '../styles/main.scss'
+import '../main.scss'
 import './post.scss'
 
 export default ({ data: { markdownRemark: post } }) => (
