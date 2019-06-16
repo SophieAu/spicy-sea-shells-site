@@ -148,4 +148,23 @@ $card-border-radius: 0.75rem;
   }
 }
 
-@import 'Profiles.responsive.scss';
+@media (max-width: $tablet-breakpoint - 1) {
+  #about > .body {
+    @include tall-card;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  #about > .body {
+    @include wide-card;
+
+    > .card {
+      @media (max-width: $midscreen-breakpoint) {
+        width: 30rem;
+      }
+      @media (max-width: $desktop-breakpoint) {
+        width: 29rem;
+      }
+    }
+  }
+}
