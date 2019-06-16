@@ -5,18 +5,24 @@
   align-items: center;
 
   > .body {
-    min-height: calc(100% - 7rem);
-    width: calc(100% - 8rem);
-    max-width: $content-width - 8rem;
-    padding: 3.5rem 4rem;
+    flex: 1;
 
     background: $card-bg;
+    width: calc(100vw - 2 * var(--padding));
+    max-width: calc($content-width - 2 * var(--padding));
+
+    padding: var(--padding);
   }
 }
 
 @media all and (max-width: $mobile-breakpoint - 1) {
-  #blog > .body-wrapper > .body {
-    width: calc(100% - 2rem);
-    padding: 1rem;
+  #blog > .body {
+    --padding: 1rem;
+  }
+}
+
+@media all and (min-width: $mobile-breakpoint) {
+  #blog > .body {
+    --padding: 4rem;
   }
 }

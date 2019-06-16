@@ -6,7 +6,7 @@
 
   padding: 1rem var(--padding);
   height: var(--blog-header-height);
-  width: calc(100vw - calc(var(--padding) * 2));
+  width: calc(100vw - var(--padding) * 2);
 
   display: flex;
   justify-content: space-between;
