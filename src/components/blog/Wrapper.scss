@@ -9,7 +9,7 @@
 
     background: $card-bg;
     width: calc(100vw - 2 * var(--padding));
-    max-width: calc($content-width - 2 * var(--padding));
+    max-width: calc(var(--content-width) - 2 * var(--padding));
 
     padding: var(--padding);
   }
