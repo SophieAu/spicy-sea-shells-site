@@ -1,46 +1,50 @@
 @import '../../variables';
 
-#blog > .header-wrapper {
+#blog > .header {
+  align-self: flex-start;
   background-color: $primary-color;
+
+  padding: 1rem var(--padding);
+  height: var(--blog-header-height);
+  width: calc(100vw - calc(var(--padding) * 2));
+
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
 
-  .header {
-    margin: 1rem;
-    width: 100%;
-    max-width: $content-width;
+.header-logo {
+  line-height: 0;
+
+  img {
     height: var(--blog-header-height);
+    width: auto;
+  }
+}
 
+.header-nav {
+  margin: 0 4rem 0 1rem;
+
+  a {
+    font: $bold 2.25rem / var(--blog-header-height) $font-family;
     color: $header-footer-text;
-
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header-logo {
-    line-height: 0;
-
-    img {
-      height: var(--blog-header-height);
-      width: auto;
-    }
-  }
-
-  .header-nav {
-    margin: 0 4rem 0 1rem;
-
-    a {
-      font-size: 2.25rem;
-      font-weight: $bold;
-      color: inherit;
-      text-decoration: none;
-      line-height: var(--blog-header-height);
-    }
+    text-decoration: none;
   }
 }
 
 @media all and (max-width: $mobile-breakpoint - 1) {
-  #blog > .header-wrapper > .header {
+  :root {
     --blog-header-height: 4rem;
+  }
+}
+
+@media all and (max-width: $tablet-breakpoint - 1) {
+  #blog > .header {
+    --padding: 1rem;
+  }
+}
+
+@media all and (min-width: $tablet-breakpoint) {
+  #blog > .header {
+    --padding: calc((100vw - var(--content-width)) / 2);
   }
 }

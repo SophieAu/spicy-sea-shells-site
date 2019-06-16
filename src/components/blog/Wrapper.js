@@ -6,9 +6,7 @@ import './Wrapper.scss'
 export default ({ children }) => (
   <div id="blog">
     <Header />
-    <main className="body-wrapper">
-      <div className="body">{children}</div>
-    </main>
+    <main className="body">{children}</main>
     <Footer />
   </div>
 )

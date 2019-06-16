@@ -1,9 +1,13 @@
 import React from 'react'
-import { FooterText } from './miniFragments.js'
 import './Footer.scss'
+import chili from '../images/chili.svg'
 
 export default () => (
+  <FooterText />
+)
+
+const FooterText = () => (
   <footer className="footer">
-    <FooterText />
+    Made with <img src={chili} alt="a chili" /> by the Spicy Sea Shells
   </footer>
 )
