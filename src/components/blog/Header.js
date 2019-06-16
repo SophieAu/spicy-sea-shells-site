@@ -7,18 +7,12 @@ const Header = () => (
     <div className="header">
       <div className="header-logo">
         <a href="/blog">
+          <span style={{ display: 'none' }}>Homepage / Blog</span>
           <Logo />
         </a>
       </div>
       <nav className="header-nav">
-        <ul>
-          <li className="nav-element">
-            <a href="/blog">Blog</a>
-          </li>
-          <li className="nav-element">
-            <a href="/about">About</a>
-          </li>
-        </ul>
+        <a href="/about">About</a>
       </nav>
     </div>
   </header>

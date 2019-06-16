@@ -22,6 +22,9 @@ $mobile-breakpoint: 640px;
 $small-mobile-breakpoint: 560px;
 
 $content-width: 66rem;
-$blog-header-height: 6rem;
 $sidebar-width: 22rem;
 $footer-height: 4rem;
+
+:root {
+  --blog-header-height: 6rem;
+}
