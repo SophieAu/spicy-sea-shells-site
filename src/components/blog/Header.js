@@ -1,15 +1,13 @@
 import React from 'react'
-import { Logo } from '../miniFragments.js'
+import { Logo } from '../_shared/headerFragments'
 import './Header.scss'
 
 const Header = () => (
   <header className="header">
-    <div className="header-logo">
-      <a href="/blog">
-        <span style={{ display: 'none' }}>Homepage / Blog</span>
-        <Logo />
-      </a>
-    </div>
+    <a className="header-logo" href="/blog">
+      <span style={{ display: 'none' }}>Homepage / Blog</span>
+      <Logo />
+    </a>
     <nav className="header-nav">
       <a href="/about">About</a>
     </nav>

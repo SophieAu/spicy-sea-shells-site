@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../Footer'
+import Footer from '../_shared/Footer'
 import Header from './Header'
 import './Wrapper.scss'
 

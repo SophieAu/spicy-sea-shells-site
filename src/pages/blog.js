@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import PostList from '../components/blog/PostList.js'
 import Wrapper from '../components/blog/Wrapper.js'
-import { Intro } from '../components/miniFragments.js'
+import { Intro } from '../components/_shared/headerFragments.js'
 import './blog.scss'
 import '../main.scss'
 

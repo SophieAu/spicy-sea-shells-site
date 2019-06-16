@@ -1,22 +1,19 @@
 import React from 'react'
-import { Intro, BlogCallToAction, Logo, FooterText } from '../miniFragments.js'
+import { Intro, BlogCallToAction, Logo } from '../_shared/headerFragments'
+import Footer from '../_shared/footerFragment'
 import './Sidebar.scss'
 
 export default () => (
   <header className="sidebar-wrapper">
     <div className="sidebar">
       <div className="sidebar-body">
-        <div className="sidebar-logo">
-          <Logo className="logo" />
-        </div>
+        <Logo className="sidebar-logo" />
         <div className="sidebar-text">
           <Intro className="intro" />
           <BlogCallToAction className="blog-cta" />
         </div>
       </div>
-      <div className="sidebar-footer">
-        <FooterText />
-      </div>
+      <Footer className="sidebar-footer" />
     </div>
   </header>
 )

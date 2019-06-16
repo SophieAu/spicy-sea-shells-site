@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title, Intro, BlogCallToAction, Logo } from '../miniFragments.js'
+import { Title, Intro, BlogCallToAction, Logo } from '../_shared/headerFragments'
 import './Header.scss'
 
 export default () => (

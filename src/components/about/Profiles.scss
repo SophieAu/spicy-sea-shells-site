@@ -12,8 +12,6 @@ $card-border-radius: 0.75rem;
   column-gap: 1rem;
 }
 
-/// a padding
-
 @mixin card-base {
   .card {
     background: $card-bg;
@@ -23,8 +21,8 @@ $card-border-radius: 0.75rem;
 
     display: flex;
 
-    > .image > img {
-      display: block;
+    .image {
+      line-height: 0;
     }
     .profile {
       display: flex;
@@ -36,21 +34,17 @@ $card-border-radius: 0.75rem;
         height: 100%;
 
         .city {
-          font-size: 1rem;
+          font: $regular 1rem $font-family;
           color: $non-highlight-text;
-          font-weight: $regular;
         }
-
         .name {
-          font-size: 1.5rem;
-          font-weight: $semi-bold;
+          font: $semi-bold 1.5rem $font-family;
         }
       }
 
       .bio.-short {
         margin: 1rem 0.5rem 0;
       }
-
       .bio.-long {
         margin: 1rem 0 0;
       }
@@ -82,15 +76,9 @@ $card-border-radius: 0.75rem;
     flex-direction: column;
 
     .image {
-      &.-top {
-        display: block;
-
-        img {
-          height: 11.25rem;
-          width: $tall-card-width;
-          border-radius: $card-border-radius $card-border-radius 0 0;
-        }
-      }
+      height: 11.25rem;
+      width: $tall-card-width;
+      border-radius: $card-border-radius $card-border-radius 0 0;
 
       &.-side {
         display: none;
@@ -109,14 +97,8 @@ $card-border-radius: 0.75rem;
           margin-top: 0.25rem;
         }
 
-        .bio {
-          &.-long {
-            display: none;
-          }
-
-          &.-short {
-            display: block;
-          }
+        .bio.-long {
+          display: none;
         }
       }
 
@@ -137,15 +119,9 @@ $card-border-radius: 0.75rem;
     flex-direction: row;
 
     .image {
-      &.-side {
-        display: block;
-
-        img {
-          width: 10rem;
-          height: 20rem;
-          border-radius: $card-border-radius 0 0 $card-border-radius;
-        }
-      }
+      width: 10rem;
+      height: 20rem;
+      border-radius: $card-border-radius 0 0 $card-border-radius;
 
       &.-top {
         display: none;
@@ -157,22 +133,16 @@ $card-border-radius: 0.75rem;
       height: calc(100% - 3.5rem);
       width: 100%;
 
-      .info > .name {
+      .name {
         margin: 0.5rem -1rem 0 0;
+      }
+
+      .bio.-short {
+        display: none;
       }
 
       .social-media a:not(:last-child) {
         padding-right: 1.5rem;
-      }
-
-      .bio {
-        &.-long {
-          display: block;
-        }
-
-        &.-short {
-          display: none;
-        }
       }
     }
   }

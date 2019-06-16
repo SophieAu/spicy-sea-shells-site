@@ -22,12 +22,16 @@ const ProfileCard = ({ info: { name, image, city, bio, bioShort, socialMedia } }
 
 const ProfilePicture = ({ name }) => (
   <>
-    <div className="image -side">
-      <img src={require('../../images/profiles/' + name + '_tall.jpg')} alt={name} />
-    </div>
-    <div className="image -top">
-      <img src={require('../../images/profiles/' + name + '_wide.jpg')} alt={name} />
-    </div>
+    <img
+      className="image -side"
+      src={require('../../images/profiles/' + name + '_tall.jpg')}
+      alt={name}
+    />
+    <img
+      className="image -top"
+      src={require('../../images/profiles/' + name + '_wide.jpg')}
+      alt={name}
+    />
   </>
 )
 

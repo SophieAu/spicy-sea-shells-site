@@ -20,7 +20,11 @@
   .sidebar-body {
     padding: 2rem;
 
-    .sidebar-logo img {
+    p {
+      margin: 2rem 0;
+    }
+
+    .sidebar-logo {
       width: 16rem;
       padding: 1rem;
     }
@@ -33,15 +37,5 @@
   .sidebar-footer {
     width: 100%;
     padding-bottom: 0.75rem;
-
-    p {
-      text-align: center;
-      font-size: 1.25rem;
-    }
-
-    img {
-      margin-left: -0.5rem;
-      vertical-align: middle;
-    }
   }
 }

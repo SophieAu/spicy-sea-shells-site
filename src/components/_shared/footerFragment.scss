@@ -1,14 +1,10 @@
-@import '../variables';
+@import '../../variables';
 
 footer {
-  align-self: flex-start;
-
-  background-color: $footer-bg;
+  text-align: center;
   color: $header-footer-text;
   font: $light 1.25rem / #{$footer-height} $font-family;
   height: $footer-height;
-  text-align: center;
-  width: 100vw;
   img {
     display: inline-block;
     height: 2.5rem;

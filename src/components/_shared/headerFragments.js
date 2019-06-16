@@ -1,6 +1,6 @@
 import React from 'react'
-import './miniFragments.scss'
-import logo from '../images/logo.png'
+import './headerFragments.scss'
+import logo from '../../images/logo.png'
 
 export const Title = ({ className }) => <h1 className={className}>Spicy Sea Shells</h1>
 
@@ -14,7 +14,10 @@ export const Intro = ({ className }) => (
 
 export const BlogCallToAction = ({ className }) => (
   <p className={className}>
-    Together we're running the <a href="/blog">Spicy Blog</a>
+    Together we're running the{' '}
+    <a className="cta-link" href="/blog">
+      Spicy Blog
+    </a>
   </p>
 )
 
