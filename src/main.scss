@@ -1,3 +1,4 @@
+@import './reset.scss';
 @import 'variables';
 
 :root {
@@ -24,15 +25,4 @@ code {
   background: repeat url(./images/bg_pattern.png);
 
   display: flex;
-}
-
-// RESET
-h1,
-h2,
-h4,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }

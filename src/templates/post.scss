@@ -3,7 +3,9 @@
 .post {
   h1 {
     font-size: 3rem;
-    margin: 0;
+  }
+  p {
+    margin: 1rem 0;
   }
   a {
     color: $black;
@@ -14,10 +16,7 @@
 
     font-size: 1.5rem;
     font-weight: $light;
-    p {
-      margin: 0;
-      padding: 1rem 0 2rem;
-    }
+    margin: 0.5rem 0;
   }
   .crosspost {
     padding-bottom: 2rem;
