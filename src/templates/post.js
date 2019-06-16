@@ -12,7 +12,7 @@ export default ({ data: { markdownRemark: post } }) => (
   <>
     <HelmetData post={post} />
     <Wrapper>
-      <div className="post">
+      <div id="post">
         <Frontmatter frontmatter={post.frontmatter} />
         <PostBody body={post.html} />
       </div>
@@ -35,7 +35,7 @@ const Frontmatter = ({ frontmatter }) => (
   <>
     <h1>{frontmatter.title}</h1>
     <div className="meta">
-      <p className="author">By {frontmatter.author}</p>
+      <p className="author">{`By ${frontmatter.author}`}</p>
       <p className="date">{frontmatter.date}</p>
     </div>
     {!!frontmatter.crosspost && (

@@ -1,25 +1,26 @@
 @import '../variables';
 
-.post {
+#post {
   h1 {
     font-size: 3rem;
   }
   p {
     margin: 1rem 0;
   }
+
   .meta {
+    margin: 0.5rem 0;
     display: flex;
     justify-content: space-between;
 
-    font-size: 1.5rem;
-    font-weight: $light;
-    margin: 0.5rem 0;
+    font: $light 1.5rem $font-family;
   }
+
   .crosspost {
     padding-bottom: 2rem;
-    font-size: 1.25rem;
-    font-style: italic;
+    font: italic $regular 1.25rem $font-family;
   }
+
   .post-body {
     font-size: 1.25rem;
 
@@ -44,4 +45,23 @@
 
 .commentbox {
   padding-top: 4rem;
+}
+
+@media all and (max-width: $small-mobile-breakpoint - 1) {
+  #post {
+    .meta {
+      flex-direction: column-reverse;
+      margin: 1.25rem 0;
+
+      font: $light 1.25rem $font-family;
+
+      p {
+        margin: 0.25rem 0;
+      }
+
+      .date {
+        text-align: right;
+      }
+    }
+  }
 }
