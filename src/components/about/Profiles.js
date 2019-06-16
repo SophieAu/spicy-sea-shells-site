@@ -5,16 +5,16 @@ import './Profiles.scss'
 export default () => (
   <main className="body">
     {profiles.map((profile, i) => (
-      <ProfileCard key={i} info={profile} />
+      <ProfileCard key={i} {...profile} />
     ))}
   </main>
 )
 
-const ProfileCard = ({ info: { name, image, city, bio, bioShort, socialMedia } }) => (
+const ProfileCard = ({ baseInfo, image, socialMedia }) => (
   <div className="card">
     <ProfilePicture name={image} />
     <div className="profile">
-      <InfoBox city={city} name={name} bio={bio} bioShort={bioShort} />
+      <InfoBox {...baseInfo} />
       <SocialMedia socialMedia={socialMedia} />
     </div>
   </div>
@@ -22,16 +22,18 @@ const ProfileCard = ({ info: { name, image, city, bio, bioShort, socialMedia } }
 
 const ProfilePicture = ({ name }) => (
   <>
-    <img
-      className="image -side"
-      src={require('../../images/profiles/' + name + '_tall.jpg')}
-      alt={name}
-    />
-    <img
-      className="image -top"
-      src={require('../../images/profiles/' + name + '_wide.jpg')}
-      alt={name}
-    />
+    <div className="image">
+      <img
+        className="image -side"
+        src={require('../../images/profiles/' + name + '_tall.jpg')}
+        alt={name}
+      />
+      <img
+        className="image -top"
+        src={require('../../images/profiles/' + name + '_wide.jpg')}
+        alt={name}
+      />
+    </div>
   </>
 )
 

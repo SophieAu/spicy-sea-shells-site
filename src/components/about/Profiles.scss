@@ -24,6 +24,7 @@ $card-border-radius: 0.75rem;
     .image {
       line-height: 0;
     }
+
     .profile {
       display: flex;
       flex-direction: column;
@@ -75,14 +76,13 @@ $card-border-radius: 0.75rem;
     width: $tall-card-width;
     flex-direction: column;
 
-    .image {
+    .image.-top {
       height: 11.25rem;
       width: $tall-card-width;
       border-radius: $card-border-radius $card-border-radius 0 0;
-
-      &.-side {
-        display: none;
-      }
+    }
+    .image.-side {
+      display: none;
     }
 
     .profile {
@@ -118,14 +118,13 @@ $card-border-radius: 0.75rem;
     width: 32.5rem;
     flex-direction: row;
 
-    .image {
+    .image.-side {
       width: 10rem;
       height: 20rem;
       border-radius: $card-border-radius 0 0 $card-border-radius;
-
-      &.-top {
-        display: none;
-      }
+    }
+    .image.-top {
+      display: none;
     }
 
     .profile {
