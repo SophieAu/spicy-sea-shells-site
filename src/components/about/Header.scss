@@ -26,9 +26,10 @@
   }
 
   .logo {
-    display: block;
     height: var(--logo-height);
     width: auto;
+    line-height: 0;
+    text-align: right;
   }
 }
 

@@ -7,6 +7,8 @@ export default () => (
     <Title className="title" />
     <Intro className="text intro" />
     <BlogCallToAction className="text blog-cta" />
-    <Logo className="logo" />
+    <div className="logo">
+      <Logo className="logo" />
+    </div>
   </header>
 )
