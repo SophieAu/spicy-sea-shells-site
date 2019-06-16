@@ -2,7 +2,7 @@ import React from 'react'
 import './PostList.scss'
 
 export default ({ posts }) => (
-  <ul className="post-list">
+  <ul id="post-list">
     {posts.map(({ node }) => (
       <li key={node.id}>
         <h2 className="title">

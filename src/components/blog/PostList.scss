@@ -1,8 +1,9 @@
 @import '../../variables';
 
-.post-list {
+#post-list {
   li {
     padding-bottom: 4rem;
+    list-style: none;
   }
 
   .title {
