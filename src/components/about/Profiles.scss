@@ -160,9 +160,6 @@ $card-border-radius: 0.75rem;
 
     > .card {
       @media (max-width: $midscreen-breakpoint) {
-        width: 30rem;
-      }
-      @media (max-width: $desktop-breakpoint) {
         width: 29rem;
       }
     }
