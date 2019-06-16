@@ -1,58 +1,19 @@
-$tall-card-width: 18rem;
+@media (max-width: $tablet-breakpoint - 1) {
+  #about > .body {
+    @include tall-card;
+  }
+}
 
-@media (max-width: $tablet-breakpoint) {
-  #about > .body > .card {
-    height: 28rem;
-    width: $tall-card-width;
-    flex-direction: column;
+@media (min-width: $tablet-breakpoint) {
+  #about > .body {
+    @include wide-card;
 
-    .image {
-      &.-top {
-        display: block;
-
-        img {
-          height: 11.25rem;
-          width: $tall-card-width;
-          border-radius: $card-border-radius $card-border-radius 0 0;
-        }
+    > .card {
+      @media (max-width: $midscreen-breakpoint) {
+        width: 30rem;
       }
-
-      &.-side {
-        display: none;
-      }
-    }
-
-    .profile {
-      padding: 0.75rem 1rem 1rem;
-      height: 100%;
-      width: $tall-card-width - 2rem;
-
-      .info {
-        height: 100%;
-        text-align: center;
-
-        .name {
-          margin-top: 0.25rem;
-        }
-
-        .bio {
-          &.-long {
-            display: none;
-          }
-
-          &.-short {
-            display: block;
-          }
-        }
-      }
-
-      .social-media > .links {
-        display: flex;
-        justify-content: space-evenly;
-
-        a {
-          padding: 0;
-        }
+      @media (max-width: $desktop-breakpoint) {
+        width: 29rem;
       }
     }
   }
