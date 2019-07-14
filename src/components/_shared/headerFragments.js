@@ -14,7 +14,7 @@ export const Intro = ({ className }) => (
 
 export const BlogCallToAction = ({ className }) => (
   <p className={className}>
-    Together we're running the{' '}
+    {`Together we're running the `}
     <a className="cta-link" href="/blog">
       Spicy Blog
     </a>
