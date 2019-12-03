@@ -1,9 +1,18 @@
 {
   "name": "spicy-sea-shells-site",
   "private": true,
-  "description": "A blog for the Spicy Sea Shells",
   "version": "0.1.0",
+  "description": "A blog for the Spicy Sea Shells",
+  "main": "index.js",
   "author": "Sophie Au <sophie@sophieau.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "format": "prettier --write \"src/**/*.js\""
+  },
   "dependencies": {
     "commentbox.io": "^2.0.0",
     "gatsby": "^2.18.6",
@@ -25,14 +34,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0"
-  },
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --write \"src/**/*.js\""
   },
   "devDependencies": {
     "prettier": "1.15.3"
