@@ -8,7 +8,6 @@ _non-code/
 public
 node_modules/
 yarn.lock
-package-lock.json
 
 # Mac files
 .DS_Store
