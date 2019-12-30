@@ -1,7 +1,7 @@
 import React from 'react'
-import profiles from '../../profiles.js'
+import profiles from '../../profiles'
 import './Profiles.scss'
-import { BaseInfo, SocialMedia, UserInfo } from '../../types.js'
+import { BaseInfo, SocialMedia, UserInfo } from '../../types'
 
 const Profiles = () => (
   <main className="body">
@@ -10,7 +10,7 @@ const Profiles = () => (
         <ProfilePicture name={profile.image} />
         <div className="profile">
           <InfoBox baseInfo={profile.baseInfo} />
-          <SocialMedia socialMedia={profile.socialMedia} />
+          <SocialMediaIcons socialMedia={profile.socialMedia} />
         </div>
       </div>
     ))}
@@ -43,7 +43,7 @@ const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
   </div>
 )
 
-const SocialMedia: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
+const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
   <div className="social-media">
     <hr />
     <div className="links">

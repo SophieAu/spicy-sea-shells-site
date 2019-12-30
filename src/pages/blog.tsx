@@ -1,12 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import PostList from '../components/blog/PostList.js'
-import Wrapper from '../components/blog/Wrapper.js'
-import { Intro } from '../components/_shared/headerFragments.js'
+import PostList from '../components/blog/PostList'
+import Wrapper from '../components/blog/Wrapper'
+import { Intro } from '../components/_shared/headerFragments'
 import './blog.scss'
 import '../main.scss'
-import { GraphQLResponse } from '../types.js'
+import { GraphQLResponse } from '../types'
 
 export const query = graphql`
   query {

@@ -42,3 +42,33 @@ export type GraphQLResponse = {
     }
   }
 }
+
+export type SingleGraphQLResponse = {
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        slug: string
+        title: string
+        author: string
+        date: string
+      }
+      html: string
+    }
+  }
+}
+
+export type PostFrontmatter = {
+  frontmatter: {
+    slug: string
+    title: string
+    author: string
+    date: string
+    crosspost?: Crosspost
+  }
+}
+
+export type Crosspost = {
+  url: string
+  site: string
+  prefix: boolean
+}

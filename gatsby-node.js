@@ -1,5 +1,5 @@
-import path from 'path'
-import { createFilePath } from 'gatsby-source-filesystem'
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 const QUERY = `{
     allMarkdownRemark {
@@ -23,7 +23,7 @@ exports.createPages = ({ graphql, actions }) =>
       nodes.forEach(({ node: { frontmatter: { slug } } }) => {
         actions.createPage({
           path: 'article/' + slug,
-          component: path.resolve(`./src/templates/post.js`),
+          component: path.resolve(`./src/templates/post.tsx`),
           context: { slug },
         })
       })
