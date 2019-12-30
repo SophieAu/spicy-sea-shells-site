@@ -1,7 +1,8 @@
 import React from 'react'
 import './PostList.scss'
+import { Post } from '../../types'
 
-export default ({ posts }) => (
+const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
   <ul id="post-list">
     {posts.map(({ node }) => (
       <li key={node.id}>
@@ -19,3 +20,5 @@ export default ({ posts }) => (
     ))}
   </ul>
 )
+
+export default PostList

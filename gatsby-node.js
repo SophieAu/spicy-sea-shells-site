@@ -1,45 +1,43 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+import path from 'path'
+import { createFilePath } from 'gatsby-source-filesystem'
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                slug
-              }
-            }
+const QUERY = `{
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            slug
           }
         }
       }
-    `).then(result => {
+    }
+  }
+`
+
+exports.createPages = ({ graphql, actions }) =>
+  new Promise((resolve, _) => {
+    graphql(QUERY).then(result => {
       console.log(JSON.stringify(result, null, 4))
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: 'article/' + node.frontmatter.slug,
+
+      const nodes = result.data.allMarkdownRemark.edges
+      nodes.forEach(({ node: { frontmatter: { slug } } }) => {
+        actions.createPage({
+          path: 'article/' + slug,
           component: path.resolve(`./src/templates/post.js`),
-          context: {
-            slug: node.frontmatter.slug,
-          },
+          context: { slug },
         })
       })
+
       resolve()
     })
   })
-}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
+  if (node.internal.type !== `MarkdownRemark`) return
+
+  actions.createNodeField({
+    name: `slug`,
+    node,
+    value: createFilePath({ node, getNode }),
+  })
 }

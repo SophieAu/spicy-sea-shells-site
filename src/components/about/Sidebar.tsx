@@ -3,7 +3,7 @@ import { Intro, BlogCallToAction, Logo } from '../_shared/headerFragments'
 import Footer from '../_shared/footerFragment'
 import './Sidebar.scss'
 
-export default () => (
+const Sidebar = () => (
   <header className="sidebar-wrapper">
     <div className="sidebar">
       <div className="sidebar-body">
@@ -17,3 +17,5 @@ export default () => (
     </div>
   </header>
 )
+
+export default Sidebar

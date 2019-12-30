@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-export default () => (
+const Home = () => (
   <Helmet>
     <meta http-equiv="refresh" content="0; url=/blog" />
     <title>Spicy Sea Shells</title>
@@ -13,3 +13,5 @@ export default () => (
     />
   </Helmet>
 )
+
+export default Home

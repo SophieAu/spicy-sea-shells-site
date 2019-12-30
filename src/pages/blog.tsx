@@ -1,13 +1,34 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PostList from '../components/blog/PostList.js'
 import Wrapper from '../components/blog/Wrapper.js'
 import { Intro } from '../components/_shared/headerFragments.js'
 import './blog.scss'
 import '../main.scss'
+import { GraphQLResponse } from '../types.js'
 
-export default ({ data }) => (
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            author
+            date(formatString: "DD MMMM YYYY")
+            slug
+          }
+          excerpt(pruneLength: 280)
+        }
+      }
+    }
+  }
+`
+
+const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <>
     <Helmet>
       <title>Spicy Blog | Spicy Sea Shells</title>
@@ -38,22 +59,4 @@ export default ({ data }) => (
   </>
 )
 
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            author
-            date(formatString: "DD MMMM YYYY")
-            slug
-          }
-          excerpt(pruneLength: 280)
-        }
-      }
-    }
-  }
-`
+export default Blog

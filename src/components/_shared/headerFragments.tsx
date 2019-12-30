@@ -2,9 +2,11 @@ import React from 'react'
 import './headerFragments.scss'
 import logo from '../../images/logo.png'
 
-export const Title = ({ className }) => <h1 className={className}>Spicy Sea Shells</h1>
+const Title: React.FC<{ className?: string }> = ({ className }) => (
+  <h1 className={className}>Spicy Sea Shells</h1>
+)
 
-export const Intro = ({ className }) => (
+const Intro: React.FC<{ className?: string }> = ({ className }) => (
   <p className={className}>
     <span className="-extended">Who are we? </span>We are a collective of software developers,
     business analysts and quality analysts
@@ -12,7 +14,7 @@ export const Intro = ({ className }) => (
   </p>
 )
 
-export const BlogCallToAction = ({ className }) => (
+const BlogCallToAction: React.FC<{ className?: string }> = ({ className }) => (
   <p className={className}>
     {`Together we're running the `}
     <a className="cta-link" href="/blog">
@@ -21,6 +23,8 @@ export const BlogCallToAction = ({ className }) => (
   </p>
 )
 
-export const Logo = ({ className }) => (
+const Logo: React.FC<{ className?: string }> = ({ className }) => (
   <img className={className} src={logo} alt="Spicy Sea Shells logo" />
 )
+
+export { Title, Intro, BlogCallToAction, Logo }

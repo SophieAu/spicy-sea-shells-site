@@ -7,7 +7,7 @@ import Sidebar from '../components/about/Sidebar.js'
 import './about.scss'
 import '../main.scss'
 
-export default () => (
+const About = () => (
   <>
     <Helmet>
       <title>About | Spicy Sea Shells</title>
@@ -26,3 +26,5 @@ export default () => (
     </div>
   </>
 )
+
+export default About

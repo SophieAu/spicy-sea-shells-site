@@ -2,7 +2,7 @@ import React from 'react'
 import { Title, Intro, BlogCallToAction, Logo } from '../_shared/headerFragments'
 import './Header.scss'
 
-export default () => (
+const Header = () => (
   <header className="header">
     <Title className="title" />
     <Intro className="text intro" />
@@ -12,3 +12,5 @@ export default () => (
     </div>
   </header>
 )
+
+export default Header
