@@ -24,7 +24,7 @@ const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => 
 )
 
 const HelmetData: React.FC<PostFrontmatter> = ({ title }) => (
-  <Helmet>
+  <Helmet htmlAttributes={{ lang: 'en' }}>
     <title>{`${title} | ${strings.Post.pageTitle}`}</title>
     <meta name="description" content={`${strings.Post.description} ${title}`} />
   </Helmet>

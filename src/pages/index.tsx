@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import strings from '../../data/strings'
 
 const Home = () => (
-  <Helmet>
+  <Helmet htmlAttributes={{ lang: 'en' }}>
     <meta http-equiv="refresh" content="0; url=/blog" />
     <title>{strings.Home.pageTitle}</title>
     <meta name="description" content={strings.Home.description} />

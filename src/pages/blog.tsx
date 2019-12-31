@@ -31,7 +31,7 @@ export const query = graphql`
 
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <>
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: 'en' }}>
       <title>{strings.Blog.pageTitle}</title>
       <meta name="description" content={strings.Blog.description} />
     </Helmet>

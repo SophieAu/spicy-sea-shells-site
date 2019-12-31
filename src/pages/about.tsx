@@ -10,7 +10,7 @@ import strings from '../../data/strings'
 
 const About = () => (
   <>
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: 'en' }}>
       <title>{strings.About.pageTitle}</title>
       <meta name="description" content={strings.About.description} />
     </Helmet>
