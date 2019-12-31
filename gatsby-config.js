@@ -11,7 +11,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-csp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -28,7 +27,7 @@ module.exports = {
         mergeStyleHashes: false,
         directives: {
           'style-src': "'self' 'unsafe-inline'",
-          'frame-src': 'https://app.commentbox.io/*',
+          'frame-src': 'https://app.commentbox.io',
         },
       },
     },
