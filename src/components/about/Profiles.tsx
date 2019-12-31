@@ -36,7 +36,7 @@ const ProfilePicture: React.FC<{ name: string }> = ({ name }) => (
 
 const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
   <div className="info">
-    <h4 className="city">{baseInfo.city}</h4>
+    <p className="city">{baseInfo.city}</p>
     <h2 className="name">{baseInfo.name}</h2>
     <p className="bio -long">{baseInfo.bio}</p>
     <p className="bio -short">{baseInfo.bioShort}</p>
