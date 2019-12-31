@@ -1,8 +1,19 @@
 // ---
 // User Info
 
+export type Author = 'kamala' | 'sophie' | 'jean' | 'jackie' | 'nimish' | 'andrei' | 'ellie';
+export type SocialMediaPlatform =
+  | 'twitter'
+  | 'linkedin'
+  | 'medium'
+  | 'facebook'
+  | 'instagram'
+  | 'github'
+  | 'dribbble'
+  | 'website';
+
 export type UserInfo = {
-  image: string;
+  id: Author;
   baseInfo: BaseInfo;
   socialMedia: SocialMedia[];
 };
@@ -15,7 +26,7 @@ export type BaseInfo = {
 };
 
 export type SocialMedia = {
-  platform: string;
+  platform: SocialMediaPlatform;
   url: string;
 };
 
@@ -25,12 +36,7 @@ export type SocialMedia = {
 export type Post = {
   node: {
     id: number;
-    frontmatter: {
-      slug: string;
-      title: string;
-      author: string;
-      date: string;
-    };
+    frontmatter: PostFrontmatter;
     excerpt: string;
   };
 };
@@ -46,12 +52,7 @@ export type GraphQLResponse = {
 export type SingleGraphQLResponse = {
   data: {
     markdownRemark: {
-      frontmatter: {
-        slug: string;
-        title: string;
-        author: string;
-        date: string;
-      };
+      frontmatter: PostFrontmatter;
       html: string;
     };
   };
@@ -60,7 +61,7 @@ export type SingleGraphQLResponse = {
 export type PostFrontmatter = {
   slug: string;
   title: string;
-  author: string;
+  author: Author;
   date: string;
   crosspost?: Crosspost;
 };

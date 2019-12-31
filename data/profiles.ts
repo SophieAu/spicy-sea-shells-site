@@ -1,7 +1,8 @@
 import { UserInfo } from '../src/types';
 
-const UserInfos: UserInfo[] = [
+const userInfos: UserInfo[] = [
   {
+    id: 'sophie',
     baseInfo: {
       name: 'Sophie Au',
       city: 'Berlin, Germany',
@@ -10,7 +11,6 @@ const UserInfos: UserInfo[] = [
       bioShort:
         "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I'm exploring Berlin.",
     },
-    image: 'sophie',
     socialMedia: [
       { platform: 'github', url: 'https://github.com/SophieAu' },
       { platform: 'website', url: 'https://sophieau.com' },
@@ -20,6 +20,7 @@ const UserInfos: UserInfo[] = [
     ],
   },
   {
+    id: 'jean',
     baseInfo: {
       name: 'Jean Bauer',
       city: 'Porto Alegre, Brazil',
@@ -28,8 +29,6 @@ const UserInfos: UserInfo[] = [
       bioShort:
         "I’m a consultant developer focused on building web solutions for real-life problems, most of the time using JavaScript. I'm currently working for ThoughtWorks.",
     },
-    image: 'jean',
-
     socialMedia: [
       { platform: 'github', url: 'https://github.com/jeanbauer' },
       { platform: 'twitter', url: 'https://twitter.com/jeanbauerr' },
@@ -37,6 +36,7 @@ const UserInfos: UserInfo[] = [
     ],
   },
   {
+    id: 'ellie',
     baseInfo: {
       name: 'Elloise Przybylo',
       city: 'Brisbane, Australia',
@@ -45,13 +45,12 @@ const UserInfos: UserInfo[] = [
       bioShort:
         "I'm a business analyst living in Brisbane. I have a Bachelor of Information Technology from the University of Queensland focussing on web and user experience design.",
     },
-    image: 'ellie',
-
     socialMedia: [
       { platform: 'linkedin', url: 'https://www.linkedin.com/in/elloise-przybylo-2ab00b143/' },
     ],
   },
   {
+    id: 'jackie',
     baseInfo: {
       name: 'Jackie Robinson',
       city: 'Dallas, TX, USA',
@@ -60,8 +59,6 @@ const UserInfos: UserInfo[] = [
       bioShort:
         "I'm a software developer from Slidell, Louisiana. Fun Facts: I'm an identical twin. I love Android. I have serious obsession with music. Did I mention I love Android?",
     },
-    image: 'jackie',
-
     socialMedia: [
       { platform: 'facebook', url: 'https://www.facebook.com/jackie.robinson.7' },
       { platform: 'instagram', url: 'https://www.instagram.com/jakalak/' },
@@ -70,6 +67,7 @@ const UserInfos: UserInfo[] = [
     ],
   },
   {
+    id: 'kamala',
     baseInfo: {
       name: 'Kamalashree Nagaraj',
       city: 'Bangalore, India',
@@ -78,7 +76,6 @@ const UserInfos: UserInfo[] = [
       bioShort:
         "I'm a full-stack developer with a passion for back-end development, data analytics and agile consulting. When not coding, you can find me, the gardener, the gamer, the artist!",
     },
-    image: 'kamala',
     socialMedia: [
       { platform: 'github', url: 'https://github.com/KamalashreeNagaraj' },
       { platform: 'facebook', url: 'https://www.facebook.com/kamalashreen' },
@@ -88,6 +85,7 @@ const UserInfos: UserInfo[] = [
     ],
   },
   {
+    id: 'andrei',
     baseInfo: {
       name: 'Andrei Cartan',
       city: 'Manchester, United Kingdom',
@@ -96,7 +94,6 @@ const UserInfos: UserInfo[] = [
       bioShort:
         'Tennis fan with a big passion for trains and DevOps (Terraform and AWS). Doing AR in iOS as a hobby. Pushing to launch my first mobile app and speak at a conference.',
     },
-    image: 'andrei',
     socialMedia: [
       { platform: 'instagram', url: 'https://www.instagram.com/justakid94' },
       { platform: 'linkedin', url: 'https://www.linkedin.com/in/andreialexandrucartan' },
@@ -105,6 +102,7 @@ const UserInfos: UserInfo[] = [
     ],
   },
   {
+    id: 'nimish',
     baseInfo: {
       name: 'Nimish Singh',
       city: 'Gurgaon, India',
@@ -113,7 +111,6 @@ const UserInfos: UserInfo[] = [
       bioShort:
         'I enjoy looking through different technologies and tools. I am a sincere guy who thrives in a team environment. I also enjoy making pencil sketches and reading books.',
     },
-    image: 'nimish',
     socialMedia: [
       { platform: 'github', url: 'https://www.github.com/Nimish-Singh' },
       { platform: 'linkedin', url: 'https://www.linkedin.com/in/nimish-singh' },
@@ -121,4 +118,4 @@ const UserInfos: UserInfo[] = [
   },
 ];
 
-export default UserInfos;
+export default userInfos;

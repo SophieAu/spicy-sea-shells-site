@@ -2,9 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SITE_LANG = 'en';
-// const CREATOR = '@trydonut';
 const BASE_URL = 'https://spicyseashells.com';
-// const META_IMAGE = `metaImage.png`;
 
 interface Props {
   title: string;
@@ -14,7 +12,7 @@ interface Props {
   creator?: string;
 }
 
-const SEO: React.FC<Props> = ({ title, description, slug, children }) => (
+const SEO: React.FC<Props> = ({ title, description, slug, children, creator }) => (
   <Helmet
     htmlAttributes={{
       lang: SITE_LANG,
@@ -39,10 +37,6 @@ const SEO: React.FC<Props> = ({ title, description, slug, children }) => (
         content: `website`,
       },
       {
-        property: `og:image`,
-        content: `${BASE_URL}/${META_IMAGE}`,
-      },
-      {
         property: `og:url`,
         content: `${BASE_URL}/${slug}`,
       },
@@ -64,11 +58,7 @@ const SEO: React.FC<Props> = ({ title, description, slug, children }) => (
       },
       {
         name: `twitter:site`,
-        content: CREATOR,
-      },
-      {
-        name: `twitter:image`,
-        content: `${BASE_URL}/${META_IMAGE}`,
+        content: creator || '',
       },
     ]}
   >

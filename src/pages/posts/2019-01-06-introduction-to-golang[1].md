@@ -2,7 +2,7 @@
 title:  "Introduction to Golang [Part I]"
 date:   2019-01-06 11:35:00
 slug: "introduction-to-golang"
-author: "Kamalashree N"
+author: "kamala"
 ---
 
 Working for one of the clients here at ThoughtWorks, I found myself working a lot on Golang. **Go** has been a great language to work on but it never felt that way the first time I started on it. To begin with, it has a strange syntax, as opposed to most other *strongly typed languages*. The [Golang tour](https://tour.golang.org/) is a great place to start with. 

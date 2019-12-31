@@ -1,13 +1,13 @@
 import React from 'react';
 import profiles from '../../../data/profiles';
 import './Profiles.scss';
-import { BaseInfo, SocialMedia, UserInfo } from '../../types';
+import { BaseInfo, SocialMedia } from '../../types';
 
 const Profiles = () => (
   <main className="body">
-    {profiles.map((profile: UserInfo, i: number) => (
-      <div className="card" key={i}>
-        <ProfilePicture name={profile.image} />
+    {profiles.map(profile => (
+      <div className="card" key={profile.id}>
+        <ProfilePicture id={profile.id} name={profile.baseInfo.name} />
         <div className="profile">
           <InfoBox baseInfo={profile.baseInfo} />
           <SocialMediaIcons socialMedia={profile.socialMedia} />
@@ -17,21 +17,19 @@ const Profiles = () => (
   </main>
 );
 
-const ProfilePicture: React.FC<{ name: string }> = ({ name }) => (
-  <>
-    <div className="image">
-      <img
-        className="image -side"
-        src={require('../../../data/images/profiles/' + name + '_tall.jpg')}
-        alt={name}
-      />
-      <img
-        className="image -top"
-        src={require('../../../data/images/profiles/' + name + '_wide.jpg')}
-        alt={name}
-      />
-    </div>
-  </>
+const ProfilePicture: React.FC<{ id: string; name: string }> = ({ id, name }) => (
+  <div className="image">
+    <img
+      className="image -side"
+      src={require('../../../data/images/profiles/' + id + '_tall.jpg')}
+      alt={name}
+    />
+    <img
+      className="image -top"
+      src={require('../../../data/images/profiles/' + id + '_wide.jpg')}
+      alt={name}
+    />
+  </div>
 );
 
 const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (

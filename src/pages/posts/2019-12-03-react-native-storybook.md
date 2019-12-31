@@ -2,7 +2,7 @@
 title:  "Setting up Storybook for React Native"
 date:   2019-12-03 18:14:58
 slug: "react-native-storybook"
-author: "Sophie Au"
+author: "sophie"
 crosspost:
   url: https://sophieau.com/article/python-mock-stdin-stderr-stdout
   site: "Sophie's Blog"

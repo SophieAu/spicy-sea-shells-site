@@ -9,6 +9,7 @@ import './post.scss';
 import { SingleGraphQLResponse, PostFrontmatter } from '../types';
 import strings from '../../data/strings';
 import SEO from '../components/_shared/SEO';
+import { getSocialMediaHandle, getName } from '../helpers';
 
 const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
   <>
@@ -23,11 +24,12 @@ const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => 
   </>
 );
 
-const HelmetData: React.FC<PostFrontmatter> = ({ title, slug }) => (
+const HelmetData: React.FC<PostFrontmatter> = ({ title, slug, author }) => (
   <SEO
     title={`${title} | ${strings.Post.pageTitle}`}
     description={`${strings.Post.description} ${title}`}
     slug={`article/${slug}`}
+    creator={getSocialMediaHandle(author, 'twitter')}
   />
 );
 
@@ -35,7 +37,7 @@ const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost
   <>
     <h1>{title}</h1>
     <div className="meta">
-      <p className="author">{`By ${author}`}</p>
+      <p className="author">{`By ${getName(author)}`}</p>
       <p className="date">{date}</p>
     </div>
     {!!crosspost && (

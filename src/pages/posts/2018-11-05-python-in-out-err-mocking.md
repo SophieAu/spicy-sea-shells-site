@@ -2,7 +2,7 @@
 title:  "Mocking stdin, stderr and stdout for python unittest"
 date:   2018-11-05 19:14:58
 slug: "python-mock-stdin-stderr-stdout"
-author: "Sophie Au"
+author: "sophie"
 crosspost:
   url: https://sophieau.com/article/python-mock-stdin-stderr-stdout
   site: "Sophie's Blog"
