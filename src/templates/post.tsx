@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import 'prismjs/themes/prism-okaidia.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
@@ -9,6 +8,7 @@ import '../main.scss'
 import './post.scss'
 import { SingleGraphQLResponse, PostFrontmatter } from '../types'
 import strings from '../../data/strings'
+import SEO from '../components/_shared/SEO'
 
 const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
   <>
@@ -23,11 +23,12 @@ const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => 
   </>
 )
 
-const HelmetData: React.FC<PostFrontmatter> = ({ title }) => (
-  <Helmet htmlAttributes={{ lang: 'en' }}>
-    <title>{`${title} | ${strings.Post.pageTitle}`}</title>
-    <meta name="description" content={`${strings.Post.description} ${title}`} />
-  </Helmet>
+const HelmetData: React.FC<PostFrontmatter> = ({ title, slug }) => (
+  <SEO
+    title={`${title} | ${strings.Post.pageTitle}`}
+    description={`${strings.Post.description} ${title}`}
+    slug={`article/${slug}`}
+  />
 )
 
 const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost }) => (

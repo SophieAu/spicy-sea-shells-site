@@ -1,13 +1,11 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import strings from '../../data/strings'
+import SEO from '../components/_shared/SEO'
 
 const Home = () => (
-  <Helmet htmlAttributes={{ lang: 'en' }}>
+  <SEO title={strings.Home.pageTitle} description={strings.Home.description} slug={''}>
     <meta httpEquiv="refresh" content="0; url=/blog" />
-    <title>{strings.Home.pageTitle}</title>
-    <meta name="description" content={strings.Home.description} />
-  </Helmet>
+  </SEO>
 )
 
 export default Home

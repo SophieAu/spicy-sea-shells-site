@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PostList from '../components/blog/PostList'
 import Wrapper from '../components/blog/Wrapper'
@@ -8,6 +7,7 @@ import './blog.scss'
 import '../main.scss'
 import { GraphQLResponse } from '../types'
 import strings from '../../data/strings'
+import SEO from '../components/_shared/SEO'
 
 export const query = graphql`
   query {
@@ -31,10 +31,7 @@ export const query = graphql`
 
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <>
-    <Helmet htmlAttributes={{ lang: 'en' }}>
-      <title>{strings.Blog.pageTitle}</title>
-      <meta name="description" content={strings.Blog.description} />
-    </Helmet>
+    <SEO title={strings.Blog.pageTitle} description={strings.Blog.description} slug="blog" />
     <Wrapper>
       <section className="hero-section">
         <h1>{strings.Blog.title}</h1>
