@@ -1,6 +1,8 @@
-import React from 'react';
-import { Title, Intro, BlogCallToAction } from '../_shared/headerFragments';
 import './Header.scss';
+
+import React from 'react';
+
+import { BlogCallToAction, Intro, Title } from '../_shared/headerFragments';
 import logo56 from '../../../data/images/logo_56.png';
 import logo144 from '../../../data/images/logo_144.png';
 import logo192 from '../../../data/images/logo_192.png';

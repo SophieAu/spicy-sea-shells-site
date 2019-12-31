@@ -1,9 +1,11 @@
-import React from 'react';
-import { Intro, BlogCallToAction } from '../_shared/headerFragments';
-import Footer from '../_shared/footerFragment';
 import './Sidebar.scss';
-import strings from '../../../data/strings';
+
+import React from 'react';
+
+import Footer from '../_shared/footerFragment';
+import { BlogCallToAction, Intro } from '../_shared/headerFragments';
 import logo from '../../../data/images/logo_256.png';
+import strings from '../../../data/strings';
 
 const Sidebar = () => (
   <div className="sidebar-wrapper">

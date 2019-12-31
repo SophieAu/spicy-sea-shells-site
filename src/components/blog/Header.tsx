@@ -1,7 +1,9 @@
-import React from 'react';
 import './Header.scss';
-import strings from '../../../data/strings';
+
+import React from 'react';
+
 import logo from '../../../data/images/logo_96.png';
+import strings from '../../../data/strings';
 
 const Header = () => (
   <header className="header">

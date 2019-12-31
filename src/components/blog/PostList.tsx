@@ -1,8 +1,10 @@
-import React from 'react';
 import './PostList.scss';
-import { Post } from '../../types';
+
+import React from 'react';
+
 import strings from '../../../data/strings';
 import { getName } from '../../helpers';
+import { Post } from '../../types';
 
 const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
   <ul id="post-list">

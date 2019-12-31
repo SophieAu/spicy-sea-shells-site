@@ -1,5 +1,7 @@
-import React from 'react';
 import './headerFragments.scss';
+
+import React from 'react';
+
 import strings from '../../../data/strings';
 
 const Title: React.FC<{ className?: string }> = ({ className }) => (

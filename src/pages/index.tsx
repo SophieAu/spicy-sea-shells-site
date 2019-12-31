@@ -1,4 +1,5 @@
 import React from 'react';
+
 import strings from '../../data/strings';
 import SEO from '../components/_shared/SEO';
 

@@ -1,6 +1,8 @@
-import React from 'react';
-import profiles from '../../../data/profiles';
 import './Profiles.scss';
+
+import React from 'react';
+
+import profiles from '../../../data/profiles';
 import { BaseInfo, SocialMedia } from '../../types';
 
 const Profiles = () => (

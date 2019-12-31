@@ -1,5 +1,7 @@
-import React from 'react';
 import './Footer.scss';
+
+import React from 'react';
+
 import FooterFragment from './footerFragment';
 
 const Footer = () => <FooterFragment className="footer" />;

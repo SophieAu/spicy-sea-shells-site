@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
-import { graphql } from 'gatsby';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
-import Wrapper from '../components/blog/Wrapper';
-import commentBox from 'commentbox.io';
 import '../main.scss';
 import './post.scss';
-import { SingleGraphQLResponse, PostFrontmatter } from '../types';
+
+import commentBox from 'commentbox.io';
+import { graphql } from 'gatsby';
+import React, { useEffect } from 'react';
+
 import strings from '../../data/strings';
 import SEO from '../components/_shared/SEO';
-import { getSocialMediaHandle, getName } from '../helpers';
+import Wrapper from '../components/blog/Wrapper';
+import { getName, getSocialMediaHandle } from '../helpers';
+import { PostFrontmatter, SingleGraphQLResponse } from '../types';
 
 const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
   <>

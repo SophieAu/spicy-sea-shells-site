@@ -1,5 +1,5 @@
-import { Author, SocialMediaPlatform } from './types';
 import profiles from '../data/profiles';
+import { Author, SocialMediaPlatform } from './types';
 
 export const getSocialMediaHandle = (author: Author, platform: SocialMediaPlatform) => {
   if (platform !== 'twitter') return;

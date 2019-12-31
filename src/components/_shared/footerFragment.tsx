@@ -1,5 +1,7 @@
-import React from 'react';
 import './footerFragment.scss';
+
+import React from 'react';
+
 import chili from '../../../data/images/chili.svg';
 import strings from '../../../data/strings';
 

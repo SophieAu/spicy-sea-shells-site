@@ -1,13 +1,15 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import PostList from '../components/blog/PostList';
-import Wrapper from '../components/blog/Wrapper';
-import { Intro } from '../components/_shared/headerFragments';
 import './blog.scss';
 import '../main.scss';
-import { GraphQLResponse } from '../types';
+
+import { graphql } from 'gatsby';
+import React from 'react';
+
 import strings from '../../data/strings';
+import { Intro } from '../components/_shared/headerFragments';
 import SEO from '../components/_shared/SEO';
+import PostList from '../components/blog/PostList';
+import Wrapper from '../components/blog/Wrapper';
+import { GraphQLResponse } from '../types';
 
 export const query = graphql`
   query {
