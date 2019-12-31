@@ -7,9 +7,7 @@ const Header = () => (
     <Title className="title" />
     <Intro className="text intro" />
     <BlogCallToAction className="text blog-cta" />
-    <div className="logo">
-      <Logo className="logo" />
-    </div>
+    <Logo className="logo" />
   </header>
 )
 

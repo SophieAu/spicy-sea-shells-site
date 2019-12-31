@@ -14,10 +14,10 @@ const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => 
   <>
     <HelmetData {...markdownRemark.frontmatter} />
     <Wrapper>
-      <div id="post">
+      <article id="post">
         <Frontmatter {...markdownRemark.frontmatter} />
         <div className="post-body" dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-      </div>
+      </article>
       <CommentBox />
     </Wrapper>
   </>

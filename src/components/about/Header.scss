@@ -70,6 +70,9 @@
     --info-font-size: 1.5rem;
     --outside-padding: 1rem;
 
+    .title {
+      line-height: 3.5rem;
+    }
     .logo {
       grid-area: 1 / 2 / 2 / 3;
     }

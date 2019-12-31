@@ -20,6 +20,10 @@ const BlogHeader = {
   aboutLink: 'About',
 }
 
+const PostList = {
+  authorTag: 'By',
+}
+
 const About = {
   pageTitle: 'About | Spicy Sea Shells',
   description:
@@ -50,4 +54,4 @@ const Post = {
   crosspostPrefix: 'the',
 }
 
-export default { ...Shared, BlogHeader, About, Blog, Home, Post }
+export default { ...Shared, BlogHeader, About, Blog, Home, Post, PostList }

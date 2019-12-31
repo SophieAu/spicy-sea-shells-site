@@ -36,23 +36,19 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
       <meta name="description" content={strings.Blog.description} />
     </Helmet>
     <Wrapper>
-      <div className="blog-home">
-        <div className="hero-section">
-          <h1>{strings.Blog.title}</h1>
-          <div className="hero-text">
-            <p>
-              {`${strings.Blog.heroPreLink} `}
-              <a href="/about">{strings.Blog.heroLink}</a>
-              {` ${strings.Blog.heroPostLink}`}
-            </p>
-            <Intro />
-          </div>
-        </div>
-        <div className="posts">
-          <h1>{strings.Blog.latestHeading}</h1>
-          <PostList posts={data.allMarkdownRemark.edges} />
-        </div>
-      </div>
+      <section className="hero-section">
+        <h1>{strings.Blog.title}</h1>
+        <p className="hero-text">
+          {`${strings.Blog.heroPreLink} `}
+          <a href="/about">{strings.Blog.heroLink}</a>
+          {` ${strings.Blog.heroPostLink}`}
+        </p>
+        <Intro className="hero-text" />
+      </section>
+      <section className="posts">
+        <h1>{strings.Blog.latestHeading}</h1>
+        <PostList posts={data.allMarkdownRemark.edges} />
+      </section>
     </Wrapper>
   </>
 )
