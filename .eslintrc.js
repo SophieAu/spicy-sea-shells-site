@@ -3,12 +3,21 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'jsx-a11y'],
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
   ],
+  settings: {
+    react: {
+      version: 'detect', // Tell eslint-plugin-react to autodetect React version
+    },
+  },
+  rules: {
+    'react/prop-types': 0,
+    '@typescript-eslint/explicit-function-return-type': 0,
+  },
 }
 
 /*

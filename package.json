@@ -11,8 +11,11 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --write \"src/**/*.js\"",
-    "clean": "gatsby clean"
+    "format": "prettier --write \"src/**/*.tsx\"",
+    "clean": "gatsby clean",
+    "checks": "tsc && npm run lint",
+    "lint": "eslint 'src/**/*.ts' --ignore-pattern \"*.d.ts\" && eslint 'src/**/*.tsx' && eslint 'data/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --ignore-pattern \"*.d.ts\" --fix && eslint 'src/**/*.tsx' --fix && eslint 'data/**/*.tsx' --fix"
   },
   "dependencies": {
     "commentbox.io": "^2.0.0",
@@ -41,7 +44,9 @@
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "prettier": "1.15.3",
     "typescript": "^3.7.4"
   },
