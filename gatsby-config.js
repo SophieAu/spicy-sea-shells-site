@@ -24,7 +24,9 @@ module.exports = {
       resolve: `gatsby-plugin-csp`,
       options: {
         disableOnDev: false,
+        mergeStyleHashes: true,
         directives: {
+          'style-src': "'self' 'unsafe-inline'",
           'frame-src': 'https://app.commentbox.io',
         },
       },
