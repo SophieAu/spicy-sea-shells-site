@@ -8,10 +8,10 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-feed`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
