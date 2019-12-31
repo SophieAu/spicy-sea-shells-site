@@ -1,4 +1,4 @@
-import { UserInfo } from '../src/types'
+import { UserInfo } from '../src/types';
 
 const UserInfos: UserInfo[] = [
   {
@@ -119,6 +119,6 @@ const UserInfos: UserInfo[] = [
       { platform: 'linkedin', url: 'https://www.linkedin.com/in/nimish-singh' },
     ],
   },
-]
+];
 
-export default UserInfos
+export default UserInfos;

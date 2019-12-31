@@ -11,11 +11,11 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --write \"src/**/*.tsx\"",
+    "format": "prettier --write '{src,data}/**/*.{tsx,ts}'",
     "clean": "gatsby clean",
     "checks": "tsc && npm run lint",
-    "lint": "eslint 'src/**/*.ts' --ignore-pattern \"*.d.ts\" && eslint 'src/**/*.tsx' && eslint 'data/**/*.ts'",
-    "lint:fix": "eslint 'src/**/*.ts' --ignore-pattern \"*.d.ts\" --fix && eslint 'src/**/*.tsx' --fix && eslint 'data/**/*.tsx' --fix"
+    "lint": "eslint '{src,data}/**/*.{ts,tsx}' --ignore-pattern '*.d.ts'",
+    "lint:fix": "eslint '{src,data}/**/*.{ts,tsx}' --ignore-pattern '*.d.ts' --fix"
   },
   "dependencies": {
     "commentbox.io": "^2.0.0",

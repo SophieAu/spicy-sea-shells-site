@@ -13,22 +13,22 @@ const Shared = {
     blogCTALink: 'Spicy Blog',
     logoAlt: 'Spicy Sea Shells logo',
   },
-}
+};
 
 const BlogHeader = {
   homeLinkAlt: 'Homepage / Blog',
   aboutLink: 'About',
-}
+};
 
 const PostList = {
   authorTag: 'By',
-}
+};
 
 const About = {
   pageTitle: 'About | Spicy Sea Shells',
   description:
     'About page of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
-}
+};
 
 const Blog = {
   pageTitle: 'Spicy Blog | Spicy Sea Shells',
@@ -39,19 +39,19 @@ const Blog = {
   heroLink: 'Spicy Sea Shells',
   heroPostLink: 'and this is our blog.',
   latestHeading: 'Latest',
-}
+};
 
 const Home = {
   pageTitle: 'Spicy Sea Shells',
   description:
     'Homepage of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
-}
+};
 
 const Post = {
   pageTitle: 'Spicy Sea Shells',
   description: 'Blog of the Spicy Sea Shells | Blogpost about',
   crosspost: 'This is a crosspost from',
   crosspostPrefix: 'the',
-}
+};
 
-export default { ...Shared, BlogHeader, About, Blog, Home, Post, PostList }
+export default { ...Shared, BlogHeader, About, Blog, Home, Post, PostList };
