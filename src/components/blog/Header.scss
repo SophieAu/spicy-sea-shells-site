@@ -46,5 +46,9 @@
 @media all and (min-width: $tablet-breakpoint) {
   #blog > .header {
     --padding: calc((100vw - var(--content-width)) / 2);
+
+    .header-logo {
+      margin-left: 1rem;
+    }
   }
 }
