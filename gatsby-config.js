@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: `Spicy Sea Shells`,
@@ -10,6 +11,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-csp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -53,4 +55,4 @@ module.exports = {
       },
     },
   ],
-}
+};
