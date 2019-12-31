@@ -46,7 +46,7 @@ const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
 const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
   <div className="social-media">
     <hr />
-    <div className="links">
+    <ul className="links">
       {socialMedia
         .sort((a, b) => (a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0))
         .map((entry, i) => (
@@ -57,7 +57,7 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
             />
           </a>
         ))}
-    </div>
+    </ul>
   </div>
 )
 

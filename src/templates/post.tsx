@@ -39,7 +39,9 @@ const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost
     </div>
     {!!crosspost && (
       <div className="crosspost">
-        {`${strings.Post.crosspost} ${crosspost.hasPrefix && `${strings.Post.crosspostPrefix} `}`}
+        {`${strings.Post.crosspost} ${
+          crosspost.hasPrefix ? `${strings.Post.crosspostPrefix} ` : ''
+        }`}
         <a href={crosspost.url}>{crosspost.site}</a>.
       </div>
     )}

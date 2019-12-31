@@ -1,0 +1,9 @@
+{
+    "defaults": {
+        "includeWarnings": true
+    },
+    "urls":[
+        "https://spicyseashells.com/about/",
+        "https://spicyseashells.com/blog/",
+        "https://spicyseashells.com/article/react-native-storybook"
+]}
