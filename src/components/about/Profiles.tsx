@@ -1,7 +1,7 @@
-import React from 'react'
-import profiles from '../../../data/profiles'
-import './Profiles.scss'
-import { BaseInfo, SocialMedia, UserInfo } from '../../types'
+import React from 'react';
+import profiles from '../../../data/profiles';
+import './Profiles.scss';
+import { BaseInfo, SocialMedia, UserInfo } from '../../types';
 
 const Profiles = () => (
   <main className="body">
@@ -15,7 +15,7 @@ const Profiles = () => (
       </div>
     ))}
   </main>
-)
+);
 
 const ProfilePicture: React.FC<{ name: string }> = ({ name }) => (
   <>
@@ -32,7 +32,7 @@ const ProfilePicture: React.FC<{ name: string }> = ({ name }) => (
       />
     </div>
   </>
-)
+);
 
 const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
   <div className="info">
@@ -41,7 +41,7 @@ const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
     <p className="bio -long">{baseInfo.bio}</p>
     <p className="bio -short">{baseInfo.bioShort}</p>
   </div>
-)
+);
 
 const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
   <div className="social-media">
@@ -59,6 +59,6 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
         ))}
     </ul>
   </div>
-)
+);
 
-export default Profiles
+export default Profiles;

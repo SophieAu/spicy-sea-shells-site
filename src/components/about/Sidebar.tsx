@@ -1,7 +1,7 @@
-import React from 'react'
-import { Intro, BlogCallToAction, Logo } from '../_shared/headerFragments'
-import Footer from '../_shared/footerFragment'
-import './Sidebar.scss'
+import React from 'react';
+import { Intro, BlogCallToAction, Logo } from '../_shared/headerFragments';
+import Footer from '../_shared/footerFragment';
+import './Sidebar.scss';
 
 const Sidebar = () => (
   <div className="sidebar-wrapper">
@@ -16,6 +16,6 @@ const Sidebar = () => (
       <Footer className="sidebar-footer" />
     </div>
   </div>
-)
+);
 
-export default Sidebar
+export default Sidebar;

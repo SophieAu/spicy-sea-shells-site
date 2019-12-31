@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import PostList from '../components/blog/PostList'
-import Wrapper from '../components/blog/Wrapper'
-import { Intro } from '../components/_shared/headerFragments'
-import './blog.scss'
-import '../main.scss'
-import { GraphQLResponse } from '../types'
-import strings from '../../data/strings'
-import SEO from '../components/_shared/SEO'
+import React from 'react';
+import { graphql } from 'gatsby';
+import PostList from '../components/blog/PostList';
+import Wrapper from '../components/blog/Wrapper';
+import { Intro } from '../components/_shared/headerFragments';
+import './blog.scss';
+import '../main.scss';
+import { GraphQLResponse } from '../types';
+import strings from '../../data/strings';
+import SEO from '../components/_shared/SEO';
 
 export const query = graphql`
   query {
@@ -27,7 +27,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <>
@@ -48,6 +48,6 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
       </section>
     </Wrapper>
   </>
-)
+);
 
-export default Blog
+export default Blog;

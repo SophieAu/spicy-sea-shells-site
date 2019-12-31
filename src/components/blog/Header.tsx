@@ -1,7 +1,7 @@
-import React from 'react'
-import { Logo } from '../_shared/headerFragments'
-import './Header.scss'
-import strings from '../../../data/strings'
+import React from 'react';
+import { Logo } from '../_shared/headerFragments';
+import './Header.scss';
+import strings from '../../../data/strings';
 
 const Header = () => (
   <header className="header">
@@ -13,6 +13,6 @@ const Header = () => (
       <a href="/about">{strings.BlogHeader.aboutLink}</a>
     </nav>
   </header>
-)
+);
 
-export default Header
+export default Header;

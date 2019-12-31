@@ -1,7 +1,7 @@
-import React from 'react'
-import './PostList.scss'
-import { Post } from '../../types'
-import strings from '../../../data/strings'
+import React from 'react';
+import './PostList.scss';
+import { Post } from '../../types';
+import strings from '../../../data/strings';
 
 const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
   <ul id="post-list">
@@ -18,6 +18,6 @@ const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
       </li>
     ))}
   </ul>
-)
+);
 
-export default PostList
+export default PostList;

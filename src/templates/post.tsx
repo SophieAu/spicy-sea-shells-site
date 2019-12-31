@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import { graphql } from 'gatsby'
-import 'prismjs/themes/prism-okaidia.css'
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
-import Wrapper from '../components/blog/Wrapper'
-import commentBox from 'commentbox.io'
-import '../main.scss'
-import './post.scss'
-import { SingleGraphQLResponse, PostFrontmatter } from '../types'
-import strings from '../../data/strings'
-import SEO from '../components/_shared/SEO'
+import React, { useEffect } from 'react';
+import { graphql } from 'gatsby';
+import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import Wrapper from '../components/blog/Wrapper';
+import commentBox from 'commentbox.io';
+import '../main.scss';
+import './post.scss';
+import { SingleGraphQLResponse, PostFrontmatter } from '../types';
+import strings from '../../data/strings';
+import SEO from '../components/_shared/SEO';
 
 const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
   <>
@@ -21,7 +21,7 @@ const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => 
       <CommentBox />
     </Wrapper>
   </>
-)
+);
 
 const HelmetData: React.FC<PostFrontmatter> = ({ title, slug }) => (
   <SEO
@@ -29,7 +29,7 @@ const HelmetData: React.FC<PostFrontmatter> = ({ title, slug }) => (
     description={`${strings.Post.description} ${title}`}
     slug={`article/${slug}`}
   />
-)
+);
 
 const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost }) => (
   <>
@@ -47,16 +47,16 @@ const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost
       </div>
     )}
   </>
-)
+);
 
 const CommentBox = () => {
   useEffect(() => {
-    const removeCommentBox = commentBox('5655957052850176-proj')
-    return removeCommentBox()
-  }, [])
+    const removeCommentBox = commentBox('5655957052850176-proj');
+    return removeCommentBox();
+  }, []);
 
-  return <div className="commentbox" />
-}
+  return <div className="commentbox" />;
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -75,6 +75,6 @@ export const query = graphql`
       html
     }
   }
-`
+`;
 
-export default Post
+export default Post;

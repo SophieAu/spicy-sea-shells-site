@@ -1,17 +1,17 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-const SITE_LANG = 'en'
+const SITE_LANG = 'en';
 // const CREATOR = '@trydonut';
-const BASE_URL = 'https://spicyseashells.com'
+const BASE_URL = 'https://spicyseashells.com';
 // const META_IMAGE = `metaImage.png`;
 
 interface Props {
-  title: string
-  description: string
-  slug: string
-  children?: React.ReactNode
-  creator?: string
+  title: string;
+  description: string;
+  slug: string;
+  children?: React.ReactNode;
+  creator?: string;
 }
 
 const SEO: React.FC<Props> = ({ title, description, slug, children }) => (
@@ -74,6 +74,6 @@ const SEO: React.FC<Props> = ({ title, description, slug, children }) => (
   >
     {children}
   </Helmet>
-)
+);
 
-export default SEO
+export default SEO;

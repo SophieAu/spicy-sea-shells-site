@@ -1,7 +1,7 @@
-import React from 'react'
-import './Footer.scss'
-import FooterFragment from './footerFragment'
+import React from 'react';
+import './Footer.scss';
+import FooterFragment from './footerFragment';
 
-const Footer = () => <FooterFragment className="footer" />
+const Footer = () => <FooterFragment className="footer" />;
 
-export default Footer
+export default Footer;
