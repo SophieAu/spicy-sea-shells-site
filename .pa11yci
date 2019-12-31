@@ -3,7 +3,7 @@
         "includeWarnings": true
     },
     "urls":[
-        "https://spicyseashells.com/about/",
-        "https://spicyseashells.com/blog/",
-        "https://spicyseashells.com/article/react-native-storybook"
+        "http://localhost:8000/about/",
+        "http://localhost:8000/blog/",
+        "http://localhost:8000/article/react-native-storybook"
 ]}
