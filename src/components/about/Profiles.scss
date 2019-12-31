@@ -52,6 +52,14 @@ $card-border-radius: 0.75rem;
     }
 
     .social-media {
+      .links {
+        display: flex;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
       hr {
         border: none;
         border-top: 1px solid $primary-dim;
@@ -103,7 +111,6 @@ $card-border-radius: 0.75rem;
       }
 
       .social-media > .links {
-        display: flex;
         justify-content: space-evenly;
       }
     }
@@ -140,7 +147,7 @@ $card-border-radius: 0.75rem;
         display: none;
       }
 
-      .social-media a:not(:last-child) {
+      .social-media li:not(:last-child) {
         padding-right: 1.5rem;
       }
     }

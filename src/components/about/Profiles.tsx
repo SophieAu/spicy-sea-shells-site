@@ -48,12 +48,14 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
       {socialMedia
         .sort((a, b) => (a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0))
         .map((entry, i) => (
-          <a key={i} href={entry.url}>
-            <img
-              src={require('../../../data/images/social-media/' + entry.platform + '.svg')}
-              alt={'logo of ' + entry.platform}
-            />
-          </a>
+          <li key={i}>
+            <a href={entry.url}>
+              <img
+                src={require('../../../data/images/social-media/' + entry.platform + '.svg')}
+                alt={'logo of ' + entry.platform}
+              />
+            </a>
+          </li>
         ))}
     </ul>
   </div>
