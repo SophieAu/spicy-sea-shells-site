@@ -1,6 +1,5 @@
 import React from 'react';
 import './headerFragments.scss';
-import logo from '../../../data/images/logo.png';
 import strings from '../../../data/strings';
 
 const Title: React.FC<{ className?: string }> = ({ className }) => (
@@ -24,8 +23,4 @@ const BlogCallToAction: React.FC<{ className?: string }> = ({ className }) => (
   </p>
 );
 
-const Logo: React.FC<{ className?: string }> = ({ className }) => (
-  <img className={className} src={logo} alt={strings.Header.logoAlt} />
-);
-
-export { Title, Intro, BlogCallToAction, Logo };
+export { Title, Intro, BlogCallToAction };
