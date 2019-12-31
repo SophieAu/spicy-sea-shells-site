@@ -22,6 +22,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: false,
+        directives: {
+          'style-src': "'self' 'unsafe-inline'",
+          'frame-src': 'https://app.commentbox.io/',
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog-posts`,

@@ -5,8 +5,7 @@ import strings from '../../../data/strings';
 
 const Header = () => (
   <header className="header">
-    <a className="header-logo" href="/blog">
-      <span style={{ display: 'none' }}>{strings.BlogHeader.homeLinkAlt}</span>
+    <a className="header-logo" href="/blog" aria-label={strings.BlogHeader.homeLinkAlt}>
       <Logo />
     </a>
     <nav className="header-nav">
