@@ -6,7 +6,7 @@ author: "Sophie Au"
 crosspost:
   url: https://sophieau.com/article/python-mock-stdin-stderr-stdout
   site: "Sophie's Blog"
-  prefix: false
+  hasPrefix: false
 ---
 
 [Storybook](https://storybook.js.org/) is a tool for documenting a design system and developing modular apps. It is popular in the web development community and I've used it in all my bigger projects. So when I transitioned from web development to working on a React Native codebase, I set up Storybook too. Here's how I did it:
@@ -27,7 +27,7 @@ If you use TypeScript, don't forget to install the types and convert all files:
 
 If everything went well, your folder structure should look like this: (Assuming you use TypeScript)
 
-```
+```bash
 storybook/:
 ./stories
 ./addons.ts

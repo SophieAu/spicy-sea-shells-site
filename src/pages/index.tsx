@@ -1,16 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import strings from '../../data/strings'
 
 const Home = () => (
   <Helmet>
     <meta http-equiv="refresh" content="0; url=/blog" />
-    <title>Spicy Sea Shells</title>
-    <meta
-      name="description"
-      content={
-        'Homepage of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts'
-      }
-    />
+    <title>{strings.Home.pageTitle}</title>
+    <meta name="description" content={strings.Home.description} />
   </Helmet>
 )
 

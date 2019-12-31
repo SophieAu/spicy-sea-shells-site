@@ -7,64 +7,50 @@ import Wrapper from '../components/blog/Wrapper'
 import commentBox from 'commentbox.io'
 import '../main.scss'
 import './post.scss'
-import { SingleGraphQLResponse, PostFrontmatter, Crosspost } from '../types'
+import { SingleGraphQLResponse, PostFrontmatter } from '../types'
+import strings from '../../data/strings'
 
 const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
   <>
-    <HelmetData frontmatter={markdownRemark.frontmatter} />
+    <HelmetData {...markdownRemark.frontmatter} />
     <Wrapper>
       <div id="post">
-        <Frontmatter frontmatter={markdownRemark.frontmatter} />
-        <PostBody body={markdownRemark.html} />
+        <Frontmatter {...markdownRemark.frontmatter} />
+        <div className="post-body" dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </div>
       <CommentBox />
     </Wrapper>
   </>
 )
 
-const HelmetData: React.FC<PostFrontmatter> = ({ frontmatter }) => (
+const HelmetData: React.FC<PostFrontmatter> = ({ title }) => (
   <Helmet>
-    <title>{frontmatter.title} | Spicy Sea Shells</title>
-    <meta
-      name="description"
-      content={'Blog of the Spicy Sea Shells | Blogpost about ' + frontmatter.title}
-    />
+    <title>{`${title} | ${strings.Post.pageTitle}`}</title>
+    <meta name="description" content={`${strings.Post.description} ${title}`} />
   </Helmet>
 )
 
-const Frontmatter: React.FC<PostFrontmatter> = ({ frontmatter }) => (
+const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost }) => (
   <>
-    <h1>{frontmatter.title}</h1>
+    <h1>{title}</h1>
     <div className="meta">
-      <p className="author">{`By ${frontmatter.author}`}</p>
-      <p className="date">{frontmatter.date}</p>
+      <p className="author">{`By ${author}`}</p>
+      <p className="date">{date}</p>
     </div>
-    {!!frontmatter.crosspost && (
-      <CrosspostText
-        url={frontmatter.crosspost.url}
-        site={frontmatter.crosspost.site}
-        prefix={!!frontmatter.crosspost.prefix}
-      />
+    {!!crosspost && (
+      <div className="crosspost">
+        {`${strings.Post.crosspost} ${crosspost.hasPrefix && `${strings.Post.crosspostPrefix} `}`}
+        <a href={crosspost.url}>{crosspost.site}</a>.
+      </div>
     )}
   </>
-)
-
-const CrosspostText: React.FC<Crosspost> = ({ site, url, prefix }) => (
-  <div className="crosspost">
-    This is a crosspost from {prefix && 'the '}
-    <a href={url}>{site}</a>.
-  </div>
-)
-
-const PostBody: React.FC<{ body: string }> = ({ body }) => (
-  <div className="post-body" dangerouslySetInnerHTML={{ __html: body }} />
 )
 
 const CommentBox = () => {
   useEffect(() => {
     const removeCommentBox = commentBox('5655957052850176-proj')
     return removeCommentBox()
-  })
+  }, [])
 
   return <div className="commentbox" />
 }
@@ -80,7 +66,7 @@ export const query = graphql`
         crosspost {
           url
           site
-          prefix
+          hasPrefix
         }
       }
       html

@@ -7,6 +7,7 @@ import { Intro } from '../components/_shared/headerFragments'
 import './blog.scss'
 import '../main.scss'
 import { GraphQLResponse } from '../types'
+import strings from '../../data/strings'
 
 export const query = graphql`
   query {
@@ -31,27 +32,24 @@ export const query = graphql`
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <>
     <Helmet>
-      <title>Spicy Blog | Spicy Sea Shells</title>
-      <meta
-        name="description"
-        content={
-          'Blog of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts'
-        }
-      />
+      <title>{strings.Blog.pageTitle}</title>
+      <meta name="description" content={strings.Blog.description} />
     </Helmet>
     <Wrapper>
       <div className="blog-home">
         <div className="hero-section">
-          <h1>Spicy Blog</h1>
+          <h1>{strings.Blog.title}</h1>
           <div className="hero-text">
             <p>
-              We're the <a href="/about">Spicy Sea Shells</a> and this is our blog.
+              {`${strings.Blog.heroPreLink} `}
+              <a href="/about">{strings.Blog.heroLink}</a>
+              {` ${strings.Blog.heroPostLink}`}
             </p>
             <Intro />
           </div>
         </div>
         <div className="posts">
-          <h1>Latest</h1>
+          <h1>{strings.Blog.latestHeading}</h1>
           <PostList posts={data.allMarkdownRemark.edges} />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import profiles from '../../profiles'
+import profiles from '../../../data/profiles'
 import './Profiles.scss'
 import { BaseInfo, SocialMedia, UserInfo } from '../../types'
 
@@ -22,12 +22,12 @@ const ProfilePicture: React.FC<{ name: string }> = ({ name }) => (
     <div className="image">
       <img
         className="image -side"
-        src={require('../../images/profiles/' + name + '_tall.jpg')}
+        src={require('../../../data/images/profiles/' + name + '_tall.jpg')}
         alt={name}
       />
       <img
         className="image -top"
-        src={require('../../images/profiles/' + name + '_wide.jpg')}
+        src={require('../../../data/images/profiles/' + name + '_wide.jpg')}
         alt={name}
       />
     </div>
@@ -52,7 +52,7 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
         .map((entry, i) => (
           <a key={i} href={entry.url}>
             <img
-              src={require('../../images/social-media/' + entry.platform + '.svg')}
+              src={require('../../../data/images/social-media/' + entry.platform + '.svg')}
               alt={'logo of ' + entry.platform}
             />
           </a>

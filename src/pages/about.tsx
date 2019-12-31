@@ -6,17 +6,13 @@ import Profiles from '../components/about/Profiles'
 import Sidebar from '../components/about/Sidebar'
 import './about.scss'
 import '../main.scss'
+import strings from '../../data/strings'
 
 const About = () => (
   <>
     <Helmet>
-      <title>About | Spicy Sea Shells</title>
-      <meta
-        name="description"
-        content={
-          'About page of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts'
-        }
-      />
+      <title>{strings.About.pageTitle}</title>
+      <meta name="description" content={strings.About.description} />
     </Helmet>
     <div id="about">
       <Header />

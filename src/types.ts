@@ -58,17 +58,15 @@ export type SingleGraphQLResponse = {
 }
 
 export type PostFrontmatter = {
-  frontmatter: {
-    slug: string
-    title: string
-    author: string
-    date: string
-    crosspost?: Crosspost
-  }
+  slug: string
+  title: string
+  author: string
+  date: string
+  crosspost?: Crosspost
 }
 
-export type Crosspost = {
+type Crosspost = {
   url: string
   site: string
-  prefix: boolean
+  hasPrefix: boolean
 }

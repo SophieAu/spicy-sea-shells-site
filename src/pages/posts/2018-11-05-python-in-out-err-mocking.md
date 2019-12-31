@@ -6,7 +6,7 @@ author: "Sophie Au"
 crosspost:
   url: https://sophieau.com/article/python-mock-stdin-stderr-stdout
   site: "Sophie's Blog"
-  prefix: false
+  hasPrefix: false
 ---
 
 Working on my latest project, [todoster](github.com/sophieau/todoster), forced me to learn all about input/output mocking using python's built-in `unittest` library.

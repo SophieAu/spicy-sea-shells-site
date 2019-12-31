@@ -16,7 +16,7 @@ As part of this project, I will be using [Mux](https://github.com/gorilla/mux) a
 Let's start with `/ping`, the basic health-check route. 
 
 1. Create a file named `main.go` under project root directory. Add the following lines in your `main()`.
-    ```
+    ```go
     func main() {
         r := mux.NewRouter()
         r.HandleFunc("/ping", handler.PingHandler).Methods("GET")
@@ -28,7 +28,7 @@ Let's start with `/ping`, the basic health-check route.
     ```  
 2. Create a directory named `handler` and a file `ping_handler.go` under it.
 3. Add the following lines in `ping_handler.go`.
-    ```
+    ```go
     func PingHandler(w http.ResponseWriter, r *http.Request) {
         w.Header().Set("Content-Type", "application/json")
         w.WriteHeader(http.StatusOK)
