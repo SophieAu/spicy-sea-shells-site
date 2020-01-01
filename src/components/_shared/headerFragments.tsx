@@ -2,6 +2,7 @@ import './headerFragments.scss';
 
 import React from 'react';
 
+import { paths } from '../../../data/config';
 import strings from '../../../data/strings';
 
 const Title: React.FC<{ className?: string }> = ({ className }) => (
@@ -19,7 +20,7 @@ const Intro: React.FC<{ className?: string }> = ({ className }) => (
 const BlogCallToAction: React.FC<{ className?: string }> = ({ className }) => (
   <p className={className}>
     {`${strings.Header.blogCTA} `}
-    <a className="cta-link" href="/blog">
+    <a className="cta-link" href={paths.blog}>
       {strings.Header.blogCTALink}
     </a>
   </p>

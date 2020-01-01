@@ -3,6 +3,7 @@ import './Profiles.scss';
 import React from 'react';
 
 import profiles from '../../../data/profiles';
+import strings from '../../../data/strings';
 import { BaseInfo, SocialMedia } from '../../types';
 
 const Profiles = () => (
@@ -23,12 +24,12 @@ const ProfilePicture: React.FC<{ id: string; name: string }> = ({ id, name }) =>
   <div className="image">
     <img
       className="image -side"
-      src={require('../../../data/images/profiles/' + id + '_tall.jpg')}
+      src={require(`../../../data/images/profiles/${id}_tall.jpg`)}
       alt={name}
     />
     <img
       className="image -top"
-      src={require('../../../data/images/profiles/' + id + '_wide.jpg')}
+      src={require(`../../../data/images/profiles/${id}_wide.jpg`)}
       alt={name}
     />
   </div>
@@ -49,16 +50,20 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
     <ul className="links">
       {socialMedia
         .sort((a, b) => (a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0))
-        .map((entry, i) => (
-          <li key={i}>
-            <a href={entry.url}>
-              <img
-                src={require('../../../data/images/social-media/' + entry.platform + '.svg')}
-                alt={'logo of ' + entry.platform}
-              />
-            </a>
-          </li>
-        ))}
+        .map(entry => {
+          const { platform, url } = entry;
+
+          return (
+            <li key={platform}>
+              <a href={url}>
+                <img
+                  src={require(`../../../data/images/social-media/${platform}.svg`)}
+                  alt={strings.About.socialMediaAlt({ platform })}
+                />
+              </a>
+            </li>
+          );
+        })}
     </ul>
   </div>
 );

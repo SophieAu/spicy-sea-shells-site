@@ -15,43 +15,39 @@ const Shared = {
   },
 };
 
-const BlogHeader = {
-  homeLinkAlt: 'Homepage / Blog',
-  aboutLink: 'About',
-};
-
-const PostList = {
-  authorTag: 'By',
-};
-
 const About = {
   pageTitle: 'About | Spicy Sea Shells',
-  description:
+  pageDescription:
     'About page of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
+  socialMediaAlt: ({ platform }: { platform: string }) => `logo of ${platform}`,
 };
 
 const Blog = {
   pageTitle: 'Spicy Blog | Spicy Sea Shells',
-  description:
+  pageDescription:
     'Blog of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
   title: 'Spicy Blog',
   heroPreLink: "We're the",
   heroLink: 'Spicy Sea Shells',
   heroPostLink: 'and this is our blog.',
   latestHeading: 'Latest',
+  homeLinkAlt: 'Homepage / Blog',
+  aboutLink: 'About',
 };
 
 const Home = {
   pageTitle: 'Spicy Sea Shells',
-  description:
+  pageDescription:
     'Homepage of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
 };
 
 const Post = {
-  pageTitle: 'Spicy Sea Shells',
-  description: 'Blog of the Spicy Sea Shells | Blogpost about',
-  crosspost: 'This is a crosspost from',
-  crosspostPrefix: 'the',
+  pageTitle: ({ title }: { title: string }) => `${title} | Spicy Sea Shells`,
+  pageDescription: ({ title }: { title: string }) =>
+    `Blog of the Spicy Sea Shells | Blogpost about ${title}`,
+  crosspost: ({ hasPrefix }: { hasPrefix: boolean }) =>
+    `This is a crosspost from${hasPrefix ? ' the' : ''}`,
+  author: ({ author }: { author?: string }) => `By ${author}`,
 };
 
-export default { ...Shared, BlogHeader, About, Blog, Home, Post, PostList };
+export default { ...Shared, About, Blog, Home, Post };

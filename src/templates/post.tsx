@@ -7,6 +7,7 @@ import commentBox from 'commentbox.io';
 import { graphql } from 'gatsby';
 import React, { useEffect } from 'react';
 
+import { slugs } from '../../data/config';
 import strings from '../../data/strings';
 import SEO from '../components/_shared/SEO';
 import Wrapper from '../components/blog/Wrapper';
@@ -28,9 +29,9 @@ const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => 
 
 const HelmetData: React.FC<PostFrontmatter> = ({ title, slug, author }) => (
   <SEO
-    title={`${title} | ${strings.Post.pageTitle}`}
-    description={`${strings.Post.description} ${title}`}
-    slug={`article/${slug}`}
+    title={strings.Post.pageTitle({ title })}
+    description={strings.Post.pageDescription({ title })}
+    slug={`${slugs.articleBase}/${slug}`}
     creator={getSocialMediaHandle(author, 'twitter')}
   />
 );
@@ -39,14 +40,12 @@ const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost
   <>
     <h1>{title}</h1>
     <div className="meta">
-      <p className="author">{`By ${getName(author)}`}</p>
+      <p className="author">{strings.Post.author({ author: getName(author) })}</p>
       <p className="date">{date}</p>
     </div>
     {!!crosspost && (
       <div className="crosspost">
-        {`${strings.Post.crosspost} ${
-          crosspost.hasPrefix ? `${strings.Post.crosspostPrefix} ` : ''
-        }`}
+        {`${strings.Post.crosspost({ hasPrefix: crosspost.hasPrefix })} `}
         <a href={crosspost.url}>{crosspost.site}</a>.
       </div>
     )}

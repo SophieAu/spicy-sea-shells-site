@@ -4,6 +4,7 @@ import '../main.scss';
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import { paths, slugs } from '../../data/config';
 import strings from '../../data/strings';
 import { Intro } from '../components/_shared/headerFragments';
 import SEO from '../components/_shared/SEO';
@@ -33,13 +34,17 @@ export const query = graphql`
 
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <>
-    <SEO title={strings.Blog.pageTitle} description={strings.Blog.description} slug="blog" />
+    <SEO
+      title={strings.Blog.pageTitle}
+      description={strings.Blog.pageDescription}
+      slug={slugs.blog}
+    />
     <Wrapper>
       <section className="hero-section">
         <h1>{strings.Blog.title}</h1>
         <p className="hero-text">
           {`${strings.Blog.heroPreLink} `}
-          <a href="/about">{strings.Blog.heroLink}</a>
+          <a href={paths.about}>{strings.Blog.heroLink}</a>
           {` ${strings.Blog.heroPostLink}`}
         </p>
         <Intro className="hero-text" />
