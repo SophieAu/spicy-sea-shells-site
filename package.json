@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "description": "A blog for the Spicy Sea Shells",
-  "main": "index.js",
   "author": "Sophie Au <sophie@sophieau.com>",
   "license": "MIT",
   "scripts": {
