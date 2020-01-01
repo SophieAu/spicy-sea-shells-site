@@ -3,8 +3,8 @@
 @media (min-width: $widescreen-breakpoint) {
   #about {
     .footer,
-    .header {
-      display: none !important;
+    #about-header {
+      display: none;
     }
   }
 }
@@ -14,7 +14,7 @@
     flex-direction: column;
 
     .sidebar-wrapper {
-      display: none !important;
+      display: none;
     }
   }
 }

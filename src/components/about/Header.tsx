@@ -9,8 +9,8 @@ import logo192 from '../../../data/images/logo_192.png';
 import logo from '../../../data/images/logo_256.png';
 import strings from '../../../data/strings';
 
-const Header = () => (
-  <header className="header">
+const Header: React.FC<{ id?: string }> = ({ id }) => (
+  <header id={id} className="header">
     <Title className="title" />
     <Intro className="text intro" />
     <BlogCallToAction className="text blog-cta" />

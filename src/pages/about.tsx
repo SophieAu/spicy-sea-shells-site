@@ -19,7 +19,7 @@ const About = () => (
       slug={slugs.about}
     />
     <div id="about">
-      <Header />
+      <Header id="about-header" />
       <Sidebar />
       <Profiles />
       <Footer />
