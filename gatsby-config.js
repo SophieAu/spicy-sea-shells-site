@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-feed`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
