@@ -10,6 +10,7 @@ import React, { useEffect } from 'react';
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
 import SEO from '../components/_shared/SEO';
+import PostMeta from '../components/blog/PostMeta';
 import Wrapper from '../components/blog/Wrapper';
 import { getName, getSocialMediaHandle } from '../helpers';
 import { PostFrontmatter, SingleGraphQLResponse } from '../types';
@@ -39,10 +40,7 @@ const HelmetData: React.FC<PostFrontmatter> = ({ title, slug, author }) => (
 const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost }) => (
   <>
     <h1>{title}</h1>
-    <div className="meta">
-      <p className="author">{strings.Post.author({ author: getName(author) })}</p>
-      <p className="date">{date}</p>
-    </div>
+    <PostMeta author={author} date={date} />
     {!!crosspost && (
       <div className="crosspost">
         {`${strings.Post.crosspost({ hasPrefix: crosspost.hasPrefix })} `}

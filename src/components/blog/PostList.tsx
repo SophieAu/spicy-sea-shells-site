@@ -3,9 +3,8 @@ import './PostList.scss';
 import React from 'react';
 
 import { paths } from '../../../data/config';
-import strings from '../../../data/strings';
-import { getName } from '../../helpers';
 import { Post } from '../../types';
+import PostMeta from './PostMeta';
 
 const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
   <ul id="post-list">
@@ -18,10 +17,7 @@ const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
           <h2 className="title">
             <a href={`${paths.articleBase}/${slug}`}>{title}</a>
           </h2>
-          <div className="meta">
-            <p className="author">{strings.Post.author({ author: getName(author) })}</p>
-            <p className="date">{date}</p>
-          </div>
+          <PostMeta date={date} author={author} />
           <p className="excerpt">{excerpt}</p>
         </li>
       );

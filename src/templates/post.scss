@@ -7,18 +7,6 @@
     margin: 0;
   }
 
-  p {
-    margin: 1rem 0;
-  }
-
-  .meta {
-    margin: 0.5rem 0;
-    display: flex;
-    justify-content: space-between;
-
-    font: $light 1.5rem $font-family;
-  }
-
   .crosspost {
     padding-bottom: 2rem;
     font: italic $regular 1.25rem $font-family;
@@ -26,6 +14,10 @@
 
   .post-body {
     font-size: 1.25rem;
+
+    p {
+      margin: 1rem 0;
+    }
 
     code {
       font-size: 1rem;
@@ -48,23 +40,4 @@
 
 .commentbox {
   padding-top: 4rem;
-}
-
-@media all and (max-width: $small-mobile-breakpoint - 1) {
-  #post {
-    .meta {
-      flex-direction: column-reverse;
-      margin: 1.25rem 0;
-
-      font: $light 1.25rem $font-family;
-
-      p {
-        margin: 0.25rem 0;
-      }
-
-      .date {
-        text-align: right;
-      }
-    }
-  }
 }
