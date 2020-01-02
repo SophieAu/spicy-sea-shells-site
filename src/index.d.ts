@@ -4,7 +4,6 @@ declare module '*.svg';
 
 declare module 'commentbox.io';
 
-// React Helmet
 declare module 'react-helmet' {
   import * as React from 'react';
 
