@@ -12,7 +12,7 @@ import strings from '../../data/strings';
 import SEO from '../components/_shared/SEO';
 import PostMeta from '../components/blog/PostMeta';
 import Wrapper from '../components/blog/Wrapper';
-import { getName, getSocialMediaHandle } from '../helpers';
+import { getSocialMediaHandle } from '../helpers';
 import { PostFrontmatter, SingleGraphQLResponse } from '../types';
 
 const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
