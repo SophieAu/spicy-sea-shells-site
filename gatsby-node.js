@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
 
 const QUERY = `{
     allMarkdownRemark {
@@ -15,30 +14,29 @@ const QUERY = `{
   }
 `;
 
-exports.createPages = ({ graphql, actions }) =>
-  new Promise((resolve, _) => {
-    graphql(QUERY).then(result => {
-      console.log(JSON.stringify(result, null, 4));
+const buildBlogPosts = (nodes, createPage) => {
+  const post = path.resolve(`./src/templates/post.tsx`);
 
-      const nodes = result.data.allMarkdownRemark.edges;
-      nodes.forEach(({ node }) => {
-        actions.createPage({
-          path: 'article/' + node.frontmatter.slug,
-          component: path.resolve(`./src/templates/post.tsx`),
-          context: { slug: node.frontmatter.slug },
-        });
-      });
-
-      resolve();
+  nodes.forEach(({ node }) => {
+    const slug = node.frontmatter.slug;
+    createPage({
+      path: `article/${slug}`,
+      component: post,
+      context: { slug },
     });
+    console.log(slug);
   });
+};
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  if (node.internal.type !== `MarkdownRemark`) return;
+exports.createPages = async ({ graphql, actions }) => {
+  const result = await graphql(QUERY);
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
-  actions.createNodeField({
-    name: `slug`,
-    node,
-    value: createFilePath({ node, getNode }),
-  });
+  console.log('\nCreating Blog Posts...');
+  buildBlogPosts(result.data.allMarkdownRemark.edges, actions.createPage);
+
+  console.log();
 };
