@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
 
 const QUERY = `{
     allMarkdownRemark {
@@ -40,14 +39,4 @@ exports.createPages = async ({ graphql, actions }) => {
   buildBlogPosts(result.data.allMarkdownRemark.edges, actions.createPage);
 
   console.log();
-};
-
-// For the RSS feed
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  if (node.internal.type !== `MarkdownRemark`) return;
-  actions.createNodeField({
-    name: `slug`,
-    node,
-    value: createFilePath({ node, getNode }),
-  });
 };
