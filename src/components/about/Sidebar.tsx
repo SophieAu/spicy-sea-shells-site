@@ -4,7 +4,7 @@ import React from 'react';
 
 import Footer from '../_shared/footerFragment';
 import { BlogCallToAction, Intro } from '../_shared/headerFragments';
-import logo from '../../../data/images/logo_256.png';
+import logo from '../../../data/img/logo_256.png';
 import strings from '../../../data/strings';
 
 const Sidebar = () => (
