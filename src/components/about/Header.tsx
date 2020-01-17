@@ -3,10 +3,10 @@ import './Header.scss';
 import React from 'react';
 
 import { BlogCallToAction, Intro, Title } from '../_shared/headerFragments';
-import logo56 from '../../../data/images/logo_56.png';
-import logo144 from '../../../data/images/logo_144.png';
-import logo192 from '../../../data/images/logo_192.png';
-import logo from '../../../data/images/logo_256.png';
+import logo56 from '../../../data/img/logo_56.png';
+import logo144 from '../../../data/img/logo_144.png';
+import logo192 from '../../../data/img/logo_192.png';
+import logo from '../../../data/img/logo_256.png';
 import strings from '../../../data/strings';
 
 const Header: React.FC<{ id?: string }> = ({ id }) => (

@@ -2,7 +2,7 @@ import './footerFragment.scss';
 
 import React from 'react';
 
-import chili from '../../../data/images/chili.svg';
+import chili from '../../../data/img/chili.svg';
 import strings from '../../../data/strings';
 
 const FooterFragment: React.FC<{ className?: string }> = ({ className }) => (
