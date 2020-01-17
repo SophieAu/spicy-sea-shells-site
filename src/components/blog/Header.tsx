@@ -3,7 +3,7 @@ import './Header.scss';
 import React from 'react';
 
 import { paths } from '../../../data/config';
-import logo from '../../../data/images/logo_96.png';
+import logo from '../../../data/img/logo_96.png';
 import strings from '../../../data/strings';
 
 const Header = () => (

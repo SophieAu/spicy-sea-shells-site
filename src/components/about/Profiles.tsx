@@ -24,12 +24,12 @@ const ProfilePicture: React.FC<{ id: string; name: string }> = ({ id, name }) =>
   <div className="image">
     <img
       className="image -side"
-      src={require(`../../../data/images/profiles/${id}_tall.jpg`)}
+      src={require(`../../../data/img/profiles/${id}_tall.jpg`)}
       alt={name}
     />
     <img
       className="image -top"
-      src={require(`../../../data/images/profiles/${id}_wide.jpg`)}
+      src={require(`../../../data/img/profiles/${id}_wide.jpg`)}
       alt={name}
     />
   </div>
@@ -57,7 +57,7 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
             <li key={platform}>
               <a href={url}>
                 <img
-                  src={require(`../../../data/images/social-media/${platform}.svg`)}
+                  src={require(`../../../data/img/social-media/${platform}.svg`)}
                   alt={strings.About.socialMediaAlt({ platform })}
                 />
               </a>
