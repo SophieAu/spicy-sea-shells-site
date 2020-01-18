@@ -1,6 +1,27 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
-const gatsbyPluginFeedOptions = {
+const transformerRemarkOptions = {
+  plugins: [
+    `gatsby-remark-prismjs`,
+    {
+      resolve: 'gatsby-remark-images',
+      options: {
+        maxWidth: 970,
+      },
+    },
+  ],
+};
+
+const cspOptions = {
+  disableOnDev: true,
+  mergeStyleHashes: false,
+  directives: {
+    'style-src': "'self' 'unsafe-inline' blob:",
+    'frame-src': 'https://app.commentbox.io',
+  },
+};
+
+const feedOptions = {
   query: `
   {
     site {
@@ -54,6 +75,16 @@ const gatsbyPluginFeedOptions = {
   ],
 };
 
+const manifestOptions = {
+  name: `spicy-sea-shells`,
+  short_name: `s^3`,
+  start_url: `/blog`,
+  background_color: `#FFFFFF`,
+  theme_color: `#ff5555`,
+  display: `minimal-ui`,
+  icon: `data/img/logo.png`,
+};
+
 module.exports = {
   siteMetadata: {
     title: `Spicy Sea Shells`,
@@ -69,26 +100,16 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-feed`,
-      options: gatsbyPluginFeedOptions,
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/data/img`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: true,
-        mergeStyleHashes: false,
-        directives: {
-          'style-src': "'self' 'unsafe-inline' blob:",
-          'frame-src': 'https://app.commentbox.io',
-        },
-      },
+      options: cspOptions,
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: feedOptions,
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: transformerRemarkOptions,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -98,30 +119,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-          `gatsby-remark-prismjs`,
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 970,
-            },
-          },
-        ],
+        name: `images`,
+        path: `${__dirname}/data/img`,
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `spicy-sea-shells`,
-        short_name: `s^3`,
-        start_url: `/blog`,
-        background_color: `#FFFFFF`,
-        theme_color: `#ff5555`,
-        display: `minimal-ui`,
-        icon: `data/img/logo.png`, // This path is relative to the root of the site.
-      },
+      options: manifestOptions,
     },
   ],
 };

@@ -30,10 +30,6 @@ const buildBlogPosts = (nodes, createPage) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(QUERY);
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return;
-  }
 
   console.log('\nCreating Blog Posts...');
   buildBlogPosts(result.data.allMarkdownRemark.edges, actions.createPage);
