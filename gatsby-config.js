@@ -1,5 +1,15 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
+const members = {
+  sophie: 'Sophie Au',
+  jean: 'Jean Bauer',
+  ellie: 'Elloise Przybylo',
+  jackie: 'Jackie Robinson',
+  kamala: 'Kamalashree Nagaraj',
+  andrei: 'Andrei Cartan',
+  nimish: 'Nimish Singh',
+};
+
 const transformerRemarkOptions = {
   plugins: [
     `gatsby-remark-prismjs`,
@@ -41,9 +51,7 @@ const feedOptions = {
           const { frontmatter, html } = edge.node;
 
           return Object.assign({}, frontmatter, {
-            date: frontmatter.date,
-            author: frontmatter.author,
-            excerpt: frontmatter.excerpt,
+            author: members[frontmatter.author],
             url: site.siteMetadata.siteUrl + '/blog/' + frontmatter.slug,
             guid: site.siteMetadata.siteUrl + '/blog/' + frontmatter.slug,
             custom_elements: [{ 'content:encoded': html }],
@@ -62,7 +70,6 @@ const feedOptions = {
                 title
                 date
                 slug
-                formattedDate: date(formatString: "YYYY-MM-DD")
               }
             }
           }
@@ -82,7 +89,7 @@ const manifestOptions = {
   background_color: `#FFFFFF`,
   theme_color: `#ff5555`,
   display: `minimal-ui`,
-  icon: `data/img/logo.png`,
+  icon: `data/img/logo.png`, // This path is relative to the root of the site.
 };
 
 module.exports = {
