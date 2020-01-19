@@ -20,6 +20,7 @@ $card-border-radius: 0.75rem;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 16px 20px 0 rgba(0, 0, 0, 0.14);
 
     display: flex;
+    overflow: hidden;
 
     .image {
       line-height: 0;
@@ -87,7 +88,6 @@ $card-border-radius: 0.75rem;
     .image.-top {
       height: 11.25rem;
       width: $tall-card-width;
-      border-radius: $card-border-radius $card-border-radius 0 0;
     }
     .image.-side {
       display: none;
@@ -128,7 +128,6 @@ $card-border-radius: 0.75rem;
     .image.-side {
       width: 10rem;
       height: 20rem;
-      border-radius: $card-border-radius 0 0 $card-border-radius;
     }
     .image.-top {
       display: none;
