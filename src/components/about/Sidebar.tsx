@@ -12,7 +12,7 @@ const query = graphql`
   query {
     file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fixed(height: 256, width: 256) {
+        fixed(height: 256, width: 256, quality: 100) {
           ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
