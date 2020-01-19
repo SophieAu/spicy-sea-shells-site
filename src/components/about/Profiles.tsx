@@ -11,7 +11,7 @@ import { BaseInfo, SocialMedia } from '../../types';
 export const profileTall = graphql`
   fragment profileTall on File {
     childImageSharp {
-      fixed(width: 160, height: 320, quality: 100) {
+      fixed(width: 160, height: 320, quality: 90) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -21,7 +21,7 @@ export const profileTall = graphql`
 export const profileWide = graphql`
   fragment profileWide on File {
     childImageSharp {
-      fixed(width: 288, height: 180, quality: 100) {
+      fixed(width: 288, height: 180, quality: 90) {
         ...GatsbyImageSharpFixed_withWebp
       }
     }
