@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 
+const hiddenPages = [];
+
 const members = {
   sophie: 'Sophie Au',
   jean: 'Jean Bauer',
@@ -130,6 +132,18 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/data/img`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', disallow: hiddenPages, noindex: hiddenPages }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: hiddenPages,
       },
     },
     {
