@@ -28,6 +28,11 @@ code {
   display: flex;
 }
 
+.webp #blog,
+.webp #about {
+  background: repeat url(../data/img/bg_pattern.webp);
+}
+
 a {
   color: $black;
 }
