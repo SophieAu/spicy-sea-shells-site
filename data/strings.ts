@@ -28,7 +28,7 @@ const Blog = {
   pageDescription:
     'Blog of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
   title: 'Spicy Blog',
-  hero: `We're the [Spicy Sea Shells](${paths.about}) 'and this is our blog.`,
+  hero: `We're the [Spicy Sea Shells](${paths.about}) and this is our blog.`,
   latestHeading: 'Latest',
   homeLinkAlt: 'Homepage / Blog',
   aboutLink: 'About',
@@ -44,8 +44,8 @@ const Post = {
   pageTitle: ({ title }: { title: string }) => `${title} | Spicy Sea Shells`,
   pageDescription: ({ title }: { title: string }) =>
     `Blog of the Spicy Sea Shells | Blogpost about ${title}`,
-  crosspost: ({ hasPrefix }: { hasPrefix: boolean }) =>
-    `This is a crosspost from${hasPrefix ? ' the' : ''}`,
+  crosspost: ({ hasPrefix, site, url }: { hasPrefix: boolean; site: string; url: string }) =>
+    `This is a crosspost from${hasPrefix ? ' the' : ''} [${site}](${url}).`,
   author: ({ author }: { author?: string }) => `By ${author}`,
 };
 

@@ -9,6 +9,7 @@ import React, { useEffect } from 'react';
 
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
+import MarkdownWithLink from '../components/_shared/MarkdownWithLink';
 import SEO from '../components/_shared/SEO';
 import PostMeta from '../components/blog/PostMeta';
 import Wrapper from '../components/blog/Wrapper';
@@ -43,8 +44,7 @@ const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost
     <PostMeta author={author} date={date} />
     {!!crosspost && (
       <div className="crosspost">
-        {`${strings.Post.crosspost({ hasPrefix: crosspost.hasPrefix })} `}
-        <a href={crosspost.url}>{crosspost.site}</a>.
+        <MarkdownWithLink markdownText={strings.Post.crosspost({ ...crosspost })} />
       </div>
     )}
   </>
