@@ -8,26 +8,6 @@ import profiles from '../../../data/profiles';
 import strings from '../../../data/strings';
 import { BaseInfo, SocialMedia } from '../../types';
 
-export const profileTall = graphql`
-  fragment profileTall on File {
-    childImageSharp {
-      fixed(width: 160, height: 320, quality: 90) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`;
-
-export const profileWide = graphql`
-  fragment profileWide on File {
-    childImageSharp {
-      fixed(width: 288, height: 180, quality: 90) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-    }
-  }
-`;
-
 export const query = graphql`
   query {
     sophie_tall: file(relativePath: { eq: "profiles/sophie_tall.jpg" }) {
@@ -75,38 +55,40 @@ export const query = graphql`
   }
 `;
 
-const Profiles = () => {
-  const data = useStaticQuery(query);
-
-  return (
-    <main className="body">
-      {profiles.map(profile => (
-        <div className="card" key={profile.id}>
-          <ProfilePicture id={profile.id} name={profile.baseInfo.name} imgData={data} />
-          <div className="profile">
-            <InfoBox baseInfo={profile.baseInfo} />
-            <SocialMediaIcons socialMedia={profile.socialMedia} />
-          </div>
+const Profiles = () => (
+  <main className="body">
+    {profiles.map(profile => (
+      <div className="card" key={profile.id}>
+        <ProfilePicture
+          id={profile.id}
+          name={profile.baseInfo.name}
+          imgData={useStaticQuery(query)}
+        />
+        <div className="profile">
+          <InfoBox baseInfo={profile.baseInfo} />
+          <SocialMediaIcons socialMedia={profile.socialMedia} />
         </div>
-      ))}
-    </main>
-  );
-};
-
-const ProfilePicture: React.FC<{ id: string; name: string; imgData: any }> = props => {
-  const { id, name, imgData } = props;
-
-  return (
-    <>
-      <div className="image -side">
-        <Img fixed={imgData[`${id}_tall`].childImageSharp.fixed} alt={name} />
       </div>
-      <div className="image -top">
-        <Img fixed={imgData[`${id}_wide`].childImageSharp.fixed} alt={name} />
-      </div>
-    </>
-  );
-};
+    ))}
+  </main>
+);
+
+interface ProfilePicProps {
+  id: string;
+  name: string;
+  imgData: any;
+}
+
+const ProfilePicture: React.FC<ProfilePicProps> = ({ id, name, imgData }) => (
+  <>
+    <div className="image -side">
+      <Img fixed={imgData[`${id}_tall`].childImageSharp.fixed} alt={name} />
+    </div>
+    <div className="image -top">
+      <Img fixed={imgData[`${id}_wide`].childImageSharp.fixed} alt={name} />
+    </div>
+  </>
+);
 
 const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
   <div className="info">

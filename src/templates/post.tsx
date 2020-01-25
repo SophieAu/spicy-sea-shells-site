@@ -14,51 +14,7 @@ import SEO from '../components/_shared/SEO';
 import PostMeta from '../components/blog/PostMeta';
 import Wrapper from '../components/blog/Wrapper';
 import { getSocialMediaHandle } from '../helpers';
-import { PostFrontmatter, SingleGraphQLResponse } from '../types';
-
-const Post: React.FC<SingleGraphQLResponse> = ({ data: { markdownRemark } }) => (
-  <>
-    <HelmetData {...markdownRemark.frontmatter} />
-    <Wrapper>
-      <article id="post">
-        <Frontmatter {...markdownRemark.frontmatter} />
-        <div className="post-body" dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-      </article>
-      <CommentBox />
-    </Wrapper>
-  </>
-);
-
-const HelmetData: React.FC<PostFrontmatter> = ({ title, slug, author }) => (
-  <SEO
-    title={strings.Post.pageTitle({ title })}
-    description={strings.Post.pageDescription({ title })}
-    slug={`${slugs.articleBase}/${slug}`}
-    creator={getSocialMediaHandle(author, 'twitter')}
-  />
-);
-
-const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost }) => (
-  <>
-    <h1>{title}</h1>
-    <PostMeta author={author} date={date} />
-    {!!crosspost && (
-      <MarkdownWithLink
-        className="crosspost"
-        markdownText={strings.Post.crosspost({ ...crosspost })}
-      />
-    )}
-  </>
-);
-
-const CommentBox = () => {
-  useEffect(() => {
-    const removeCommentBox = commentBox('5655957052850176-proj');
-    return removeCommentBox();
-  }, []);
-
-  return <div className="commentbox" />;
-};
+import { PostResponse } from '../types';
 
 export const query = graphql`
   query($slug: String!) {
@@ -78,5 +34,44 @@ export const query = graphql`
     }
   }
 `;
+
+const Post: React.FC<PostResponse> = props => {
+  const { frontmatter, html } = props.data.markdownRemark;
+  const { title, slug, author, date, crosspost } = frontmatter;
+
+  return (
+    <>
+      <SEO
+        title={strings.Post.pageTitle({ title: title })}
+        description={strings.Post.pageDescription({ title: title })}
+        slug={`${slugs.articleBase}/${slug}`}
+        creator={getSocialMediaHandle(author, 'twitter')}
+      />
+      <Wrapper>
+        <article id="post">
+          <h1>{title}</h1>
+          <PostMeta author={author} date={date} />
+          {!!crosspost && (
+            <MarkdownWithLink
+              className="crosspost"
+              markdownText={strings.Post.crosspost({ ...crosspost })}
+            />
+          )}
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
+        <CommentBox />
+      </Wrapper>
+    </>
+  );
+};
+
+const CommentBox = () => {
+  useEffect(() => {
+    const removeCommentBox = commentBox('5655957052850176-proj');
+    return removeCommentBox();
+  }, []);
+
+  return <div className="commentbox" />;
+};
 
 export default Post;

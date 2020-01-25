@@ -19,21 +19,18 @@ const query = graphql`
   }
 `;
 
-const Header: React.FC<{ id?: string }> = ({ id }) => {
-  const data = useStaticQuery(query);
-  return (
-    <header id={id} className="header">
-      <Title className="title" />
-      <Intro className="text intro" />
-      <BlogCallToAction className="text blog" />
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        className="logo"
-        alt={strings.Header.logoAlt}
-        imgStyle={{ objectFit: 'contain', objectPosition: 'top center' }}
-      />
-    </header>
-  );
-};
+const Header: React.FC<{ id?: string }> = ({ id }) => (
+  <header id={id} className="header">
+    <Title className="title" />
+    <Intro className="text intro" />
+    <BlogCallToAction className="text blog" />
+    <Img
+      fluid={useStaticQuery(query).file.childImageSharp.fluid}
+      className="logo"
+      alt={strings.Header.logoAlt}
+      imgStyle={{ objectFit: 'contain', objectPosition: 'top center' }}
+    />
+  </header>
+);
 
 export default Header;

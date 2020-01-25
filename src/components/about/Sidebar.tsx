@@ -20,27 +20,23 @@ const query = graphql`
   }
 `;
 
-const Sidebar = () => {
-  const data = useStaticQuery(query);
-
-  return (
-    <div className="sidebar-wrapper">
-      <div className="sidebar">
-        <header className="sidebar-body">
-          <Img
-            className="sidebar-logo"
-            fixed={data.file.childImageSharp.fixed}
-            alt={strings.Header.logoAlt}
-          />
-          <div className="sidebar-text">
-            <Intro className="intro" />
-            <BlogCallToAction />
-          </div>
-        </header>
-        <Footer className="sidebar-footer" />
-      </div>
+const Sidebar = () => (
+  <div className="sidebar-wrapper">
+    <div className="sidebar">
+      <header className="sidebar-body">
+        <Img
+          className="sidebar-logo"
+          fixed={useStaticQuery(query).file.childImageSharp.fixed}
+          alt={strings.Header.logoAlt}
+        />
+        <div className="sidebar-text">
+          <Intro className="intro" />
+          <BlogCallToAction />
+        </div>
+      </header>
+      <Footer className="sidebar-footer" />
     </div>
-  );
-};
+  </div>
+);
 
 export default Sidebar;

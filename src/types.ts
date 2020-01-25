@@ -49,7 +49,7 @@ export type GraphQLResponse = {
   };
 };
 
-export type SingleGraphQLResponse = {
+export type PostResponse = {
   data: {
     markdownRemark: {
       frontmatter: PostFrontmatter;

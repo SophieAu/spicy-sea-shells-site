@@ -19,23 +19,19 @@ const query = graphql`
   }
 `;
 
-const Header = () => {
-  const data = useStaticQuery(query);
-
-  return (
-    <header className="header">
-      <a className="header-logo" href={paths.blog} aria-label={strings.Blog.homeLinkAlt}>
-        <Img
-          className="sidebar-logo"
-          fixed={data.file.childImageSharp.fixed}
-          alt={strings.Header.logoAlt}
-        />
-      </a>
-      <nav className="header-nav">
-        <a href={paths.about}>{strings.Blog.aboutLink}</a>
-      </nav>
-    </header>
-  );
-};
+const Header = () => (
+  <header className="header">
+    <a className="header-logo" href={paths.blog} aria-label={strings.Blog.homeLinkAlt}>
+      <Img
+        className="sidebar-logo"
+        fixed={useStaticQuery(query).file.childImageSharp.fixed}
+        alt={strings.Header.logoAlt}
+      />
+    </a>
+    <nav className="header-nav">
+      <a href={paths.about}>{strings.Blog.aboutLink}</a>
+    </nav>
+  </header>
+);
 
 export default Header;
