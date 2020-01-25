@@ -5,8 +5,13 @@ import Link from './Link';
 
 const MARKDOWN_LINK_REGEX = /(\[[^\]]+\]\([^\)]+\))/;
 
-const MarkdownWithLink: React.FC<{ markdownText: string }> = ({ markdownText }) => (
-  <>
+interface Props {
+  markdownText: string;
+  className?: string;
+}
+
+const MarkdownWithLink: React.FC<Props> = ({ markdownText, className }) => (
+  <p className={className}>
     {markdownText.split(MARKDOWN_LINK_REGEX).map((subString, i) => {
       if (!/^[\[]/.test(subString)) return subString;
 
@@ -17,7 +22,7 @@ const MarkdownWithLink: React.FC<{ markdownText: string }> = ({ markdownText }) 
         </Link>
       );
     })}
-  </>
+  </p>
 );
 
 export default MarkdownWithLink;

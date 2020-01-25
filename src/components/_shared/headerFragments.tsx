@@ -18,9 +18,10 @@ const Intro: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 const BlogCallToAction: React.FC<{ className?: string }> = ({ className }) => (
-  <p className={`blog-cta${className ? ` ${className}` : ''}`}>
-    <MarkdownWithLink markdownText={strings.Header.blogCTA} />
-  </p>
+  <MarkdownWithLink
+    className={`blog-cta${className ? ` ${className}` : ''}`}
+    markdownText={strings.Header.blogCTA}
+  />
 );
 
 export { Title, Intro, BlogCallToAction };

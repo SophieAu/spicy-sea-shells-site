@@ -43,9 +43,7 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
     <Wrapper>
       <section className="hero-section">
         <h1>{strings.Blog.title}</h1>
-        <p className="hero-text">
-          <MarkdownWithLink markdownText={strings.Blog.hero} />
-        </p>
+        <MarkdownWithLink className="hero-text" markdownText={strings.Blog.hero} />
         <Intro className="hero-text" />
       </section>
       <section className="posts">

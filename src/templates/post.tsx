@@ -43,9 +43,10 @@ const Frontmatter: React.FC<PostFrontmatter> = ({ title, author, date, crosspost
     <h1>{title}</h1>
     <PostMeta author={author} date={date} />
     {!!crosspost && (
-      <div className="crosspost">
-        <MarkdownWithLink markdownText={strings.Post.crosspost({ ...crosspost })} />
-      </div>
+      <MarkdownWithLink
+        className="crosspost"
+        markdownText={strings.Post.crosspost({ ...crosspost })}
+      />
     )}
   </>
 );
