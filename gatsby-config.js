@@ -12,18 +12,6 @@ const members = {
   nimish: 'Nimish Singh',
 };
 
-const transformerRemarkOptions = {
-  plugins: [
-    `gatsby-remark-prismjs`,
-    {
-      resolve: 'gatsby-remark-images',
-      options: {
-        maxWidth: 970,
-      },
-    },
-  ],
-};
-
 const cspOptions = {
   disableOnDev: true,
   mergeStyleHashes: false,
@@ -94,6 +82,16 @@ const manifestOptions = {
   icon: `data/img/logo.png`, // This path is relative to the root of the site.
 };
 
+const transformerRemarkOptions = {
+  plugins: [
+    `gatsby-remark-prismjs`,
+    {
+      resolve: 'gatsby-remark-images',
+      options: { maxWidth: 970, quality: 90, withWebp: true },
+    },
+  ],
+};
+
 module.exports = {
   siteMetadata: {
     title: `Spicy Sea Shells`,
@@ -117,38 +115,28 @@ module.exports = {
       options: feedOptions,
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: transformerRemarkOptions,
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog-posts`,
-        path: `${__dirname}/data/content/posts/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/data/img`,
-      },
+      resolve: `gatsby-plugin-manifest`,
+      options: manifestOptions,
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', disallow: hiddenPages, noindex: hiddenPages }],
-      },
+      options: { policy: [{ userAgent: '*', disallow: hiddenPages, noindex: hiddenPages }] },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: hiddenPages,
-      },
+      options: { exclude: hiddenPages },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: manifestOptions,
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `blog-posts`, path: `${__dirname}/data/content/posts/` },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `images`, path: `${__dirname}/data/img` },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: transformerRemarkOptions,
     },
   ],
 };
