@@ -34,7 +34,7 @@ const Sidebar = () => {
           />
           <div className="sidebar-text">
             <Intro className="intro" />
-            <BlogCallToAction className="blog-cta" />
+            <BlogCallToAction />
           </div>
         </header>
         <Footer className="sidebar-footer" />

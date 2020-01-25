@@ -25,7 +25,7 @@ const Header: React.FC<{ id?: string }> = ({ id }) => {
     <header id={id} className="header">
       <Title className="title" />
       <Intro className="text intro" />
-      <BlogCallToAction className="text blog-cta" />
+      <BlogCallToAction className="text blog" />
       <Img
         fluid={data.file.childImageSharp.fluid}
         className="logo"

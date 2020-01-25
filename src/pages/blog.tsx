@@ -4,9 +4,10 @@ import '../main.scss';
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import { paths, slugs } from '../../data/config';
+import { slugs } from '../../data/config';
 import strings from '../../data/strings';
 import { Intro } from '../components/_shared/headerFragments';
+import MarkdownWithLink from '../components/_shared/MarkdownWithLink';
 import SEO from '../components/_shared/SEO';
 import PostList from '../components/blog/PostList';
 import Wrapper from '../components/blog/Wrapper';
@@ -43,9 +44,7 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
       <section className="hero-section">
         <h1>{strings.Blog.title}</h1>
         <p className="hero-text">
-          {`${strings.Blog.heroPreLink} `}
-          <a href={paths.about}>{strings.Blog.heroLink}</a>
-          {` ${strings.Blog.heroPostLink}`}
+          <MarkdownWithLink markdownText={strings.Blog.hero} />
         </p>
         <Intro className="hero-text" />
       </section>

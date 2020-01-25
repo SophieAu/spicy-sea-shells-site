@@ -1,3 +1,5 @@
+import { paths } from './config';
+
 const Shared = {
   Footer: {
     preImage: 'Made with',
@@ -9,8 +11,7 @@ const Shared = {
     introExtendedOpening: 'Who are we?',
     introBase: 'We are a collective of software developers, business analysts and quality analysts',
     introExtended: 'who met on a training course by ThoughtWorks',
-    blogCTA: "Together we're running the",
-    blogCTALink: 'Spicy Blog',
+    blogCTA: `Together we're running the [Spicy Blog](${paths.blog})`,
     logoAlt: 'Spicy Sea Shells logo',
   },
 };
@@ -27,9 +28,7 @@ const Blog = {
   pageDescription:
     'Blog of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
   title: 'Spicy Blog',
-  heroPreLink: "We're the",
-  heroLink: 'Spicy Sea Shells',
-  heroPostLink: 'and this is our blog.',
+  hero: `We're the [Spicy Sea Shells](${paths.about}) 'and this is our blog.`,
   latestHeading: 'Latest',
   homeLinkAlt: 'Homepage / Blog',
   aboutLink: 'About',
