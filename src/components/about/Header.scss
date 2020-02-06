@@ -26,8 +26,8 @@
   }
 
   .logo {
-    line-height: 0;
-    text-align: right;
+    height: var(--logo-height);
+    width: var(--logo-height);
   }
 }
 

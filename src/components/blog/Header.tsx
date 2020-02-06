@@ -11,8 +11,8 @@ const query = graphql`
   query {
     file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fixed(height: 96, width: 96, quality: 90) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        fluid(maxHeight: 96, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
@@ -24,7 +24,7 @@ const Header = () => (
     <a className="header-logo" href={paths.blog} aria-label={strings.Blog.homeLinkAlt}>
       <Img
         className="sidebar-logo"
-        fixed={useStaticQuery(query).file.childImageSharp.fixed}
+        fluid={useStaticQuery(query).file.childImageSharp.fluid}
         alt={strings.Header.logoAlt}
       />
     </a>

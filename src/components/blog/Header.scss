@@ -13,7 +13,8 @@
 }
 
 .header-logo {
-  line-height: 0;
+  height: var(--blog-header-height);
+  width: var(--blog-header-height);
 }
 
 .header-nav {
