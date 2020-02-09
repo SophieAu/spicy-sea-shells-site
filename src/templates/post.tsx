@@ -13,8 +13,8 @@ import MarkdownWithLink from '../components/_shared/MarkdownWithLink';
 import SEO from '../components/_shared/SEO';
 import PostMeta from '../components/blog/PostMeta';
 import Wrapper from '../components/blog/Wrapper';
-import { getSocialMediaHandle } from '../helpers';
 import { PostResponse } from '../types';
+import { getSocialMediaHandle } from '../util';
 
 export const query = graphql`
   query($slug: String!) {
