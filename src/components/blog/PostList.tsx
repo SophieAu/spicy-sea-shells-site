@@ -4,6 +4,7 @@ import React from 'react';
 
 import { paths } from '../../../data/config';
 import { Post } from '../../types';
+import Link from '../Link';
 import PostMeta from './PostMeta';
 
 const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
@@ -15,7 +16,7 @@ const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
       return (
         <li key={id}>
           <h2 className="title">
-            <a href={`${paths.articleBase}/${slug}`}>{title}</a>
+            <Link to={`${paths.articleBase}/${slug}`}>{title}</Link>
           </h2>
           <PostMeta date={date} author={author} />
           <p className="excerpt">{excerpt}</p>

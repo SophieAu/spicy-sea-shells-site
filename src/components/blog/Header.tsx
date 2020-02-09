@@ -6,6 +6,7 @@ import React from 'react';
 
 import { paths } from '../../../data/config';
 import strings from '../../../data/strings';
+import Link from '../Link';
 
 const query = graphql`
   query {
@@ -17,15 +18,15 @@ const query = graphql`
 
 const Header = () => (
   <header className="header">
-    <a className="header-logo" href={paths.blog} aria-label={strings.Blog.homeLinkAlt}>
+    <Link className="header-logo" to={paths.blog} ariaLabel={strings.Blog.homeLinkAlt}>
       <Img
         className="sidebar-logo"
         fluid={useStaticQuery(query).file.childImageSharp.fluid}
         alt={strings.Header.logoAlt}
       />
-    </a>
+    </Link>
     <nav className="header-nav">
-      <a href={paths.about}>{strings.Blog.aboutLink}</a>
+      <Link to={paths.about}>{strings.Blog.aboutLink}</Link>
     </nav>
   </header>
 );

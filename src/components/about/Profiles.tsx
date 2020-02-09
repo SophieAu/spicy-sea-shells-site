@@ -7,6 +7,7 @@ import React from 'react';
 import profiles from '../../../data/profiles';
 import strings from '../../../data/strings';
 import { BaseInfo, SocialMedia } from '../../types';
+import Link from '../Link';
 
 export const query = graphql`
   query {
@@ -107,12 +108,12 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
         .sort((a, b) => (a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0))
         .map(({ platform, url }) => (
           <li key={platform}>
-            <a href={url}>
+            <Link to={url}>
               <img
                 src={require(`../../../data/img/social-media/${platform}.svg`)}
                 alt={strings.About.socialMediaAlt({ platform })}
               />
-            </a>
+            </Link>
           </li>
         ))}
     </ul>
