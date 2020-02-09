@@ -11,7 +11,7 @@ import strings from '../../data/strings';
 import BlogWrapper from '../components/BlogWrapper';
 import MarkdownWithLink from '../components/MarkdownWithLink';
 import PostMeta from '../components/PostMeta';
-import { PostResponse } from '../types';
+import { Crosspost as CrosspostType, PostResponse } from '../types';
 import { getSocialMediaHandle } from '../util';
 
 export const query = graphql`
@@ -36,17 +36,19 @@ const Post: React.FC<PostResponse> = props => {
       <article id="post">
         <h1>{title}</h1>
         <PostMeta author={author} date={date} />
-        {!!crosspost && (
-          <MarkdownWithLink className="crosspost">
-            {strings.Post.crosspost({ ...crosspost })}
-          </MarkdownWithLink>
-        )}
+        {!!crosspost && <Crosspost crosspost={crosspost} />}
         <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
       <CommentBox />
     </BlogWrapper>
   );
 };
+
+const Crosspost: React.FC<{ crosspost: CrosspostType }> = ({ crosspost }) => (
+  <MarkdownWithLink className="crosspost">
+    {strings.Post.crosspost({ ...crosspost })}
+  </MarkdownWithLink>
+);
 
 const CommentBox = () => {
   useEffect(() => {

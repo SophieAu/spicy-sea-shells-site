@@ -30,6 +30,12 @@ export type SocialMedia = {
   url: string;
 };
 
+export type Crosspost = {
+  hasPrefix: boolean;
+  site: string;
+  url: string;
+};
+
 // ---
 // Post GraphQL Response
 

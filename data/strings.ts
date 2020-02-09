@@ -1,3 +1,4 @@
+import { Crosspost } from '../src/types';
 import { paths } from './config';
 
 const Shared = {
@@ -44,7 +45,7 @@ const Post = {
   pageTitle: ({ title }: { title: string }) => `${title} | Spicy Sea Shells`,
   pageDescription: ({ title }: { title: string }) =>
     `Blog of the Spicy Sea Shells | Blogpost about ${title}`,
-  crosspost: ({ hasPrefix, site, url }: { hasPrefix: boolean; site: string; url: string }) =>
+  crosspost: ({ hasPrefix, site, url }: Crosspost) =>
     `This is a crosspost from${hasPrefix ? ' the' : ''} [${site}](${url}).`,
   author: ({ author }: { author?: string }) => `By ${author}`,
 };
