@@ -6,7 +6,7 @@ import React from 'react';
 
 import profiles from '../../data/profiles';
 import strings from '../../data/strings';
-import { BaseInfo, SocialMedia } from '../types';
+import { BaseInfo, ProfilePics, SocialMedia } from '../types';
 import Link from './Link';
 
 export const query = graphql`
@@ -77,16 +77,16 @@ const Profiles = () => (
 interface ProfilePicProps {
   id: string;
   name: string;
-  imgData: any;
+  imgData: ProfilePics;
 }
 
 const ProfilePicture: React.FC<ProfilePicProps> = ({ id, name, imgData }) => (
   <>
     <div className="image -side">
-      <Img fixed={imgData[`${id}_tall`].childImageSharp.fixed} alt={name} />
+      <Img fixed={imgData[`${id}_tall` as keyof ProfilePics].childImageSharp.fixed} alt={name} />
     </div>
     <div className="image -top">
-      <Img fixed={imgData[`${id}_wide`].childImageSharp.fixed} alt={name} />
+      <Img fixed={imgData[`${id}_wide` as keyof ProfilePics].childImageSharp.fixed} alt={name} />
     </div>
   </>
 );
