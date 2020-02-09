@@ -5,11 +5,11 @@ import React from 'react';
 import strings from '../../../data/strings';
 import MarkdownWithLink from './MarkdownWithLink';
 
-const Title: React.FC<{ className?: string }> = ({ className }) => (
+export const Title: React.FC<{ className?: string }> = ({ className }) => (
   <h1 className={className}>{strings.Header.title}</h1>
 );
 
-const Intro: React.FC<{ className?: string }> = ({ className }) => (
+export const Intro: React.FC<{ className?: string }> = ({ className }) => (
   <p className={className}>
     <span className="-extended">{`${strings.Header.introExtendedOpening} `}</span>
     {strings.Header.introBase}
@@ -17,11 +17,8 @@ const Intro: React.FC<{ className?: string }> = ({ className }) => (
   </p>
 );
 
-const BlogCallToAction: React.FC<{ className?: string }> = ({ className }) => (
-  <MarkdownWithLink
-    className={`blog-cta${className ? ` ${className}` : ''}`}
-    markdownText={strings.Header.blogCTA}
-  />
+export const BlogCallToAction: React.FC<{ className?: string }> = ({ className }) => (
+  <MarkdownWithLink className={`blog-cta${className ? ` ${className}` : ''}`}>
+    {strings.Header.blogCTA}
+  </MarkdownWithLink>
 );
-
-export { Title, Intro, BlogCallToAction };

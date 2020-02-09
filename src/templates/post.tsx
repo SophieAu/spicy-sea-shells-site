@@ -41,10 +41,9 @@ const Post: React.FC<PostResponse> = props => {
           <h1>{title}</h1>
           <PostMeta author={author} date={date} />
           {!!crosspost && (
-            <MarkdownWithLink
-              className="crosspost"
-              markdownText={strings.Post.crosspost({ ...crosspost })}
-            />
+            <MarkdownWithLink className="crosspost">
+              {strings.Post.crosspost({ ...crosspost })}
+            </MarkdownWithLink>
           )}
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
         </article>

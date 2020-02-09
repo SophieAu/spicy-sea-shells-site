@@ -3,19 +3,21 @@ import React from 'react';
 
 import Link from './Link';
 
-const MARKDOWN_LINK_REGEX = /(\[[^\]]+\]\([^\)]+\))/;
+const SPLIT_PER_LINK = /(\[[^\]]+\]\([^\)]+\))/;
+const CONTAINS_LINK = /^[\[]/;
+const EXTRACT_LINK = /\[([^\]]+)\]\(([^\)]+)\)/;
 
 interface Props {
-  markdownText: string;
+  children: string;
   className?: string;
 }
 
-const MarkdownWithLink: React.FC<Props> = ({ markdownText, className }) => (
+const MarkdownWithLink: React.FC<Props> = ({ children, className }) => (
   <p className={className}>
-    {markdownText.split(MARKDOWN_LINK_REGEX).map((subString, i) => {
-      if (!/^[\[]/.test(subString)) return subString;
+    {children.split(SPLIT_PER_LINK).map((subString, i) => {
+      if (!CONTAINS_LINK.test(subString)) return subString;
 
-      const [_, text, link] = subString.split(/\[([^\]]+)\]\(([^\)]+)\)/);
+      const [_, text, link] = subString.split(EXTRACT_LINK);
       return (
         <Link key={i} to={link}>
           {text}
