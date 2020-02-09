@@ -5,11 +5,11 @@ import React from 'react';
 
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
-import Header from '../components/about/Header';
-import Profiles from '../components/about/Profiles';
-import Sidebar from '../components/about/Sidebar';
+import AboutHeader from '../components/AboutHeader';
 import Footer from '../components/Footer';
+import Profiles from '../components/Profiles';
 import SEO from '../components/SEO';
+import Sidebar from '../components/Sidebar';
 
 const About = () => (
   <>
@@ -19,7 +19,7 @@ const About = () => (
       slug={slugs.about}
     />
     <div id="about">
-      <Header id="about-header" />
+      <AboutHeader id="about-header" />
       <Sidebar />
       <Profiles />
       <Footer />

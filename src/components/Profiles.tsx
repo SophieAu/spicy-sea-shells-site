@@ -4,10 +4,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 
-import profiles from '../../../data/profiles';
-import strings from '../../../data/strings';
-import { BaseInfo, SocialMedia } from '../../types';
-import Link from '../Link';
+import profiles from '../../data/profiles';
+import strings from '../../data/strings';
+import { BaseInfo, SocialMedia } from '../types';
+import Link from './Link';
 
 export const query = graphql`
   query {
@@ -110,7 +110,7 @@ const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedi
           <li key={platform}>
             <Link to={url}>
               <img
-                src={require(`../../../data/img/social-media/${platform}.svg`)}
+                src={require(`../../data/img/social-media/${platform}.svg`)}
                 alt={strings.About.socialMediaAlt({ platform })}
               />
             </Link>

@@ -1,11 +1,11 @@
-import './Header.scss';
+import './AboutHeader.scss';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 
-import { BlogCallToAction, Intro, Title } from '../_shared/headerFragments';
-import strings from '../../../data/strings';
+import strings from '../../data/strings';
+import { BlogCallToAction, Intro, Title } from './_shared/headerFragments';
 
 const query = graphql`
   query {
@@ -15,7 +15,7 @@ const query = graphql`
   }
 `;
 
-const Header: React.FC<{ id?: string }> = ({ id }) => (
+const AboutHeader: React.FC<{ id?: string }> = ({ id }) => (
   <header id={id} className="header">
     <Title className="title" />
     <Intro className="text intro" />
@@ -29,4 +29,4 @@ const Header: React.FC<{ id?: string }> = ({ id }) => (
   </header>
 );
 
-export default Header;
+export default AboutHeader;
