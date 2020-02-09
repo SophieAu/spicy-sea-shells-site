@@ -5,8 +5,8 @@ import React from 'react';
 
 import { paths, slugs } from '../../data/config';
 import strings from '../../data/strings';
-import { Intro } from '../components/_shared/headerFragments';
 import BlogWrapper from '../components/BlogWrapper';
+import { Intro } from '../components/headerFragments';
 import Link from '../components/Link';
 import MarkdownWithLink from '../components/MarkdownWithLink';
 import PostMeta from '../components/PostMeta';

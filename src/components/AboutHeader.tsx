@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import React from 'react';
 
 import strings from '../../data/strings';
-import { BlogCallToAction, Intro, Title } from './_shared/headerFragments';
+import { BlogCallToAction, Intro, Title } from './headerFragments';
 
 const query = graphql`
   query {

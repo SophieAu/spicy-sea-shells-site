@@ -5,8 +5,8 @@ import Img from 'gatsby-image';
 import React from 'react';
 
 import strings from '../../data/strings';
-import { BlogCallToAction, Intro } from './_shared/headerFragments';
 import Footer from './Footer';
+import { BlogCallToAction, Intro } from './headerFragments';
 
 const query = graphql`
   query {

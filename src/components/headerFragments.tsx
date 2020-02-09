@@ -2,9 +2,9 @@ import './headerFragments.scss';
 
 import React from 'react';
 
-import strings from '../../../data/strings';
-import { cn } from '../../util';
-import MarkdownWithLink from '../MarkdownWithLink';
+import strings from '../../data/strings';
+import { cn } from '../util';
+import MarkdownWithLink from './MarkdownWithLink';
 
 export const Title: React.FC<{ className?: string }> = ({ className }) => (
   <h1 className={className}>{strings.Header.title}</h1>
