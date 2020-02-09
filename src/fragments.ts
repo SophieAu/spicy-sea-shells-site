@@ -19,3 +19,67 @@ export const profileWide = graphql`
     }
   }
 `;
+
+export const aboutHeaderLogo = graphql`
+  fragment aboutHeaderLogo on File {
+    childImageSharp {
+      fluid(maxHeight: 384, quality: 90) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+`;
+
+export const sidebarLogo = graphql`
+  fragment sidebarLogo on File {
+    childImageSharp {
+      fixed(height: 256, width: 256, quality: 90) {
+        ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      }
+    }
+  }
+`;
+
+export const blogHeaderLogo = graphql`
+  fragment blogHeaderLogo on File {
+    childImageSharp {
+      fluid(maxHeight: 96, quality: 90) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+`;
+
+export const singlePost = graphql`
+  fragment singlePost on markdownRemark {
+    frontmatter {
+      title
+      author
+      date(formatString: "DD MMMM YYYY")
+      slug
+      crosspost {
+        url
+        site
+        hasPrefix
+      }
+    }
+    html
+  }
+`;
+
+export const postList = graphql`
+  fragment postList on MarkdownRemarkConnection {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          author
+          date(formatString: "DD MMMM YYYY")
+          slug
+        }
+        excerpt(pruneLength: 280)
+      }
+    }
+  }
+`;

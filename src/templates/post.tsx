@@ -19,18 +19,7 @@ import { PostResponse } from '../types';
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        author
-        date(formatString: "DD MMMM YYYY")
-        slug
-        crosspost {
-          url
-          site
-          hasPrefix
-        }
-      }
-      html
+      ...singlePost
     }
   }
 `;

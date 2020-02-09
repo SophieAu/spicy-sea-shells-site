@@ -10,11 +10,7 @@ import strings from '../../../data/strings';
 const query = graphql`
   query {
     file(relativePath: { eq: "logo.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 384, quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
+      ...aboutHeaderLogo
     }
   }
 `;

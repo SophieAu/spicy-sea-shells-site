@@ -11,11 +11,7 @@ import strings from '../../../data/strings';
 const query = graphql`
   query {
     file(relativePath: { eq: "logo.png" }) {
-      childImageSharp {
-        fixed(height: 256, width: 256, quality: 90) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
-      }
+      ...sidebarLogo
     }
   }
 `;
