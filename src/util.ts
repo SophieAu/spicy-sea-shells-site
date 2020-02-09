@@ -10,3 +10,5 @@ export const getSocialMediaHandle = (author: Author, platform: SocialMediaPlatfo
 };
 
 export const getName = (author: Author) => profiles.find(user => user.id === author)?.baseInfo.name;
+
+export const cn = (className?: string | false) => (!!className ? ` ${className}` : '');
