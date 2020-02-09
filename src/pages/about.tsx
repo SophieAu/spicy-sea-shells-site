@@ -5,11 +5,11 @@ import React from 'react';
 
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
-import Footer from '../components/_shared/Footer';
-import SEO from '../components/_shared/SEO';
 import Header from '../components/about/Header';
 import Profiles from '../components/about/Profiles';
 import Sidebar from '../components/about/Sidebar';
+import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const About = () => (
   <>

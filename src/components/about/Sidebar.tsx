@@ -4,9 +4,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 
-import Footer from '../_shared/Footer';
 import { BlogCallToAction, Intro } from '../_shared/headerFragments';
 import strings from '../../../data/strings';
+import Footer from '../Footer';
 
 const query = graphql`
   query {

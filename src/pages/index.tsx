@@ -2,7 +2,7 @@ import React from 'react';
 
 import { paths } from '../../data/config';
 import strings from '../../data/strings';
-import SEO from '../components/_shared/SEO';
+import SEO from '../components/SEO';
 
 const Home = () => (
   <SEO title={strings.Home.pageTitle} description={strings.Home.pageDescription} slug={''}>

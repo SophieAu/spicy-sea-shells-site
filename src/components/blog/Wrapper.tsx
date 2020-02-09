@@ -2,7 +2,7 @@ import './Wrapper.scss';
 
 import React from 'react';
 
-import Footer from '../_shared/Footer';
+import Footer from '../Footer';
 import Header from './Header';
 
 const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (

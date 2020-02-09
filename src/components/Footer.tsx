@@ -2,8 +2,8 @@ import './Footer.scss';
 
 import React from 'react';
 
-import chili from '../../../data/img/chili.svg';
-import strings from '../../../data/strings';
+import chili from '../../data/img/chili.svg';
+import strings from '../../data/strings';
 
 interface Props {
   className?: string;

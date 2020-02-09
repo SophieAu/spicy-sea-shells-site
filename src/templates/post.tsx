@@ -9,10 +9,10 @@ import React, { useEffect } from 'react';
 
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
-import MarkdownWithLink from '../components/_shared/MarkdownWithLink';
-import SEO from '../components/_shared/SEO';
 import PostMeta from '../components/blog/PostMeta';
 import Wrapper from '../components/blog/Wrapper';
+import MarkdownWithLink from '../components/MarkdownWithLink';
+import SEO from '../components/SEO';
 import { PostResponse } from '../types';
 import { getSocialMediaHandle } from '../util';
 

@@ -7,10 +7,10 @@ import React from 'react';
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
 import { Intro } from '../components/_shared/headerFragments';
-import MarkdownWithLink from '../components/_shared/MarkdownWithLink';
-import SEO from '../components/_shared/SEO';
 import PostList from '../components/blog/PostList';
 import Wrapper from '../components/blog/Wrapper';
+import MarkdownWithLink from '../components/MarkdownWithLink';
+import SEO from '../components/SEO';
 import { GraphQLResponse } from '../types';
 
 export const query = graphql`
