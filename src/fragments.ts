@@ -51,7 +51,7 @@ export const blogHeaderLogo = graphql`
 `;
 
 export const singlePost = graphql`
-  fragment singlePost on markdownRemark {
+  fragment singlePost on MarkdownRemark {
     frontmatter {
       title
       author
