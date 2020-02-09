@@ -13,10 +13,47 @@
 
     padding: var(--padding);
   }
+
+  > .header {
+    align-self: flex-start;
+    background-color: $primary-color;
+
+    padding: 1rem var(--padding);
+    height: var(--blog-header-height);
+    width: calc(100vw - var(--padding) * 2);
+
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-@media all and (max-width: $mobile-breakpoint - 1) {
-  #blog > .body {
+.header-logo {
+  height: var(--blog-header-height);
+  width: var(--blog-header-height);
+}
+
+.header-nav {
+  margin: 0 4rem 0 1rem;
+
+  a {
+    font: $bold 2.25rem / var(--blog-header-height) $font-family;
+    color: $header-footer-text;
+    text-decoration: none;
+  }
+}
+
+@media all and (min-width: $tablet-breakpoint) {
+  #blog > .header {
+    --padding: calc((100vw - var(--content-width)) / 2);
+
+    .header-logo {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media all and (max-width: $tablet-breakpoint - 1) {
+  #blog > .header {
     --padding: 1rem;
   }
 }
@@ -24,5 +61,15 @@
 @media all and (min-width: $mobile-breakpoint) {
   #blog > .body {
     --padding: 4rem;
+  }
+}
+
+@media all and (max-width: $mobile-breakpoint - 1) {
+  :root {
+    --blog-header-height: 4rem;
+  }
+
+  #blog > .body {
+    --padding: 1rem;
   }
 }
