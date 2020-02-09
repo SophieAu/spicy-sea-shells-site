@@ -63,6 +63,7 @@ export const singlePost = graphql`
         hasPrefix
       }
     }
+    excerpt
     html
   }
 `;

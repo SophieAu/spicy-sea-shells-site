@@ -87,6 +87,7 @@ export type PostResponse = {
   data: {
     markdownRemark: {
       frontmatter: PostFrontmatter;
+      excerpt: string;
       html: string;
     };
   };

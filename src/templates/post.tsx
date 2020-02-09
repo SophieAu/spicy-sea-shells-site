@@ -23,13 +23,13 @@ export const query = graphql`
 `;
 
 const Post: React.FC<PostResponse> = props => {
-  const { frontmatter, html } = props.data.markdownRemark;
+  const { frontmatter, html, excerpt } = props.data.markdownRemark;
   const { title, slug, author, date, crosspost } = frontmatter;
 
   return (
     <BlogWrapper
       title={strings.Post.pageTitle({ title: title })}
-      description={strings.Post.pageDescription({ title: title })}
+      description={excerpt}
       slug={`${slugs.articleBase}/${slug}`}
       creator={getSocialMediaHandle(author, 'twitter')}
     >
