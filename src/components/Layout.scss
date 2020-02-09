@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../variables';
 
 // ---
 // RESET
@@ -39,14 +39,14 @@ code {
 #blog,
 #about {
   min-height: 100vh;
-  background: repeat url(../data/img/bg_pattern.png);
+  background: repeat url(../../data/img/bg_pattern.png);
 
   display: flex;
 }
 
 .webp #blog,
 .webp #about {
-  background: repeat url(../data/img/bg_pattern.webp);
+  background: repeat url(../../data/img/bg_pattern.webp);
 }
 
 a {
