@@ -1,6 +1,18 @@
-@import './reset.scss';
 @import 'variables';
 
+// ---
+// RESET
+h1,
+h2,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+// ---
+// global css
 :root {
   font-size: 16px;
 }
