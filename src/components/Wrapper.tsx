@@ -2,12 +2,12 @@ import './Wrapper.scss';
 
 import React from 'react';
 
-import Footer from '../Footer';
-import Header from './Header';
+import BlogHeader from './BlogHeader';
+import Footer from './Footer';
 
 const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div id="blog">
-    <Header />
+    <BlogHeader />
     <main className="body">{children}</main>
     <Footer />
   </div>

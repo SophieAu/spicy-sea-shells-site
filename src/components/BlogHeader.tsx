@@ -1,12 +1,12 @@
-import './Header.scss';
+import './BlogHeader.scss';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 
-import { paths } from '../../../data/config';
-import strings from '../../../data/strings';
-import Link from '../Link';
+import { paths } from '../../data/config';
+import strings from '../../data/strings';
+import Link from './Link';
 
 const query = graphql`
   query {
@@ -16,7 +16,7 @@ const query = graphql`
   }
 `;
 
-const Header = () => (
+const BlogHeader = () => (
   <header className="header">
     <Link className="header-logo" to={paths.blog} ariaLabel={strings.Blog.homeLinkAlt}>
       <Img
@@ -31,4 +31,4 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default BlogHeader;

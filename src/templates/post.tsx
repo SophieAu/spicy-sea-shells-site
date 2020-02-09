@@ -9,10 +9,10 @@ import React, { useEffect } from 'react';
 
 import { slugs } from '../../data/config';
 import strings from '../../data/strings';
-import PostMeta from '../components/blog/PostMeta';
-import Wrapper from '../components/blog/Wrapper';
 import MarkdownWithLink from '../components/MarkdownWithLink';
+import PostMeta from '../components/PostMeta';
 import SEO from '../components/SEO';
+import Wrapper from '../components/Wrapper';
 import { PostResponse } from '../types';
 import { getSocialMediaHandle } from '../util';
 
@@ -56,7 +56,7 @@ const Post: React.FC<PostResponse> = props => {
 const CommentBox = () => {
   useEffect(() => {
     const removeCommentBox = commentBox('5655957052850176-proj');
-    return removeCommentBox();
+    return removeCommentBox;
   }, []);
 
   return <div className="commentbox" />;

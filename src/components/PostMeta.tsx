@@ -2,9 +2,9 @@ import './PostMeta.scss';
 
 import React from 'react';
 
-import strings from '../../../data/strings';
-import { Author } from '../../types';
-import { getName } from '../../util';
+import strings from '../../data/strings';
+import { Author } from '../types';
+import { getName } from '../util';
 
 const PostMeta: React.FC<{ date: string; author: Author }> = ({ date, author }) => (
   <div className="meta">

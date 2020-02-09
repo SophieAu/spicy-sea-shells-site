@@ -4,14 +4,15 @@ import '../main.scss';
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import { slugs } from '../../data/config';
+import { paths, slugs } from '../../data/config';
 import strings from '../../data/strings';
 import { Intro } from '../components/_shared/headerFragments';
-import PostList from '../components/blog/PostList';
-import Wrapper from '../components/blog/Wrapper';
+import Link from '../components/Link';
 import MarkdownWithLink from '../components/MarkdownWithLink';
+import PostMeta from '../components/PostMeta';
 import SEO from '../components/SEO';
-import { GraphQLResponse } from '../types';
+import Wrapper from '../components/Wrapper';
+import { GraphQLResponse, Post } from '../types';
 
 export const query = graphql`
   query {
@@ -40,6 +41,25 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
       </section>
     </Wrapper>
   </>
+);
+
+const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
+  <ul id="post-list">
+    {posts.map(post => {
+      const { excerpt, id, frontmatter } = post.node;
+      const { slug, author, title, date } = frontmatter;
+
+      return (
+        <li key={id}>
+          <h2 className="title">
+            <Link to={`${paths.articleBase}/${slug}`}>{title}</Link>
+          </h2>
+          <PostMeta date={date} author={author} />
+          <p className="excerpt">{excerpt}</p>
+        </li>
+      );
+    })}
+  </ul>
 );
 
 export default Blog;
