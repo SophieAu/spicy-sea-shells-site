@@ -9,9 +9,10 @@ const Shared = {
   },
   Header: {
     title: 'Spicy Sea Shells',
-    introExtendedOpening: 'Who are we?',
-    introBase: 'We are a collective of software developers, business analysts and quality analysts',
-    introExtended: 'who met on a training course by ThoughtWorks',
+    introExtended:
+      'Who are we? We are a collective of software developers, business analysts and quality analysts who met on a training course by ThoughtWorks',
+    introShort:
+      'We are a collective of software developers, business analysts and quality analysts.',
     blogCTA: `Together we're running the [Spicy Blog](${paths.blog})`,
     logoAlt: 'Spicy Sea Shells logo',
   },

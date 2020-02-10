@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import React from 'react';
 
 import strings from '../../data/strings';
-import { BlogCallToAction, Intro, Title } from './headerFragments';
+import { BlogCallToAction } from './headerFragments';
 
 const query = graphql`
   query {
@@ -17,8 +17,9 @@ const query = graphql`
 
 const AboutHeader: React.FC<{ id?: string }> = ({ id }) => (
   <header id={id} className="header">
-    <Title className="title" />
-    <Intro className="text intro" />
+    <h1 className="title">{strings.Header.title}</h1>
+    <p className={'text intro-extended'}>{strings.Header.introExtended}</p>
+    <p className={'text intro-short'}>{strings.Header.introShort}</p>
     <BlogCallToAction className="text blog" />
     <Img
       fluid={useStaticQuery(query).file.childImageSharp.fluid}

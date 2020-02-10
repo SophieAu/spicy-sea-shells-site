@@ -6,7 +6,6 @@ import React from 'react';
 import { paths, slugs } from '../../data/config';
 import strings from '../../data/strings';
 import BlogWrapper from '../components/BlogWrapper';
-import { Intro } from '../components/headerFragments';
 import Link from '../components/Link';
 import MarkdownWithLink from '../components/MarkdownWithLink';
 import PostMeta from '../components/PostMeta';
@@ -29,7 +28,7 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
     <section className="hero-section">
       <h1>{strings.Blog.title}</h1>
       <MarkdownWithLink className="hero-text">{strings.Blog.hero}</MarkdownWithLink>
-      <Intro className="hero-text" />
+      <p className="hero-text">{strings.Header.introExtended}</p>
     </section>
     <section className="posts">
       <h1>{strings.Blog.latestHeading}</h1>

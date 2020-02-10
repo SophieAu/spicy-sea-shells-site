@@ -6,7 +6,7 @@ import React from 'react';
 
 import strings from '../../data/strings';
 import Footer from './Footer';
-import { BlogCallToAction, Intro } from './headerFragments';
+import { BlogCallToAction } from './headerFragments';
 
 const query = graphql`
   query {
@@ -26,7 +26,7 @@ const Sidebar = () => (
           alt={strings.Header.logoAlt}
         />
         <div className="sidebar-text">
-          <Intro className="intro" />
+          <p>{strings.Header.introExtended}</p>
           <BlogCallToAction />
         </div>
       </header>
