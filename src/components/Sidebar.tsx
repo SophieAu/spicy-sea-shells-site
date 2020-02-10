@@ -5,8 +5,8 @@ import Img from 'gatsby-image';
 import React from 'react';
 
 import strings from '../../data/strings';
+import BlogCTA from './BlogCTA';
 import Footer from './Footer';
-import { BlogCallToAction } from './headerFragments';
 
 const query = graphql`
   query {
@@ -27,7 +27,7 @@ const Sidebar = () => (
         />
         <div className="sidebar-text">
           <p>{strings.Header.introExtended}</p>
-          <BlogCallToAction />
+          <BlogCTA />
         </div>
       </header>
       <Footer className="sidebar-footer" />
