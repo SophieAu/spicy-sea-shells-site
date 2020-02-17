@@ -11,3 +11,5 @@ export const paths = {
 };
 
 export const BASE_URL = 'https://spicyseashells.com';
+
+export const FALLBACK_IMAGE = '/static/socialImage.png';

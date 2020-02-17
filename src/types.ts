@@ -67,6 +67,16 @@ export type ProfilePics = {
 // ---
 // Post GraphQL Response
 
+type SocialImage = {
+  socialImage: {
+    childImageSharp: {
+      original: {
+        src: string;
+      };
+    };
+  };
+};
+
 export type Post = {
   node: {
     id: number;
@@ -89,6 +99,7 @@ export type PostResponse = {
       frontmatter: PostFrontmatter;
       excerpt: string;
       html: string;
+      fields: SocialImage;
     };
   };
 };

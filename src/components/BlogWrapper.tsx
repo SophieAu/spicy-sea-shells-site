@@ -22,12 +22,20 @@ interface Props {
   title: string;
   description: string;
   slug: string;
+  ogImage?: string;
   creator?: string;
   children?: React.ReactNode;
 }
 
-const BlogWrapper: React.FC<Props> = ({ children, title, description, slug, creator }) => (
-  <Layout id="blog" title={title} description={description} slug={slug} creator={creator}>
+const BlogWrapper: React.FC<Props> = ({ children, title, description, slug, creator, ogImage }) => (
+  <Layout
+    id="blog"
+    title={title}
+    description={description}
+    slug={slug}
+    creator={creator}
+    ogImage={ogImage}
+  >
     <BlogHeader />
     <main className="body">{children}</main>
     <Footer />

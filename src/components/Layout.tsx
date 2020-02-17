@@ -15,14 +15,15 @@ interface Props {
   children?: React.ReactNode;
   creator?: string;
   additionalHead?: React.ReactNode;
+  ogImage?: string;
 }
 
 const Layout: React.FC<Props> = props => {
-  const { id, title, description, slug, children, additionalHead, creator } = props;
+  const { id, title, description, slug, children, additionalHead, creator, ogImage } = props;
 
   return (
     <>
-      <SEO title={title} description={description} slug={slug} creator={creator}>
+      <SEO title={title} description={description} slug={slug} creator={creator} ogImage={ogImage}>
         <script>{webpSupportDetection}</script>
         {additionalHead}
       </SEO>

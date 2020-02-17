@@ -18,12 +18,21 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       ...singlePost
+      fields {
+        socialImage {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
+      }
     }
   }
 `;
 
 const Post: React.FC<PostResponse> = props => {
-  const { frontmatter, html, excerpt } = props.data.markdownRemark;
+  const { frontmatter, html, excerpt, fields } = props.data.markdownRemark;
   const { title, slug, author, date, crosspost } = frontmatter;
 
   return (
@@ -32,6 +41,7 @@ const Post: React.FC<PostResponse> = props => {
       description={excerpt}
       slug={`${slugs.articleBase}/${slug}`}
       creator={getSocialMediaHandle(author, 'twitter')}
+      ogImage={fields.socialImage.childImageSharp.original.src}
     >
       <article id="post">
         <h1>{title}</h1>
