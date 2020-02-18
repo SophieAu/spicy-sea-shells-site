@@ -51,4 +51,11 @@ const Post = {
   author: ({ author }: { author?: string }) => `By ${author}`,
 };
 
-export default { ...Shared, About, Blog, Home, Post };
+const NotFound = {
+  pageTitle: '404 | Spicy Sea Shells',
+  pageDescription: 'Page not found',
+  heading: 'Oh No!',
+  body: `This page doesn't seem to exist. Maybe check out the [blog](${paths.blog}) instead?`,
+};
+
+export default { ...Shared, About, Blog, Home, Post, NotFound };

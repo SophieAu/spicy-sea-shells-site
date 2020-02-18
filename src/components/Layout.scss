@@ -32,6 +32,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+#notFound,
 #blog,
 #about {
   min-height: 100vh;
@@ -40,6 +41,7 @@ code {
   display: flex;
 }
 
+.webp #notFound,
 .webp #blog,
 .webp #about {
   background: repeat url(../../data/img/bg_pattern.webp);

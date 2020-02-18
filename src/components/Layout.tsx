@@ -11,7 +11,7 @@ interface Props {
   title: string;
   description: string;
   slug: string;
-  id: 'about' | 'blog';
+  id: 'about' | 'blog' | 'notFound';
   children?: React.ReactNode;
   creator?: string;
   additionalHead?: React.ReactNode;
