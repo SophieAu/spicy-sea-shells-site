@@ -4,7 +4,7 @@ export const profileTall = graphql`
   fragment profileTall on File {
     childImageSharp {
       fixed(width: 160, height: 320, quality: 90) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_withWebp
       }
     }
   }

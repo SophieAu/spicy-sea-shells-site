@@ -9,7 +9,7 @@ import strings from '../../data/strings';
 import { BaseInfo, ProfilePics, SocialMedia } from '../types';
 import Link from './Link';
 
-export const query = graphql`
+const query = graphql`
   query {
     sophie_tall: file(relativePath: { eq: "profiles/sophie_tall.jpg" }) {
       ...profileTall
