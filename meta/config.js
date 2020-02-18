@@ -2,7 +2,7 @@
 
 const hiddenPages = [];
 
-exports.members = {
+const members = {
   sophie: 'Sophie Au',
   jean: 'Jean Bauer',
   ellie: 'Elloise Przybylo',
@@ -11,6 +11,8 @@ exports.members = {
   andrei: 'Andrei Cartan',
   nimish: 'Nimish Singh',
 };
+
+exports.members = members;
 
 exports.siteMetadata = {
   title: `Spicy Sea Shells`,
@@ -95,9 +97,12 @@ exports.robotsTxtOptions = {
 
 exports.sitemapOptions = { exclude: hiddenPages };
 
-exports.fileSystemContentOptions = { name: `blog-posts`, path: `${__dirname}/data/content/posts/` };
+exports.filesystemContentOptions = {
+  name: `blog-posts`,
+  path: `${__dirname}/../data/content/posts/`,
+};
 
-exports.fileSystemImageOptions = { name: `images`, path: `${__dirname}/data/img` };
+exports.filesystemImageOptions = { name: `images`, path: `${__dirname}/../data/img` };
 
 exports.transformerRemarkOptions = {
   plugins: [
