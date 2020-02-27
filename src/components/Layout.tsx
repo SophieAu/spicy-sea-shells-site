@@ -24,7 +24,7 @@ const Layout: React.FC<Props> = props => {
   return (
     <>
       <SEO title={title} description={description} slug={slug} creator={creator} ogImage={ogImage}>
-        <script>{webpSupportDetection}</script>
+        <script type="text/javascript">{webpSupportDetection}</script>
         {additionalHead}
       </SEO>
       <div id={id}>{children}</div>
