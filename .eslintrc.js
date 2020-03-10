@@ -19,7 +19,9 @@ module.exports = {
   },
   rules: {
     'react/prop-types': 0,
+    'react/display-name': 0,
     'simple-import-sort/sort': 2,
     '@typescript-eslint/explicit-function-return-type': 0,
+    'react/jsx-no-literals': 2,
   },
 };
