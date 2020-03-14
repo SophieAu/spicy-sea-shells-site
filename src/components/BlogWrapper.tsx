@@ -44,11 +44,11 @@ const BlogWrapper: React.FC<Props> = ({ children, title, description, slug, crea
 
 const BlogHeader = () => (
   <header className="header">
-    <Link className="header-logo" to={paths.blog} ariaLabel={strings.Blog.homeLinkAlt}>
+    <Link className="header-logo" to={paths.blog} ariaLabel={strings.blog.homeLinkAlt}>
       <Img fluid={useStaticQuery(query).file.childImageSharp.fluid} alt={strings.Header.logoAlt} />
     </Link>
     <nav className="header-nav">
-      <Link to={paths.about}>{strings.Blog.aboutLink}</Link>
+      <Link to={paths.about}>{strings.blog.aboutLink}</Link>
     </nav>
   </header>
 );

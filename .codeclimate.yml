@@ -1,0 +1,15 @@
+version: "2"
+checks:
+  method-complexity:
+    config:
+      threshold: 6
+  method-lines:
+    config:
+      threshold: 50
+exclude_paths:
+  - "node_modules/"
+  - "_non-code/"
+  - ".cache/"
+  - "public/"
+  - "data/profiles.ts"
+

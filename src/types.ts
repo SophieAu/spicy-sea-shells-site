@@ -41,7 +41,7 @@ export type Crosspost = {
 // ---
 // Image Types
 
-type FixedImage = {
+export type FixedImage = {
   childImageSharp: {
     fixed: FixedObject;
   };
@@ -110,10 +110,4 @@ export type PostFrontmatter = {
   author: Author;
   date: string;
   crosspost?: Crosspost;
-};
-
-type Crosspost = {
-  url: string;
-  site: string;
-  hasPrefix: boolean;
 };

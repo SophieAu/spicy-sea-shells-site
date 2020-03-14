@@ -1,6 +1,8 @@
 import { Crosspost } from '../src/types';
 import { paths } from './config';
 
+export type Page = 'blog' | 'about' | 'notFound';
+
 const Shared = {
   Footer: {
     preImage: 'Made with',
@@ -18,14 +20,14 @@ const Shared = {
   },
 };
 
-const About = {
+const about = {
   pageTitle: 'About | Spicy Sea Shells',
   pageDescription:
     'About page of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
   socialMediaAlt: ({ platform }: { platform: string }) => `logo of ${platform}`,
 };
 
-const Blog = {
+const blog = {
   pageTitle: 'Spicy Blog | Spicy Sea Shells',
   pageDescription:
     'Blog of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
@@ -51,11 +53,11 @@ const Post = {
   author: ({ author }: { author?: string }) => `By ${author}`,
 };
 
-const NotFound = {
+const notFound = {
   pageTitle: '404 | Spicy Sea Shells',
   pageDescription: 'Page not found',
   heading: 'Oh No!',
   body: `This page doesn't seem to exist. Maybe check out the [blog](${paths.blog}) instead?`,
 };
 
-export default { ...Shared, About, Blog, Home, Post, NotFound };
+export default { ...Shared, about, blog, Home, Post, notFound };

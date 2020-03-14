@@ -2,23 +2,17 @@ import './404.scss';
 
 import React from 'react';
 
-import { slugs } from '../../data/config';
 import strings from '../../data/strings';
-import Layout from '../components/Layout';
+import { LayoutWrapper } from '../components/Layout';
 import MarkdownWithLink from '../components/MarkdownWithLink';
 
 const NotFoundPage = () => (
-  <Layout
-    title={strings.NotFound.pageTitle}
-    description={strings.NotFound.pageDescription}
-    slug={slugs.notFound}
-    id="notFound"
-  >
+  <LayoutWrapper page="notFound">
     <div>
-      <h1>{strings.NotFound.heading}</h1>
-      <MarkdownWithLink>{strings.NotFound.body}</MarkdownWithLink>
+      <h1>{strings.notFound.heading}</h1>
+      <MarkdownWithLink>{strings.notFound.body}</MarkdownWithLink>
     </div>
-  </Layout>
+  </LayoutWrapper>
 );
 
 export default NotFoundPage;

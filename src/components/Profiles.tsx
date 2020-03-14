@@ -6,7 +6,7 @@ import React from 'react';
 
 import profiles from '../../data/profiles';
 import strings from '../../data/strings';
-import { BaseInfo, ProfilePics, SocialMedia } from '../types';
+import { BaseInfo, FixedImage, SocialMedia, UserInfo } from '../types';
 import Link from './Link';
 
 const query = graphql`
@@ -56,39 +56,39 @@ const query = graphql`
   }
 `;
 
-const Profiles = () => (
+const Profiles: React.FC = () => (
   <main className="body">
     {profiles.map(profile => (
-      <div className="card" key={profile.id}>
-        <ProfilePicture
-          id={profile.id}
-          name={profile.baseInfo.name}
-          imgData={useStaticQuery(query)}
-        />
-        <div className="profile">
-          <InfoBox baseInfo={profile.baseInfo} />
-          <SocialMediaIcons socialMedia={profile.socialMedia} />
-        </div>
-      </div>
+      <Card profile={profile} key={profile.id} />
     ))}
   </main>
 );
 
-interface ProfilePicProps {
-  id: string;
-  name: string;
-  imgData: ProfilePics;
-}
+const Card: React.FC<{ profile: UserInfo }> = ({ profile }) => {
+  const { id, baseInfo, socialMedia } = profile;
+  const imgData = useStaticQuery(query);
 
-const ProfilePicture: React.FC<ProfilePicProps> = ({ id, name, imgData }) => (
-  <>
-    <div className="image -side">
-      <Img fixed={imgData[`${id}_tall` as keyof ProfilePics].childImageSharp.fixed} alt={name} />
+  return (
+    <div className="card">
+      <ProfileImage className="side" image={imgData[`${id}_tall`]} alt={baseInfo.name} />
+      <ProfileImage className="top" image={imgData[`${id}wide`]} alt={baseInfo.name} />
+      <div className="profile">
+        <InfoBox baseInfo={baseInfo} />
+        <SocialMediaIcons socialMedia={socialMedia} />
+      </div>
     </div>
-    <div className="image -top">
-      <Img fixed={imgData[`${id}_wide` as keyof ProfilePics].childImageSharp.fixed} alt={name} />
-    </div>
-  </>
+  );
+};
+
+interface ProfileImageProps {
+  image: FixedImage;
+  className: string;
+  alt: string;
+}
+const ProfileImage: React.FC<ProfileImageProps> = ({ image, className, alt }) => (
+  <div className={`image -${className}`}>
+    <Img fixed={image.childImageSharp.fixed} alt={alt} />
+  </div>
 );
 
 const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
@@ -100,24 +100,29 @@ const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
   </div>
 );
 
+const platformsAlphabetically = (a: { platform: string }, b: { platform: string }) =>
+  a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0;
+
 const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
   <div className="social-media">
     <hr />
     <ul className="links">
-      {socialMedia
-        .sort((a, b) => (a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0))
-        .map(({ platform, url }) => (
-          <li key={platform}>
-            <Link to={url}>
-              <img
-                src={require(`../../data/img/social-media/${platform}.svg`)}
-                alt={strings.About.socialMediaAlt({ platform })}
-              />
-            </Link>
-          </li>
-        ))}
+      {socialMedia.sort(platformsAlphabetically).map(socialMedia => (
+        <SocialMediaIcon socialMedia={socialMedia} key={socialMedia.url} />
+      ))}
     </ul>
   </div>
+);
+
+const SocialMediaIcon: React.FC<{ socialMedia: SocialMedia }> = ({ socialMedia }) => (
+  <li key={socialMedia.platform}>
+    <Link to={socialMedia.url}>
+      <img
+        src={require(`../../data/img/social-media/${socialMedia.platform}.svg`)}
+        alt={strings.about.socialMediaAlt({ platform: socialMedia.platform })}
+      />
+    </Link>
+  </li>
 );
 
 export default Profiles;

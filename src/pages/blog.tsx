@@ -21,17 +21,17 @@ export const query = graphql`
 
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
   <BlogWrapper
-    title={strings.Blog.pageTitle}
-    description={strings.Blog.pageDescription}
+    title={strings.blog.pageTitle}
+    description={strings.blog.pageDescription}
     slug={slugs.blog}
   >
     <section className="hero-section">
-      <h1>{strings.Blog.title}</h1>
-      <MarkdownWithLink className="hero-text">{strings.Blog.hero}</MarkdownWithLink>
+      <h1>{strings.blog.title}</h1>
+      <MarkdownWithLink className="hero-text">{strings.blog.hero}</MarkdownWithLink>
       <p className="hero-text">{strings.Header.introExtended}</p>
     </section>
     <section className="posts">
-      <h1>{strings.Blog.latestHeading}</h1>
+      <h1>{strings.blog.latestHeading}</h1>
       <PostList posts={data.allMarkdownRemark.edges} />
     </section>
   </BlogWrapper>
