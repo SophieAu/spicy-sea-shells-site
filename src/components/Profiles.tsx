@@ -7,6 +7,7 @@ import React from 'react';
 import profiles from '../../data/profiles';
 import strings from '../../data/strings';
 import { BaseInfo, FixedImage, SocialMedia, UserInfo } from '../types';
+import { sortPlatforms } from '../util';
 import Link from './Link';
 
 const query = graphql`
@@ -100,14 +101,11 @@ const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
   </div>
 );
 
-const platformsAlphabetically = (a: { platform: string }, b: { platform: string }) =>
-  a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0;
-
 const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
   <div className="social-media">
     <hr />
     <ul className="links">
-      {socialMedia.sort(platformsAlphabetically).map(socialMedia => (
+      {socialMedia.sort(sortPlatforms).map(socialMedia => (
         <SocialMediaIcon socialMedia={socialMedia} key={socialMedia.url} />
       ))}
     </ul>
