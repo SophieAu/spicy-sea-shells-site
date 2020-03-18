@@ -67,12 +67,15 @@ const Profiles: React.FC = () => (
 
 const Card: React.FC<{ profile: UserInfo }> = ({ profile }) => {
   const { id, baseInfo, socialMedia } = profile;
+
   const imgData = useStaticQuery(query);
+  const tallId = `${id}_tall`;
+  const wideId = `${id}_wide`;
 
   return (
     <div className="card">
-      <ProfileImage className="side" image={imgData[`${id}_tall`]} alt={baseInfo.name} />
-      <ProfileImage className="top" image={imgData[`${id}wide`]} alt={baseInfo.name} />
+      <ProfileImage className="side" image={imgData[tallId]} alt={baseInfo.name} />
+      <ProfileImage className="top" image={imgData[wideId]} alt={baseInfo.name} />
       <div className="profile">
         <InfoBox baseInfo={baseInfo} />
         <SocialMediaIcons socialMedia={socialMedia} />
