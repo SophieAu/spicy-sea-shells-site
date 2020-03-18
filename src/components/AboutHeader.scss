@@ -2,7 +2,6 @@
 
 #about > .header {
   background-color: $primary-color;
-
   display: grid;
   grid-auto-columns: 1fr var(--logo-height);
   grid-gap: 0.5rem 1rem;
@@ -16,9 +15,9 @@
   }
 
   .title {
-    text-transform: uppercase;
     font: $bold var(--header-font-size) / 1.2 $font-family;
     grid-area: 1 / 1 / 2 / 2;
+    text-transform: uppercase;
   }
 
   .text {

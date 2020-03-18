@@ -3,23 +3,21 @@
 $card-border-radius: 0.75rem;
 
 #about > .body {
-  width: 100%;
-  padding-top: 2rem;
-
+  column-gap: 1rem;
   display: flex;
   flex-flow: wrap;
   justify-content: space-evenly;
-  column-gap: 1rem;
+  padding-top: 2rem;
+  width: 100%;
 }
 
 @mixin card-base {
   .card {
     background: $card-bg;
-    margin: 2rem 0.5rem;
     border-radius: $card-border-radius;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 16px 20px 0 rgba(0, 0, 0, 0.14);
-
     display: flex;
+    margin: 2rem 0.5rem;
     overflow: hidden;
 
     .image {
@@ -27,17 +25,17 @@ $card-border-radius: 0.75rem;
     }
 
     .profile {
+      align-content: space-between;
       display: flex;
       flex-direction: column;
-      align-content: space-between;
       justify-content: flex-end;
 
       .info {
         height: 100%;
 
         .city {
-          font: $regular 1rem $font-family;
           color: $non-highlight-text;
+          font: $regular 1rem $font-family;
         }
         .name {
           font: $semi-bold 1.5rem $font-family;
@@ -81,9 +79,9 @@ $card-border-radius: 0.75rem;
   $tall-card-width: 18rem;
 
   .card {
+    flex-direction: column;
     height: 28rem;
     width: $tall-card-width;
-    flex-direction: column;
 
     .image.-top {
       height: 11.25rem;
@@ -94,8 +92,8 @@ $card-border-radius: 0.75rem;
     }
 
     .profile {
-      padding: 0.75rem 1rem 1rem;
       height: 100%;
+      padding: 0.75rem 1rem 1rem;
       width: $tall-card-width - 2rem;
 
       .info {
@@ -121,21 +119,21 @@ $card-border-radius: 0.75rem;
   @include card-base;
 
   .card {
+    flex-direction: row;
     height: 20rem;
     width: 32.5rem;
-    flex-direction: row;
 
     .image.-side {
-      width: 10rem;
       height: 20rem;
+      width: 10rem;
     }
     .image.-top {
       display: none;
     }
 
     .profile {
-      padding: 2rem 2rem 1.5rem;
       height: calc(100% - 3.5rem);
+      padding: 2rem 2rem 1.5rem;
       width: 100%;
 
       .name {

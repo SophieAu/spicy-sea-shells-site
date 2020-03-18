@@ -1,20 +1,18 @@
 @import '../variables';
 
 #about > .sidebar-wrapper {
-  width: $sidebar-width;
   flex: 0 0 $sidebar-width;
+  width: $sidebar-width;
 
   .sidebar {
-    position: fixed;
-    height: 100%;
-    width: inherit;
-
     background: $primary-color;
     color: $header-footer-text;
-
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
+    position: fixed;
+    width: inherit;
   }
 
   .sidebar-body {
@@ -25,8 +23,8 @@
     }
 
     .sidebar-logo {
-      width: 16rem;
       padding: 1rem;
+      width: 16rem;
     }
 
     .sidebar-text {
@@ -35,7 +33,7 @@
   }
 
   .sidebar-footer {
-    width: 100%;
     padding-bottom: 0.75rem;
+    width: 100%;
   }
 }

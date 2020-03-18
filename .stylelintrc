@@ -1,0 +1,13 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order","stylelint-a11y"],
+  "ignoreFiles": ["!**/*.{css,scss}", "!**/src/*", "**/*rc"],
+  "rules": {
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "selector-max-id": null,
+    "at-rule-no-unknown": [true, {"ignoreAtRules": ["mixin", "include"]}]
+  }
+}

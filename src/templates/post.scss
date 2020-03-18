@@ -3,13 +3,13 @@
 #post {
   h1 {
     font-size: 3rem;
-    text-transform: none;
     margin: 0;
+    text-transform: none;
   }
 
   .crosspost {
-    padding-bottom: 2rem;
     font: italic $regular 1.25rem $font-family;
+    padding-bottom: 2rem;
   }
 
   .post-body {

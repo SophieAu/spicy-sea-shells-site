@@ -18,14 +18,14 @@ ul {
 }
 
 body {
-  display: flex;
-  margin: 0;
-  padding: 0;
   background: $primary-color;
-  font-family: $font-family;
   color: $black;
+  display: flex;
+  font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 code {
@@ -35,10 +35,9 @@ code {
 #notFound,
 #blog,
 #about {
-  min-height: 100vh;
   background: repeat url(../../data/img/bg_pattern.png);
-
   display: flex;
+  min-height: 100vh;
 }
 
 .webp #notFound,

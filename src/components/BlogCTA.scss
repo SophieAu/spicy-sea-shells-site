@@ -1,7 +1,7 @@
 @import '../variables';
 
 .blog-cta > a {
-  font-weight: $bold;
   color: $header-footer-text;
+  font-weight: $bold;
   text-transform: uppercase;
 }

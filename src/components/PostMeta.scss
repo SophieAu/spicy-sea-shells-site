@@ -1,11 +1,10 @@
 @import '../variables';
 
 .meta {
-  margin: 1rem 0;
   display: flex;
-  justify-content: space-between;
-
   font: $light 1.25rem $font-family;
+  justify-content: space-between;
+  margin: 1rem 0;
 }
 
 @media all and (max-width: $small-mobile-breakpoint - 1) {
@@ -14,8 +13,8 @@
     margin: 1.25rem 0;
 
     .date {
-      text-align: right;
       margin-bottom: 0.5rem;
+      text-align: right;
     }
   }
 }
