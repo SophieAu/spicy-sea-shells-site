@@ -4,6 +4,7 @@ _non-code/
 .env
 
 # gatsby files
+.linaria-cache/
 .cache/
 public
 node_modules/
