@@ -39,7 +39,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.7.1",
     "gatsby-transformer-sharp": "^2.3.16",
-    "linaria": "^1.4.0-beta.4",
+    "linaria": "^1.4.0-beta.5",
     "node-sass": "^4.13.1",
     "prismjs": "^1.19.0",
     "puppeteer": "^2.1.1",
