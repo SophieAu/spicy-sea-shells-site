@@ -31,7 +31,7 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
     </section>
 
     <section>
-      <h1 className={styles.postsTitle}>{strings.blog.latestHeading}</h1>
+      <h2 className={styles.postsTitle}>{strings.blog.latestHeading}</h2>
       <PostList posts={data.allMarkdownRemark.edges} />
     </section>
   </BlogWrapper>
@@ -45,9 +45,9 @@ const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => (
 
       return (
         <li key={id}>
-          <h2 className={styles.postTitle}>
+          <h3 className={styles.postTitle}>
             <Link to={`${paths.articleBase}/${slug}`}>{title}</Link>
-          </h2>
+          </h3>
           <PostMeta date={date} author={author} />
           <p className={styles.postExcerpt}>{excerpt}</p>
         </li>
