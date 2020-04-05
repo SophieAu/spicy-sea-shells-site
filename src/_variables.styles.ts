@@ -52,6 +52,9 @@ export const font = {
   footer: `${fontWeight.light} 1.125rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
   blogHeaderNav: `${fontWeight.bold} 2.25rem ${fontFamilyRegular}`,
 
+  aboutHeaderTitle: `${fontWeight.bold} var(--header-font-size) ${fontFamilyRegular}`,
+  aboutHeaderBody: `${fontWeight.normal} var(--info-font-size) ${fontFamilyRegular}`,
+
   postTitle: `${fontWeight.normal} 2.5rem ${fontFamilyRegular}`,
   postMeta: `${fontWeight.light} 1.25rem ${fontFamilyRegular}`,
   postBody: `${fontWeight.normal} 1.25rem ${fontFamilyRegular}`,
