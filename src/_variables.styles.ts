@@ -1,4 +1,9 @@
-export const color = { white: '#fff', footer: '#4b7f40', primary: '#f55', black: '#000' };
+export const color = {
+  black: '#000',
+  white: '#fff',
+  primary: '#f55',
+  footer: '#4b7f40',
+};
 
 export const FOOTER_HEIGHT = '4rem';
 export const BLOG_HEADER_HEIGHT = '4rem';
