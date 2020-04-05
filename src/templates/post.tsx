@@ -17,15 +17,6 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       ...singlePost
-      fields {
-        socialImage {
-          childImageSharp {
-            original {
-              src
-            }
-          }
-        }
-      }
     }
   }
 `;

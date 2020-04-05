@@ -65,6 +65,15 @@ export const singlePost = graphql`
     }
     excerpt
     html
+    fields {
+      socialImage {
+        childImageSharp {
+          original {
+            src
+          }
+        }
+      }
+    }
   }
 `;
 
