@@ -1,17 +1,17 @@
 import { css } from 'linaria';
 
-import { color, font, SIDEBAR_WIDTH } from '../_variables.styles';
+import { color, font } from '../_variables.styles';
 
 export const root = css`
-  flex: 0 0 ${SIDEBAR_WIDTH};
   background: ${color.primary};
   color: ${color.white};
+
+  height: 100vh;
+  overflow: scroll;
+
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
-  position: fixed;
-  width: ${SIDEBAR_WIDTH};
 
   > header {
     margin: 2rem;

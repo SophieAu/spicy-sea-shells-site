@@ -26,7 +26,7 @@ export const root = css`
       grid-row: span 3;
     }
     .${header}, .${footer} {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -35,7 +35,7 @@ export const root = css`
       grid-column: span 2;
     }
     .${sidebar} {
-      display: none;
+      display: none !important;
     }
   }
 `;
