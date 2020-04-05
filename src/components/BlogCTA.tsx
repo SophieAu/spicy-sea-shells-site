@@ -1,13 +1,12 @@
-import './BlogCTA.scss';
-
+import { cx } from 'linaria';
 import React from 'react';
 
 import strings from '../../data/strings';
-import { cn } from '../util';
+import * as styles from './BlogCTA.styles';
 import MarkdownWithLink from './MarkdownWithLink';
 
 const BlogCTA: React.FC<{ className?: string }> = ({ className }) => (
-  <MarkdownWithLink className={`blog-cta${cn(className)}`}>
+  <MarkdownWithLink className={cx(styles.root, className)}>
     {strings.Header.blogCTA}
   </MarkdownWithLink>
 );
