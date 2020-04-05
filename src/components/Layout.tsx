@@ -1,17 +1,24 @@
 import './Layout.scss';
 
+import { cx } from 'linaria';
 import React from 'react';
 
 import { slugs } from '../../data/config';
 import strings, { Page } from '../../data/strings';
+import * as styles from './Layout.styles';
 import SEO from './SEO';
 
-export const LayoutWrapper: React.FC<{ page: Page }> = ({ page, children }) => (
+export const LayoutWrapper: React.FC<{ page: Page; className?: string }> = ({
+  page,
+  children,
+  className,
+}) => (
   <Layout
     title={strings[page].pageTitle}
     description={strings[page].pageDescription}
     slug={slugs[page]}
     id={page}
+    className={className}
   >
     {children}
   </Layout>
@@ -29,10 +36,21 @@ interface Props {
   creator?: string;
   additionalHead?: React.ReactNode;
   ogImage?: string;
+  className?: string;
 }
 
 const Layout: React.FC<Props> = props => {
-  const { id, title, description, slug, children, additionalHead, creator, ogImage } = props;
+  const {
+    id,
+    title,
+    description,
+    slug,
+    children,
+    additionalHead,
+    creator,
+    ogImage,
+    className,
+  } = props;
 
   return (
     <>
@@ -40,7 +58,9 @@ const Layout: React.FC<Props> = props => {
         <script type="text/javascript">{webpSupportDetection}</script>
         {additionalHead}
       </SEO>
-      <div id={id}>{children}</div>
+      <div id={id} className={cx(styles.root, className)}>
+        {children}
+      </div>
     </>
   );
 };

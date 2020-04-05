@@ -28,22 +28,9 @@ body {
   padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-#notFound,
 #blog,
 #about {
-  background: repeat url(../../data/img/bg_pattern.png);
   display: flex;
-  min-height: 100vh;
-}
-
-.webp #notFound,
-.webp #blog,
-.webp #about {
-  background: repeat url(../../data/img/bg_pattern.webp);
 }
 
 a {

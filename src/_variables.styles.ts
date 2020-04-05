@@ -36,18 +36,19 @@ export const screenSize = {
   XS: `and (max-width: 479px)`,
 };
 
-const fontFamily = `'Source Sans Pro', sans-serif`;
+const fontFamilyRegular = `'Source Sans Pro', sans-serif`;
+const fontFamilyCode = `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`;
 
 export const font = {
-  footerNormal: `${fontWeight.light} 1.25rem/${FOOTER_HEIGHT} ${fontFamily}`,
-  footerSmall: `${fontWeight.light} 1rem/${FOOTER_HEIGHT} ${fontFamily}`,
+  footerNormal: `${fontWeight.light} 1.25rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
+  footerSmall: `${fontWeight.light} 1rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
 
-  postTitle: `${fontWeight.normal} 2.5rem ${fontFamily}`,
-  postMeta: `${fontWeight.light} 1.25rem ${fontFamily}`,
-  postBody: `${fontWeight.normal} 1.25rem ${fontFamily}`,
-  postCode: `${fontWeight.normal} 1rem ${fontFamily}`,
+  postTitle: `${fontWeight.normal} 2.5rem ${fontFamilyRegular}`,
+  postMeta: `${fontWeight.light} 1.25rem ${fontFamilyRegular}`,
+  postBody: `${fontWeight.normal} 1.25rem ${fontFamilyRegular}`,
+  postCode: `${fontWeight.normal} 1rem ${fontFamilyCode}`,
 
-  heroTitle: `${fontWeight.bold} 4rem ${fontFamily}`,
-  heroText: `${fontWeight.normal} 1.5rem ${fontFamily}`,
-  postSectionTitle: `${fontWeight.bold} 3rem ${fontFamily}`,
+  heroTitle: `${fontWeight.bold} 4rem ${fontFamilyRegular}`,
+  heroText: `${fontWeight.normal} 1.5rem ${fontFamilyRegular}`,
+  postSectionTitle: `${fontWeight.bold} 3rem ${fontFamilyRegular}`,
 };
