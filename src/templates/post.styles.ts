@@ -24,7 +24,7 @@ export const body = css`
     font: ${font.postCode};
   }
   pre {
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 16px 20px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 1px 0.25rem 0 rgba(0, 0, 0, 0.3), 0 1rem 1.25rem 0 rgba(0, 0, 0, 0.14);
   }
 
   pre.line-numbers {

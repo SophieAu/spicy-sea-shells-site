@@ -2,16 +2,8 @@ import { css } from 'linaria';
 
 import { font, fontWeight } from '../_variables.styles';
 
-export const root = css`
-  padding-top: 3.5rem;
-
-  h1 {
-    margin: 0.75rem 0;
-    text-transform: uppercase;
-  }
-`;
-
 export const heroTitle = css`
+  margin: 0.75rem 0;
   font: ${font.heroTitle};
   text-transform: uppercase;
 `;
