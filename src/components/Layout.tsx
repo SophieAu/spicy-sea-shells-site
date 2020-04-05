@@ -1,5 +1,3 @@
-import './Layout.scss';
-
 import { cx } from 'linaria';
 import React from 'react';
 

@@ -2,6 +2,7 @@
 
 @media (min-width: $widescreen-breakpoint) {
   #about {
+    display: flex;
     .footer,
     #about-header {
       display: none;
@@ -11,6 +12,7 @@
 
 @media (max-width: $widescreen-breakpoint - 1) {
   #about {
+    display: flex;
     flex-direction: column;
 
     .sidebar-wrapper {
