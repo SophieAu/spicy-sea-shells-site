@@ -1,5 +1,3 @@
-import './Profiles.scss';
-
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { cx } from 'linaria';
@@ -10,6 +8,7 @@ import strings from '../../data/strings';
 import { FixedImage, SocialMedia, UserInfo } from '../types';
 import { sortPlatforms } from '../util';
 import Link from './Link';
+import * as styles from './Profiles.styles';
 
 const query = graphql`
   query {
@@ -63,7 +62,7 @@ interface Props {
 }
 
 const Profiles: React.FC<Props> = ({ className }) => (
-  <main className={cx('body', className)}>
+  <main className={cx(styles.root, className)}>
     {profiles.map(profile => (
       <Card profile={profile} key={profile.id} />
     ))}
@@ -78,24 +77,21 @@ const Card: React.FC<{ profile: UserInfo }> = ({ profile }) => {
   const wideId = `${id}_wide`;
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       <ProfileImage className="side" image={imgData[tallId]} alt={baseInfo.name} />
       <ProfileImage className="top" image={imgData[wideId]} alt={baseInfo.name} />
-      <div className="profile">
-        <div className="info">
-          <p className="city">{baseInfo.city}</p>
-          <h2 className="name">{baseInfo.name}</h2>
-          <p className="bio -long">{baseInfo.bio}</p>
-          <p className="bio -short">{baseInfo.bioShort}</p>
+      <div className={styles.profile}>
+        <div className={styles.info}>
+          <p className={styles.city}>{baseInfo.city}</p>
+          <h2 className={styles.name}>{baseInfo.name}</h2>
+          <p className={cx(styles.bio, '-long')}>{baseInfo.bio}</p>
+          <p className={cx(styles.bio, '-short')}>{baseInfo.bioShort}</p>
         </div>
-        <div className="social-media">
-          <hr />
-          <ul className="links">
-            {socialMedia.sort(sortPlatforms).map(socialMedia => (
-              <SocialMediaIcon socialMedia={socialMedia} key={socialMedia.url} />
-            ))}
-          </ul>
-        </div>
+        <ul className={styles.socialMedia}>
+          {socialMedia.sort(sortPlatforms).map(socialMedia => (
+            <SocialMediaIcon socialMedia={socialMedia} key={socialMedia.url} />
+          ))}
+        </ul>
       </div>
     </div>
   );
@@ -107,7 +103,7 @@ interface ProfileImageProps {
   alt: string;
 }
 const ProfileImage: React.FC<ProfileImageProps> = ({ image, className, alt }) => (
-  <div className={`image -${className}`}>
+  <div className={cx(styles.image, `-${className}`)}>
     <Img fixed={image.childImageSharp.fixed} alt={alt} />
   </div>
 );

@@ -1,8 +1,10 @@
 export const color = {
-  black: '#000',
+  black: '#260f0f',
   white: '#fff',
   primary: '#f55',
+  primaryDim: '#ffdede',
   footer: '#4b7f40',
+  nonHighlightText: `#737373`,
 };
 
 export const FOOTER_HEIGHT = '4rem';
@@ -54,6 +56,10 @@ export const font = {
 
   aboutHeaderTitle: `${fontWeight.bold} var(--header-font-size) ${fontFamilyRegular}`,
   aboutHeaderBody: `${fontWeight.normal} var(--info-font-size) ${fontFamilyRegular}`,
+
+  profileName: `${fontWeight.semiBold} 1.5rem ${fontFamilyRegular}`,
+  profileCity: `${fontWeight.normal} 1rem ${fontFamilyRegular}`,
+  profileBio: `${fontWeight.normal} 1rem/1.25rem ${fontFamilyRegular}`,
 
   postTitle: `${fontWeight.normal} 2.5rem ${fontFamilyRegular}`,
   postMeta: `${fontWeight.light} 1.25rem ${fontFamilyRegular}`,
