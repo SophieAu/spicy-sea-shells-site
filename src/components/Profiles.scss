@@ -42,6 +42,10 @@ $card-border-radius: 0.75rem;
         }
       }
 
+      .bio {
+        font: $regular 1rem/1.25rem $font-family;
+      }
+
       .bio.-short {
         margin: 1rem 0.5rem 0;
       }
