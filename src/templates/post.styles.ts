@@ -15,6 +15,7 @@ export const crosspost = css`
 
 export const body = css`
   font: ${font.postBody};
+  margin: 3rem 0 0;
 
   p {
     margin: 1rem 0;
