@@ -30,7 +30,7 @@ export const query = graphql`
   }
 `;
 
-const Post: React.FC<PostResponse> = (props) => {
+const Post: React.FC<PostResponse> = props => {
   const { frontmatter, html, excerpt, fields } = props.data.markdownRemark;
   const { title, slug, author, date, crosspost } = frontmatter;
 
