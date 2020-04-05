@@ -3,11 +3,10 @@ import { css } from 'linaria';
 import { color } from '../_variables.styles';
 
 const sidebarWidth = `22rem`;
-const primaryColor = `#f55`;
 
 export const root = css`
   flex: 0 0 ${sidebarWidth};
-  background: ${primaryColor};
+  background: ${color.primary};
   color: ${color.white};
   display: flex;
   flex-direction: column;

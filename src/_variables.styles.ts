@@ -1,4 +1,4 @@
-export const color = { white: '#fff', footer: '#4b7f40' };
+export const color = { white: '#fff', footer: '#4b7f40', primary: 'f55' };
 
 export const FOOTER_HEIGHT = '4rem';
 
@@ -43,4 +43,5 @@ export const font = {
   footerSmall: `${fontWeight.light} 1rem/${FOOTER_HEIGHT} ${fontFamily}`,
 
   postMeta: `${fontWeight.light} 1.25rem ${fontFamily}`,
+  crosspost: `italic ${fontWeight.normal} 1.25rem ${fontFamily}`,
 };

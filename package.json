@@ -19,7 +19,6 @@
     "lint:fix": "eslint 'src/**/*.{tsx,ts,js,jsx}' --ignore-pattern '*.d.ts'  --ignore-pattern 'src/assets/*' --fix && stylelint 'src/**/*.{css,scss,styles.ts}' --rd --risd --fix"
   },
   "dependencies": {
-    "commentbox.io": "^2.0.0",
     "core-js": "^3.6.4",
     "fs-extra": "^9.0.0",
     "gatsby": "^2.20.9",
