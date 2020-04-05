@@ -6,16 +6,16 @@ import strings, { Page } from '../../data/strings';
 import * as styles from './Layout.styles';
 import SEO from './SEO';
 
-export const LayoutWrapper: React.FC<{ page: Page; className?: string }> = ({
-  page,
-  children,
-  className,
-}) => (
+interface WrapperProps {
+  page: Page;
+  className?: string;
+}
+
+export const LayoutWrapper: React.FC<WrapperProps> = ({ page, children, className }) => (
   <Layout
     title={strings[page].pageTitle}
     description={strings[page].pageDescription}
     slug={slugs[page]}
-    id={page}
     className={className}
   >
     {children}
@@ -29,36 +29,21 @@ interface Props {
   title: string;
   description: string;
   slug: string;
-  id?: Page;
   children?: React.ReactNode;
   creator?: string;
-  additionalHead?: React.ReactNode;
   ogImage?: string;
   className?: string;
 }
 
 const Layout: React.FC<Props> = props => {
-  const {
-    id,
-    title,
-    description,
-    slug,
-    children,
-    additionalHead,
-    creator,
-    ogImage,
-    className,
-  } = props;
+  const { title, description, slug, children, creator, ogImage, className } = props;
 
   return (
     <>
       <SEO title={title} description={description} slug={slug} creator={creator} ogImage={ogImage}>
         <script type="text/javascript">{webpSupportDetection}</script>
-        {additionalHead}
       </SEO>
-      <div id={id} className={cx(styles.root, className)}>
-        {children}
-      </div>
+      <div className={cx(styles.root, className)}>{children}</div>
     </>
   );
 };
