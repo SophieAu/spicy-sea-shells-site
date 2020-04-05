@@ -24,15 +24,6 @@ export const fontWeight = {
   xBlack: 950,
 };
 
-/*
-$small-mobile-breakpoint: 480px;
-$mobile-breakpoint: 768px;
-$tablet-breakpoint: 992px;
-$desktop-breakpoint: 1024px;
-$midscreen-breakpoint: 1200px;
-$widescreen-breakpoint: 1440px;
-*/
-
 export const screenSize = {
   XL: `and (min-width: 1440px)`,
   L: `and (min-width: 1024px) and (max-width: 1439px)`,
@@ -41,10 +32,7 @@ export const screenSize = {
   M: `and (min-width: 768px) and (max-width: 1023px)`,
   M_MAX: `and (max-width: 1023px)`,
   M_MIN: `and (min-width: 768px)`,
-  S: `and (min-width: 480px) and (max-width: 767px)`,
-  S_MAX: `and (max-width: 767px)`,
-  S_MIN: `and (min-width: 480px) `,
-  XS: `and (max-width: 479px)`,
+  S: ` and (max-width: 767px)`,
 };
 
 const fontFamilyRegular = `'Source Sans Pro', sans-serif`;

@@ -14,8 +14,8 @@ export const body = css`
     --padding: 4rem;
   }
 
-  @media all ${screenSize.S_MAX} {
-    --padding: 1rem;
+  @media all ${screenSize.S} {
+    --padding: 1.5rem;
   }
 `;
 

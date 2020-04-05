@@ -34,7 +34,7 @@ export const intro = css`
     }
   }
 
-  @media all ${screenSize.S_MAX} {
+  @media all ${screenSize.S} {
     grid-area: 1 / 3;
 
     &-extended {
@@ -50,7 +50,7 @@ export const blog = css`
     grid-column: 1 / 2;
   }
 
-  @media all ${screenSize.S_MAX} {
+  @media all ${screenSize.S} {
     grid-column: 1 / 3;
   }
 `;
@@ -70,7 +70,7 @@ export const logo = css`
     grid-row: 1 / 4;
   }
 
-  @media all ${screenSize.S_MAX} {
+  @media all ${screenSize.S} {
     --logo-height: 3.5rem;
     grid-row: 1 / 2;
   }
