@@ -7,7 +7,7 @@ import React from 'react';
 
 import profiles from '../../data/profiles';
 import strings from '../../data/strings';
-import { BaseInfo, FixedImage, SocialMedia, UserInfo } from '../types';
+import { FixedImage, SocialMedia, UserInfo } from '../types';
 import { sortPlatforms } from '../util';
 import Link from './Link';
 
@@ -82,8 +82,20 @@ const Card: React.FC<{ profile: UserInfo }> = ({ profile }) => {
       <ProfileImage className="side" image={imgData[tallId]} alt={baseInfo.name} />
       <ProfileImage className="top" image={imgData[wideId]} alt={baseInfo.name} />
       <div className="profile">
-        <InfoBox baseInfo={baseInfo} />
-        <SocialMediaIcons socialMedia={socialMedia} />
+        <div className="info">
+          <p className="city">{baseInfo.city}</p>
+          <h2 className="name">{baseInfo.name}</h2>
+          <p className="bio -long">{baseInfo.bio}</p>
+          <p className="bio -short">{baseInfo.bioShort}</p>
+        </div>
+        <div className="social-media">
+          <hr />
+          <ul className="links">
+            {socialMedia.sort(sortPlatforms).map(socialMedia => (
+              <SocialMediaIcon socialMedia={socialMedia} key={socialMedia.url} />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -97,26 +109,6 @@ interface ProfileImageProps {
 const ProfileImage: React.FC<ProfileImageProps> = ({ image, className, alt }) => (
   <div className={`image -${className}`}>
     <Img fixed={image.childImageSharp.fixed} alt={alt} />
-  </div>
-);
-
-const InfoBox: React.FC<{ baseInfo: BaseInfo }> = ({ baseInfo }) => (
-  <div className="info">
-    <p className="city">{baseInfo.city}</p>
-    <h2 className="name">{baseInfo.name}</h2>
-    <p className="bio -long">{baseInfo.bio}</p>
-    <p className="bio -short">{baseInfo.bioShort}</p>
-  </div>
-);
-
-const SocialMediaIcons: React.FC<{ socialMedia: SocialMedia[] }> = ({ socialMedia }) => (
-  <div className="social-media">
-    <hr />
-    <ul className="links">
-      {socialMedia.sort(sortPlatforms).map(socialMedia => (
-        <SocialMediaIcon socialMedia={socialMedia} key={socialMedia.url} />
-      ))}
-    </ul>
   </div>
 );
 
