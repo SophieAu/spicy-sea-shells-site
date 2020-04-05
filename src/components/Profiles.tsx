@@ -2,6 +2,7 @@ import './Profiles.scss';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { cx } from 'linaria';
 import React from 'react';
 
 import profiles from '../../data/profiles';
@@ -57,8 +58,12 @@ const query = graphql`
   }
 `;
 
-const Profiles: React.FC = () => (
-  <main className="body">
+interface Props {
+  className: string;
+}
+
+const Profiles: React.FC<Props> = ({ className }) => (
+  <main className={cx('body', className)}>
     {profiles.map(profile => (
       <Card profile={profile} key={profile.id} />
     ))}

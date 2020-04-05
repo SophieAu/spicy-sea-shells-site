@@ -7,6 +7,7 @@ export const color = {
 
 export const FOOTER_HEIGHT = '4rem';
 export const BLOG_HEADER_HEIGHT = '4rem';
+export const SIDEBAR_WIDTH = `22rem`;
 
 export const fontWeight = {
   thin: 100,

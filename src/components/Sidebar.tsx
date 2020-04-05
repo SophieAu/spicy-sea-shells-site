@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { cx } from 'linaria';
 import React from 'react';
 
 import strings from '../../data/strings';
@@ -15,8 +16,12 @@ const query = graphql`
   }
 `;
 
-const Sidebar = () => (
-  <div className={styles.root}>
+interface Props {
+  className: string;
+}
+
+const Sidebar: React.FC<Props> = ({ className }) => (
+  <div className={cx(styles.root, className)}>
     <header>
       <Img
         className={styles.logo}

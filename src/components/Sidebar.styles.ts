@@ -1,11 +1,9 @@
 import { css } from 'linaria';
 
-import { color, font } from '../_variables.styles';
-
-const sidebarWidth = `22rem`;
+import { color, font, SIDEBAR_WIDTH } from '../_variables.styles';
 
 export const root = css`
-  flex: 0 0 ${sidebarWidth};
+  flex: 0 0 ${SIDEBAR_WIDTH};
   background: ${color.primary};
   color: ${color.white};
   display: flex;
@@ -13,7 +11,7 @@ export const root = css`
   height: 100%;
   justify-content: space-between;
   position: fixed;
-  width: ${sidebarWidth};
+  width: ${SIDEBAR_WIDTH};
 
   > header {
     margin: 2rem;
