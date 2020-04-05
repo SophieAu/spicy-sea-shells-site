@@ -44,4 +44,10 @@ export const font = {
 
   postMeta: `${fontWeight.light} 1.25rem ${fontFamily}`,
   crosspost: `italic ${fontWeight.normal} 1.25rem ${fontFamily}`,
+
+  heroTitle: `${fontWeight.bold} 4rem ${fontFamily}`,
+  heroText: `${fontWeight.normal} 1.5rem ${fontFamily}`,
+  postSectionTitle: `${fontWeight.bold} 3rem ${fontFamily}`,
+  postTitle: `${fontWeight.normal} 2.5rem ${fontFamily}`,
+  postExcerpt: `${fontWeight.normal} 1.25rem ${fontFamily}`,
 };
