@@ -35,15 +35,15 @@ export const screenSize = {
   S: ` and (max-width: 767px)`,
 };
 
-const fontFamilyRegular = `'Source Sans Pro', sans-serif`;
+const fontFamilyRegular = `Source Sans Pro, sans-serif`;
 const fontFamilyCode = `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`;
 
 export const font = {
   footer: `${fontWeight.light} 1.125rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
   blogHeaderNav: `${fontWeight.bold} 2.25rem ${fontFamilyRegular}`,
 
-  aboutHeaderTitle: `${fontWeight.bold} var(--header-font-size) ${fontFamilyRegular}`,
-  aboutHeaderBody: `${fontWeight.normal} var(--info-font-size) ${fontFamilyRegular}`,
+  aboutHeaderTitle: `${fontWeight.bold} 3.5rem ${fontFamilyRegular}`,
+  aboutHeaderBody: `${fontWeight.normal} 1.75rem ${fontFamilyRegular}`,
 
   profileName: `${fontWeight.semiBold} 1.5rem ${fontFamilyRegular}`,
   profileCity: `${fontWeight.normal} 1rem ${fontFamilyRegular}`,

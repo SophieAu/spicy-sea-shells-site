@@ -5,7 +5,7 @@ import { color, font, screenSize } from '../_variables.styles';
 export const root = css`
   background-color: ${color.primary};
   display: grid;
-  grid-auto-columns: repeat(2, auto);
+  grid-auto-columns: auto auto;
   grid-gap: 0.5rem 1rem;
   justify-content: center;
   padding: var(--outside-padding);
@@ -84,10 +84,18 @@ export const title = css`
   color: ${color.white};
   font: ${font.aboutHeaderTitle};
   text-transform: uppercase;
+
+  @media all ${screenSize.M_MAX} {
+    font-size: 2.25rem;
+  }
 `;
 
 export const text = css`
   color: ${color.white};
   padding-left: 0.5rem;
   font: ${font.aboutHeaderBody};
+
+  @media all ${screenSize.M_MAX} {
+    font-size: 1.5rem;
+  }
 `;
