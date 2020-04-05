@@ -14,9 +14,9 @@
     "format": "prettier --write '{src,data}/**/*.{tsx,ts}'",
     "clean": "gatsby clean",
     "checks": "tsc && npm run lint",
-    "lint": "eslint 'src/**/*.{tsx,ts,js,jsx}' --ignore-pattern '*.d.ts' --ignore-pattern 'src/assets/*' && stylelint 'src/**/*.{css,scss,styles.ts}' --rd --risd",
+    "lint": "eslint 'src/**/*.{tsx,ts,js,jsx}' --ignore-pattern '*.d.ts' --ignore-pattern 'src/assets/*' && stylelint 'src/**/*.styles.ts' --rd --risd",
     "stylelint": "stylelint '.' --rd --risd",
-    "lint:fix": "eslint 'src/**/*.{tsx,ts,js,jsx}' --ignore-pattern '*.d.ts'  --ignore-pattern 'src/assets/*' --fix && stylelint 'src/**/*.{css,scss,styles.ts}' --rd --risd --fix"
+    "lint:fix": "eslint 'src/**/*.{tsx,ts,js,jsx}' --ignore-pattern '*.d.ts'  --ignore-pattern 'src/assets/*' --fix && stylelint 'src/**/*.styles.ts' --rd --risd --fix"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -29,7 +29,6 @@
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-sitemap": "^2.3.1",
     "gatsby-plugin-typescript": "^2.3.1",
@@ -39,7 +38,6 @@
     "gatsby-transformer-remark": "^2.7.1",
     "gatsby-transformer-sharp": "^2.4.3",
     "linaria": "^1.4.0-beta.5",
-    "node-sass": "^4.13.1",
     "prismjs": "^1.19.0",
     "puppeteer": "^2.1.1",
     "react": "^16.13.1",
@@ -59,7 +57,6 @@
     "stylelint": "^13.2.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0",
     "typescript": "^3.8.3"

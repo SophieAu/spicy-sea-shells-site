@@ -1,7 +1,7 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "plugins": ["stylelint-order","stylelint-a11y"],
-  "ignoreFiles": ["!**/src/*.{,styles.ts,css,scss}"],
+  "ignoreFiles": ["!**/src/*.styles.ts"],
   "rules": {
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": true,
