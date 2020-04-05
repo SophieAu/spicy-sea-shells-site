@@ -40,8 +40,7 @@ const fontFamilyRegular = `'Source Sans Pro', sans-serif`;
 const fontFamilyCode = `source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace`;
 
 export const font = {
-  footerNormal: `${fontWeight.light} 1.25rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
-  footerSmall: `${fontWeight.light} 1rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
+  footer: `${fontWeight.light} 1.125rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
 
   postTitle: `${fontWeight.normal} 2.5rem ${fontFamilyRegular}`,
   postMeta: `${fontWeight.light} 1.25rem ${fontFamilyRegular}`,
