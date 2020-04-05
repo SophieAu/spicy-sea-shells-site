@@ -18,6 +18,6 @@ export const container = css`
   }
 
   p {
-    font-size: ${font.heroText};
+    font: ${font.heroText};
   }
 `;

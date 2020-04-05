@@ -3,7 +3,8 @@
 @media (min-width: $widescreen-breakpoint) {
   #about {
     display: flex;
-    .footer,
+
+    footer,
     #about-header {
       display: none;
     }

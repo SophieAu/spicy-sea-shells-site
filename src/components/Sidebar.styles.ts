@@ -1,6 +1,6 @@
 import { css } from 'linaria';
 
-import { color } from '../_variables.styles';
+import { color, font } from '../_variables.styles';
 
 const sidebarWidth = `22rem`;
 
@@ -26,7 +26,7 @@ export const logo = css`
 `;
 
 export const text = css`
-  font-size: 1.875rem;
+  font: ${font.sidebarBody};
 
   p:first-child {
     margin: 2rem 0;

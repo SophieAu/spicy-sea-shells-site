@@ -4,6 +4,7 @@ import { FixedObject } from 'gatsby-image';
 // User Info
 
 export type Author = 'kamala' | 'sophie' | 'jean' | 'jackie' | 'nimish' | 'andrei' | 'ellie';
+
 export type SocialMediaPlatform =
   | 'twitter'
   | 'linkedin'

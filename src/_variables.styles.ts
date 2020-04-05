@@ -56,6 +56,8 @@ export const font = {
   postBody: `${fontWeight.normal} 1.25rem ${fontFamilyRegular}`,
   postCode: `${fontWeight.normal} 1rem ${fontFamilyCode}`,
 
+  sidebarBody: `${fontWeight.normal} 1.875rem ${fontFamilyRegular}`,
+
   heroTitle: `${fontWeight.bold} 4rem ${fontFamilyRegular}`,
   heroText: `${fontWeight.normal} 1.5rem ${fontFamilyRegular}`,
   postSectionTitle: `${fontWeight.bold} 3rem ${fontFamilyRegular}`,
