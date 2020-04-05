@@ -20,7 +20,6 @@ ul {
 body {
   background: $primary-color;
   color: $black;
-  display: flex;
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,7 +27,6 @@ body {
   padding: 0;
 }
 
-#blog,
 #about {
   display: flex;
 }

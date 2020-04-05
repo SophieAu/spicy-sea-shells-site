@@ -31,7 +31,7 @@ interface Props {
   title: string;
   description: string;
   slug: string;
-  id: Page;
+  id?: Page;
   children?: React.ReactNode;
   creator?: string;
   additionalHead?: React.ReactNode;

@@ -1,7 +1,6 @@
-import './BlogWrapper.scss';
-
 import React from 'react';
 
+import * as styles from './BlogWrapper.styles';
 import Footer from './Footer';
 import HeaderBlog from './HeaderBlog';
 import Layout from './Layout';
@@ -17,15 +16,15 @@ interface Props {
 
 const BlogWrapper: React.FC<Props> = ({ children, title, description, slug, creator, ogImage }) => (
   <Layout
-    id="blog"
     title={title}
     description={description}
     slug={slug}
     creator={creator}
     ogImage={ogImage}
+    className={styles.root}
   >
     <HeaderBlog />
-    <main className="body">{children}</main>
+    <main className={styles.body}>{children}</main>
     <Footer />
   </Layout>
 );
