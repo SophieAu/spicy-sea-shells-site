@@ -3,25 +3,25 @@ import { css } from 'linaria';
 import { font } from '../_variables.styles';
 
 export const title = css`
-  font-size: 3rem;
+  font: ${font.postTitle};
   margin: 0;
   text-transform: none;
 `;
 
 export const crosspost = css`
-  font: ${font.crosspost};
+  font: italic ${font.postBody};
   padding-bottom: 2rem;
 `;
 
 export const body = css`
-  font-size: 1.25rem;
+  font: ${font.postBody};
 
   p {
     margin: 1rem 0;
   }
 
   code {
-    font-size: 1rem;
+    font: ${font.postCode};
   }
   pre {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3), 0 16px 20px 0 rgba(0, 0, 0, 0.14);

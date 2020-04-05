@@ -50,5 +50,5 @@ export const postTitle = css`
 `;
 
 export const postExcerpt = css`
-  font: ${font.postExcerpt};
+  font: ${font.postBody};
 `;

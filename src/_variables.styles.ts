@@ -42,12 +42,12 @@ export const font = {
   footerNormal: `${fontWeight.light} 1.25rem/${FOOTER_HEIGHT} ${fontFamily}`,
   footerSmall: `${fontWeight.light} 1rem/${FOOTER_HEIGHT} ${fontFamily}`,
 
+  postTitle: `${fontWeight.normal} 2.5rem ${fontFamily}`,
   postMeta: `${fontWeight.light} 1.25rem ${fontFamily}`,
-  crosspost: `italic ${fontWeight.normal} 1.25rem ${fontFamily}`,
+  postBody: `${fontWeight.normal} 1.25rem ${fontFamily}`,
+  postCode: `${fontWeight.normal} 1rem ${fontFamily}`,
 
   heroTitle: `${fontWeight.bold} 4rem ${fontFamily}`,
   heroText: `${fontWeight.normal} 1.5rem ${fontFamily}`,
   postSectionTitle: `${fontWeight.bold} 3rem ${fontFamily}`,
-  postTitle: `${fontWeight.normal} 2.5rem ${fontFamily}`,
-  postExcerpt: `${fontWeight.normal} 1.25rem ${fontFamily}`,
 };
