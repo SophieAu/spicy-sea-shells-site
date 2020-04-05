@@ -1,6 +1,7 @@
-export const color = { white: '#fff', footer: '#4b7f40', primary: 'f55' };
+export const color = { white: '#fff', footer: '#4b7f40', primary: '#f55' };
 
 export const FOOTER_HEIGHT = '4rem';
+export const BLOG_HEADER_HEIGHT = '4rem';
 
 export const fontWeight = {
   thin: 100,
@@ -33,6 +34,8 @@ export const screenSize = {
   M_MAX: `and (max-width: 1023px)`,
   M_MIN: `and (min-width: 768px)`,
   S: `and (min-width: 480px) and (max-width: 767px)`,
+  S_MAX: `and (max-width: 767px)`,
+  S_MIN: `and (min-width: 480px) `,
   XS: `and (max-width: 479px)`,
 };
 
@@ -41,6 +44,7 @@ const fontFamilyCode = `source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 
 export const font = {
   footer: `${fontWeight.light} 1.125rem/${FOOTER_HEIGHT} ${fontFamilyRegular}`,
+  blogHeaderNav: `${fontWeight.bold} 2.25rem ${fontFamilyRegular}`,
 
   postTitle: `${fontWeight.normal} 2.5rem ${fontFamilyRegular}`,
   postMeta: `${fontWeight.light} 1.25rem ${fontFamilyRegular}`,

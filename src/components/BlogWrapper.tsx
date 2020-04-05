@@ -1,22 +1,10 @@
 import './BlogWrapper.scss';
 
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 import React from 'react';
 
-import { paths } from '../../data/config';
-import strings from '../../data/strings';
 import Footer from './Footer';
+import HeaderBlog from './HeaderBlog';
 import Layout from './Layout';
-import Link from './Link';
-
-const query = graphql`
-  query {
-    file(relativePath: { eq: "logo.png" }) {
-      ...blogHeaderLogo
-    }
-  }
-`;
 
 interface Props {
   title: string;
@@ -36,21 +24,10 @@ const BlogWrapper: React.FC<Props> = ({ children, title, description, slug, crea
     creator={creator}
     ogImage={ogImage}
   >
-    <BlogHeader />
+    <HeaderBlog />
     <main className="body">{children}</main>
     <Footer />
   </Layout>
-);
-
-const BlogHeader = () => (
-  <header className="header">
-    <Link className="header-logo" to={paths.blog} ariaLabel={strings.blog.homeLinkAlt}>
-      <Img fluid={useStaticQuery(query).file.childImageSharp.fluid} alt={strings.Header.logoAlt} />
-    </Link>
-    <nav className="header-nav">
-      <Link to={paths.about}>{strings.blog.aboutLink}</Link>
-    </nav>
-  </header>
 );
 
 export default BlogWrapper;

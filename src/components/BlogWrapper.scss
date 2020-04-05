@@ -11,47 +11,6 @@
     padding: var(--padding);
     width: calc(100vw - 2 * var(--padding));
   }
-
-  > .header {
-    align-self: flex-start;
-    background-color: $primary-color;
-    display: flex;
-    height: var(--blog-header-height);
-    justify-content: space-between;
-    padding: 1rem var(--padding);
-    width: calc(100vw - var(--padding) * 2);
-  }
-}
-
-.header-logo {
-  height: var(--blog-header-height);
-  width: var(--blog-header-height);
-}
-
-.header-nav {
-  margin: 0 4rem 0 1rem;
-
-  a {
-    color: $header-footer-text;
-    font: $bold 2.25rem / var(--blog-header-height) $font-family;
-    text-decoration: none;
-  }
-}
-
-@media all and (min-width: $tablet-breakpoint) {
-  #blog > .header {
-    --padding: calc((100vw - var(--content-width)) / 2);
-
-    .header-logo {
-      margin-left: 1rem;
-    }
-  }
-}
-
-@media all and (max-width: $tablet-breakpoint - 1) {
-  #blog > .header {
-    --padding: 1rem;
-  }
 }
 
 @media all and (min-width: $mobile-breakpoint) {
@@ -61,10 +20,6 @@
 }
 
 @media all and (max-width: $mobile-breakpoint - 1) {
-  :root {
-    --blog-header-height: 4rem;
-  }
-
   #blog > .body {
     --padding: 1rem;
   }
