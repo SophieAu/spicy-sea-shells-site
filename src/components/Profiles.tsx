@@ -4,11 +4,13 @@ import { cx } from 'linaria';
 import React from 'react';
 
 import profiles from '../../data/profiles';
-import strings from '../../data/strings';
+import copy from '../../data/strings';
 import { FixedImage, SocialMedia, UserInfo } from '../types';
 import { sortPlatforms } from '../util';
 import Link from './Link';
 import * as styles from './Profiles.styles';
+
+const strings = copy.about;
 
 const query = graphql`
   query {
@@ -113,7 +115,7 @@ const SocialMediaIcon: React.FC<{ socialMedia: SocialMedia }> = ({ socialMedia }
     <Link to={socialMedia.url}>
       <img
         src={require(`../../data/img/social-media/${socialMedia.platform}.svg`)}
-        alt={strings.about.socialMediaAlt({ platform: socialMedia.platform })}
+        alt={strings.socialMediaAlt({ platform: socialMedia.platform })}
       />
     </Link>
   </li>

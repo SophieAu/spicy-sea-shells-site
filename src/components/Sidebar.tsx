@@ -3,10 +3,13 @@ import Img from 'gatsby-image';
 import { cx } from 'linaria';
 import React from 'react';
 
-import strings from '../../data/strings';
+import copy from '../../data/strings';
+import { ClassNameProp } from '../types';
 import BlogCTA from './BlogCTA';
 import Footer from './Footer';
 import * as styles from './Sidebar.styles';
+
+const strings = copy.Header;
 
 const query = graphql`
   query {
@@ -16,20 +19,16 @@ const query = graphql`
   }
 `;
 
-interface Props {
-  className: string;
-}
-
-const Sidebar: React.FC<Props> = ({ className }) => (
+const Sidebar: React.FC<ClassNameProp> = ({ className }) => (
   <div className={cx(styles.root, className)}>
     <header>
       <Img
         className={styles.logo}
         fixed={useStaticQuery(query).file.childImageSharp.fixed}
-        alt={strings.Header.logoAlt}
+        alt={strings.logoAlt}
       />
       <div className={styles.text}>
-        <p>{strings.Header.introExtended}</p>
+        <p>{strings.introExtended}</p>
         <BlogCTA />
       </div>
     </header>

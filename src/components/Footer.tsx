@@ -2,18 +2,17 @@ import { cx } from 'linaria';
 import React from 'react';
 
 import chili from '../../data/img/chili.svg';
-import strings from '../../data/strings';
+import copy from '../../data/strings';
+import { ClassNameProp } from '../types';
 import * as styles from './Footer.styles';
 
-interface Props {
-  className?: string;
-}
+const strings = copy.Footer;
 
-const Footer: React.FC<Props> = ({ className = styles.defaultFooter }) => (
+const Footer: React.FC<ClassNameProp> = ({ className = styles.defaultFooter }) => (
   <footer className={cx(styles.root, className)}>
-    {`${strings.Footer.preImage} `}
-    <img src={chili} alt={strings.Footer.imageAlt} />
-    {` ${strings.Footer.postImage}`}
+    {`${strings.preImage} `}
+    <img src={chili} alt={strings.imageAlt} />
+    {` ${strings.postImage}`}
   </footer>
 );
 

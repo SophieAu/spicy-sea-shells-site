@@ -95,3 +95,9 @@ type PostFrontmatter = {
   date: string;
   crosspost?: Crosspost;
 };
+
+// ---
+// Prop interfaces
+export interface ClassNameProp {
+  className?: string;
+}

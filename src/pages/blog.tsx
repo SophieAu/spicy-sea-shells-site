@@ -2,13 +2,15 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { paths, slugs } from '../../data/config';
-import strings from '../../data/strings';
+import copy from '../../data/strings';
 import BlogWrapper from '../components/BlogWrapper';
 import Link from '../components/Link';
 import MarkdownWithLink from '../components/MarkdownWithLink';
 import PostMeta from '../components/PostMeta';
 import { GraphQLResponse, Post } from '../types';
 import * as styles from './blog.styles';
+
+const strings = copy.blog;
 
 export const query = graphql`
   query {
@@ -19,19 +21,15 @@ export const query = graphql`
 `;
 
 const Blog: React.FC<GraphQLResponse> = ({ data }) => (
-  <BlogWrapper
-    title={strings.blog.pageTitle}
-    description={strings.blog.pageDescription}
-    slug={slugs.blog}
-  >
+  <BlogWrapper title={strings.pageTitle} description={strings.pageDescription} slug={slugs.blog}>
     <section>
-      <h1 className={styles.heroTitle}>{strings.blog.title}</h1>
-      <MarkdownWithLink className={styles.heroText}>{strings.blog.hero}</MarkdownWithLink>
-      <p className={styles.heroText}>{strings.Header.introExtended}</p>
+      <h1 className={styles.heroTitle}>{strings.title}</h1>
+      <MarkdownWithLink className={styles.heroText}>{strings.hero}</MarkdownWithLink>
+      <p className={styles.heroText}>{copy.Header.introExtended}</p>
     </section>
 
     <section>
-      <h2 className={styles.postsTitle}>{strings.blog.latestHeading}</h2>
+      <h2 className={styles.postsTitle}>{strings.latestHeading}</h2>
       <PostList posts={data.allMarkdownRemark.edges} />
     </section>
   </BlogWrapper>

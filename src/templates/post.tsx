@@ -5,13 +5,15 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { slugs } from '../../data/config';
-import strings from '../../data/strings';
+import copy from '../../data/strings';
 import BlogWrapper from '../components/BlogWrapper';
 import MarkdownWithLink from '../components/MarkdownWithLink';
 import PostMeta from '../components/PostMeta';
 import { PostResponse } from '../types';
 import { getSocialMediaHandle } from '../util';
 import * as styles from './post.styles';
+
+const strings = copy.Post;
 
 export const query = graphql`
   query($slug: String!) {
@@ -27,7 +29,7 @@ const Post: React.FC<PostResponse> = props => {
 
   return (
     <BlogWrapper
-      title={strings.Post.pageTitle({ title: title })}
+      title={strings.pageTitle({ title: title })}
       description={excerpt}
       slug={`${slugs.articleBase}/${slug}`}
       creator={getSocialMediaHandle(author, 'twitter')}
@@ -38,7 +40,7 @@ const Post: React.FC<PostResponse> = props => {
         <PostMeta author={author} date={date} />
         {!!crosspost && (
           <MarkdownWithLink className={styles.crosspost}>
-            {strings.Post.crosspost({ ...crosspost })}
+            {strings.crosspost({ ...crosspost })}
           </MarkdownWithLink>
         )}
         <div className={styles.body} dangerouslySetInnerHTML={{ __html: html }} />

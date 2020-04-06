@@ -7,6 +7,7 @@ const SPLIT_PER_LINK = /(\[[^\]]+\]\([^\)]+\))/;
 const CONTAINS_LINK = /^[\[]/;
 const EXTRACT_LINK = /\[([^\]]+)\]\(([^\)]+)\)/;
 
+// declare children explicitly to restrict them to be of type string only
 interface Props {
   children: string;
   className?: string;

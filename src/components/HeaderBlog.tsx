@@ -15,7 +15,7 @@ const query = graphql`
   }
 `;
 
-const HeaderBlog = () => (
+const HeaderBlog: React.FC = () => (
   <header className={styles.root}>
     <Link className={styles.logo} to={paths.blog} ariaLabel={strings.blog.homeLinkAlt}>
       <Img fluid={useStaticQuery(query).file.childImageSharp.fluid} alt={strings.Header.logoAlt} />
