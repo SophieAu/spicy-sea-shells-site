@@ -1,26 +1,8 @@
 import { cx } from 'linaria';
 import React from 'react';
 
-import { slugs } from '../../data/config';
-import strings, { Page } from '../../data/strings';
 import * as styles from './Layout.styles';
 import SEO from './SEO';
-
-interface WrapperProps {
-  page: Page;
-  className?: string;
-}
-
-export const LayoutWrapper: React.FC<WrapperProps> = ({ page, children, className }) => (
-  <Layout
-    title={strings[page].pageTitle}
-    description={strings[page].pageDescription}
-    slug={slugs[page]}
-    className={className}
-  >
-    {children}
-  </Layout>
-);
 
 const webpSupportDetection =
   '!function(e){"use strict";function s(s){if(s){var t=e.documentElement;t.classList?t.classList.add("webp"):t.className+=" webp",window.sessionStorage.setItem("webpSupport",!0)}}!function(e){if(window.sessionStorage&&window.sessionStorage.getItem("webpSupport"))s(!0);else{var t=new Image;t.onload=t.onerror=function(){e(2===t.height)},t.src="data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA"}}(s)}(document);';
