@@ -10,7 +10,7 @@ This is the website for the Spicy Sea Shells, built with [Gatsby](https://www.ga
 
 ## 🚀 Quick start
 
-1.  **Run `yarn install`.**
+1.  **Run `npm install`.**
 
 2.  **Run the Development Build.**
 
