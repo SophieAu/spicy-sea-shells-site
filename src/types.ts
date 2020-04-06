@@ -21,7 +21,7 @@ export type UserInfo = {
   socialMedia: SocialMedia[];
 };
 
-export type BaseInfo = {
+type BaseInfo = {
   name: string;
   city: string;
   bio: string;
@@ -46,23 +46,6 @@ export type FixedImage = {
   childImageSharp: {
     fixed: FixedObject;
   };
-};
-
-export type ProfilePics = {
-  sophie_tall: FixedImage;
-  sophie_wide: FixedImage;
-  jean_tall: FixedImage;
-  jean_wide: FixedImage;
-  ellie_tall: FixedImage;
-  ellie_wide: FixedImage;
-  jackie_tall: FixedImage;
-  jackie_wide: FixedImage;
-  kamala_tall: FixedImage;
-  kamala_wide: FixedImage;
-  andrei_tall: FixedImage;
-  andrei_wide: FixedImage;
-  nimish_tall: FixedImage;
-  nimish_wide: FixedImage;
 };
 
 // ---
@@ -105,7 +88,7 @@ export type PostResponse = {
   };
 };
 
-export type PostFrontmatter = {
+type PostFrontmatter = {
   slug: string;
   title: string;
   author: Author;
