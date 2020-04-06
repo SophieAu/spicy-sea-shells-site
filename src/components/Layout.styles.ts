@@ -43,5 +43,8 @@ export const globals = css`
     a {
       color: ${color.black};
     }
+    a:hover {
+      opacity: 0.8;
+    }
   }
 `;
