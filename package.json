@@ -36,7 +36,7 @@
     "gatsby-remark-prismjs": "^3.4.1",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^2.8.3",
-    "gatsby-transformer-sharp": "^2.4.3",
+    "gatsby-transformer-sharp": "^2.5.0",
     "linaria": "^2.0.0-alpha.2",
     "prismjs": "^1.20.0",
     "puppeteer": "^3.0.2",
