@@ -1,0 +1,8 @@
+[build]
+  publish = "public/"
+
+  ignore = "sh ignore.sh"
+
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
