@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const {
   siteMetadata,
-  cspOptions,
   feedOptions,
   manifestOptions,
   robotsTxtOptions,
@@ -22,7 +21,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    { resolve: `gatsby-plugin-csp`, options: cspOptions },
     { resolve: `gatsby-plugin-feed`, options: feedOptions },
     { resolve: `gatsby-plugin-manifest`, options: manifestOptions },
     { resolve: `gatsby-plugin-page-creator`, options: pageCreatorOptions },

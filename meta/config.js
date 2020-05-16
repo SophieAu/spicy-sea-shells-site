@@ -21,17 +21,6 @@ exports.siteMetadata = {
   siteUrl: `https://spicyseashells.com`,
 };
 
-exports.cspOptions = {
-  disableOnDev: true,
-  mergeStyleHashes: false,
-  directives: {
-    'style-src': "'self' 'unsafe-inline' blob:",
-    'img-src': "'self' data: https://*",
-    'script-src': "'self' https://d33wubrfki0l68.cloudfront.net/",
-    'frame-src': 'https://app.commentbox.io',
-  },
-};
-
 exports.feedOptions = {
   query: `
   {
