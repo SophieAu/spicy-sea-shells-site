@@ -16,7 +16,6 @@ export const footer = css`
 
 export const root = css`
   display: grid;
-  grid-template-columns: ${SIDEBAR_WIDTH} calc(100vw - ${SIDEBAR_WIDTH});
   grid-template-rows: repeat(3, auto);
 
   @media all ${screenSize.XL} {
