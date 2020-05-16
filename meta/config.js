@@ -26,6 +26,7 @@ exports.cspOptions = {
   mergeStyleHashes: false,
   directives: {
     'style-src': "'self' 'unsafe-inline' blob:",
+    'img-src': "'self' data: https://*",
     'script-src': "'self' https://d33wubrfki0l68.cloudfront.net/",
     'frame-src': 'https://app.commentbox.io',
   },
