@@ -1,4 +1,5 @@
 export const slugs = {
+  home: '',
   blog: 'blog',
   about: 'about',
   articleBase: 'article',
@@ -6,6 +7,7 @@ export const slugs = {
 };
 
 export const paths = {
+  home: `/`,
   blog: `/${slugs.blog}`,
   about: `/${slugs.about}`,
   articleBase: `/${slugs.articleBase}`,
