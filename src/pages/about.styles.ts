@@ -1,6 +1,6 @@
 import { css } from 'linaria';
 
-import { color, screenSize, SIDEBAR_WIDTH } from '../_variables.styles';
+import { color, screenSize } from '../_variables.styles';
 
 export const profiles = css`
   overflow: scroll;
