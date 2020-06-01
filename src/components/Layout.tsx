@@ -21,12 +21,12 @@ const Layout: React.FC<Props> = props => {
   const { title, description, slug, children, creator, ogImage, className } = props;
 
   return (
-    <>
+    <React.StrictMode>
       <SEO title={title} description={description} slug={slug} creator={creator} ogImage={ogImage}>
         <script type="text/javascript">{webpSupportDetection}</script>
       </SEO>
       <div className={cx(styles.root, className)}>{children}</div>
-    </>
+    </React.StrictMode>
   );
 };
 
