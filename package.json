@@ -38,7 +38,7 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "linaria": "^2.0.0-alpha.2",
     "prismjs": "^1.20.0",
-    "puppeteer": "^3.0.2",
+    "puppeteer": "^3.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1"
