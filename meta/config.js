@@ -12,6 +12,9 @@ const members = {
   nimish: 'Nimish Singh',
 };
 
+const renderCard = ({ title, author }) =>
+  `<head><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" /></head><body style="margin:0"><div style="background-image: url(../../data/img/bg_pattern.webp);width:1080px;height:510px;padding:60px;display: flex;flex-direction: row;justify-content: space-between;"><div style="display: flex;flex-direction: column;justify-content: space-between;margin-right: 60px; align-content: center;"><img src="../../data/img/logo.png" style="width:300px;"/><img src="../../data/img/profiles/${author}_wide.jpg" style="width:180px;height:180px;border-radius: 150px;object-fit: cover;align-self: flex-end;margin-right: 28px;"/></div><div style="display: flex;flex-direction: column;justify-content: space-between;margin-right: 64px; align-content: center;"><p style="font-family:'Source Sans Pro';font-size: 64px;font-weight: 700;margin: 30px 0 0;">${title}</p><p style="font-family:'Source Sans Pro';font-weight: 300;font-size: 40px;font-style: italic;margin-bottom: 64px;">By ${members[author]}</p></div></div></body>`;
+
 exports.members = members;
 
 exports.siteMetadata = {
@@ -104,3 +107,5 @@ exports.transformerRemarkOptions = {
     },
   ],
 };
+
+exports.socialImageOptions = { design: renderCard };

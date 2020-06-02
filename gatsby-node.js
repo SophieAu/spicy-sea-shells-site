@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const puppeteer = require('puppeteer');
-const { POSTS_QUERY, buildBlogPosts, createSocialCardImage } = require('./meta/node');
+const { POSTS_QUERY, buildBlogPosts } = require('./meta/node');
 
 let browser = null;
 
@@ -19,14 +19,4 @@ exports.createPages = async ({ graphql, actions }) => {
   buildBlogPosts(result.data.allMarkdownRemark.edges, actions.createPage);
 
   console.log();
-};
-
-exports.onCreateNode = async ({ node, actions, createNodeId, store }) => {
-  if (node.internal.type !== 'MarkdownRemark') return;
-
-  try {
-    await createSocialCardImage(node, browser, store, { ...actions, createNodeId });
-  } catch (e) {
-    console.warn(e);
-  }
 };
