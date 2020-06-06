@@ -7,7 +7,7 @@ const {
   sitemapOptions,
   filesystemContentOptions,
   filesystemImageOptions,
-  transformerRemarkOptions,
+  mdxOptions,
   socialImageOptions,
 } = require('./meta/config');
 
@@ -22,14 +22,14 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    { resolve: `gatsby-plugin-feed`, options: feedOptions },
+    { resolve: `gatsby-plugin-feed-mdx`, options: feedOptions },
     { resolve: `gatsby-plugin-manifest`, options: manifestOptions },
     { resolve: `gatsby-plugin-page-creator`, options: pageCreatorOptions },
     { resolve: 'gatsby-plugin-robots-txt', options: robotsTxtOptions },
     { resolve: `gatsby-plugin-sitemap`, options: sitemapOptions },
     { resolve: `gatsby-source-filesystem`, options: filesystemContentOptions },
     { resolve: `gatsby-source-filesystem`, options: filesystemImageOptions },
-    { resolve: `gatsby-transformer-remark`, options: transformerRemarkOptions },
+    { resolve: `gatsby-plugin-mdx`, options: mdxOptions },
     { resolve: `gatsby-remark-social-image`, options: socialImageOptions },
   ],
 };

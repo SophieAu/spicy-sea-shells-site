@@ -14,7 +14,7 @@ const strings = copy.blog;
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       ...postList
     }
   }
@@ -30,7 +30,7 @@ const Blog: React.FC<GraphQLResponse> = ({ data }) => (
 
     <section>
       <h2 className={styles.postsTitle}>{strings.latestHeading}</h2>
-      <PostList posts={data.allMarkdownRemark.edges} />
+      <PostList posts={data.allMdx.edges} />
     </section>
   </BlogWrapper>
 );

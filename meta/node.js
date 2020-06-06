@@ -2,7 +2,7 @@
 const { resolve } = require(`path`);
 
 exports.POSTS_QUERY = `{
-  allMarkdownRemark {
+  allMdx {
     edges {
       node {
         frontmatter {

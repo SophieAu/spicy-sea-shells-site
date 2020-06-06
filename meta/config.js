@@ -39,8 +39,8 @@ exports.feedOptions = {
 `,
   feeds: [
     {
-      serialize: ({ query: { site, allMarkdownRemark } }) =>
-        allMarkdownRemark.edges.map(edge => {
+      serialize: ({ query: { site, allMdx } }) =>
+        allMdx.edges.map(edge => {
           const { frontmatter, html } = edge.node;
 
           return Object.assign({}, frontmatter, {
@@ -52,7 +52,7 @@ exports.feedOptions = {
         }),
       query: `
       {
-        allMarkdownRemark(
+        allMdx(
           sort: { order: DESC, fields: [frontmatter___date] }
         ) {
           edges {
@@ -98,8 +98,9 @@ exports.filesystemContentOptions = {
 
 exports.filesystemImageOptions = { name: `images`, path: `${__dirname}/../data/img` };
 
-exports.transformerRemarkOptions = {
-  plugins: [
+exports.mdxOptions = {
+  extensions: [`.mdx`, `.md`],
+  gatsbyRemarkPlugins: [
     `gatsby-remark-prismjs`,
     {
       resolve: 'gatsby-remark-images',

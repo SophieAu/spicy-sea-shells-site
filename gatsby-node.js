@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(POSTS_QUERY);
 
   console.log('\nCreating Blog Posts...');
-  buildBlogPosts(result.data.allMarkdownRemark.edges, actions.createPage);
+  buildBlogPosts(result.data.allMdx.edges, actions.createPage);
 
   console.log();
 };

@@ -71,7 +71,7 @@ export type Post = {
 
 export type GraphQLResponse = {
   data: {
-    allMarkdownRemark: {
+    allMdx: {
       edges: Post[];
     };
   };
@@ -79,10 +79,10 @@ export type GraphQLResponse = {
 
 export type PostResponse = {
   data: {
-    markdownRemark: {
+    mdx: {
       frontmatter: PostFrontmatter;
       excerpt: string;
-      html: string;
+      body: string;
       fields: SocialImage;
     };
   };

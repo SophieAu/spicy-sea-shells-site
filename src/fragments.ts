@@ -51,7 +51,7 @@ export const blogHeaderLogo = graphql`
 `;
 
 export const singlePost = graphql`
-  fragment singlePost on MarkdownRemark {
+  fragment singlePost on Mdx {
     frontmatter {
       title
       author
@@ -64,7 +64,7 @@ export const singlePost = graphql`
       }
     }
     excerpt
-    html
+    body
     fields {
       socialImage {
         childImageSharp {
@@ -78,7 +78,7 @@ export const singlePost = graphql`
 `;
 
 export const postList = graphql`
-  fragment postList on MarkdownRemarkConnection {
+  fragment postList on MdxConnection {
     edges {
       node {
         id

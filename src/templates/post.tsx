@@ -2,6 +2,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 
 import { slugs } from '../../data/config';
@@ -17,14 +18,14 @@ const strings = copy.Post;
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       ...singlePost
     }
   }
 `;
 
 const Post: React.FC<PostResponse> = props => {
-  const { frontmatter, html, excerpt, fields } = props.data.markdownRemark;
+  const { frontmatter, body, excerpt, fields } = props.data.mdx;
   const { title, slug, author, date, crosspost } = frontmatter;
 
   return (
@@ -43,7 +44,9 @@ const Post: React.FC<PostResponse> = props => {
             {strings.crosspost({ ...crosspost })}
           </MarkdownWithLink>
         )}
-        <div className={styles.body} dangerouslySetInnerHTML={{ __html: html }} />
+        <div className={styles.body}>
+          <MDXRenderer>{body}</MDXRenderer>
+        </div>
       </article>
     </BlogWrapper>
   );
