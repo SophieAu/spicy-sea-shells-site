@@ -29,7 +29,7 @@
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-sitemap": "^2.4.3",
     "gatsby-plugin-typescript": "^2.4.3",
-    "gatsby-remark-images": "^3.3.8",
+    "gatsby-remark-images": "^3.3.14",
     "gatsby-remark-prismjs": "^3.5.2",
     "gatsby-remark-social-image": "^1.1.0",
     "gatsby-source-filesystem": "^2.3.8",
