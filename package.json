@@ -28,7 +28,7 @@
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-plugin-sitemap": "^2.4.11",
-    "gatsby-plugin-typescript": "^2.4.8",
+    "gatsby-plugin-typescript": "^2.4.16",
     "gatsby-remark-images": "^3.3.14",
     "gatsby-remark-prismjs": "^3.5.10",
     "gatsby-remark-social-image": "^1.1.0",
