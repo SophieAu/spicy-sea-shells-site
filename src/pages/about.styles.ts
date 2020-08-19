@@ -1,6 +1,6 @@
 import { css } from 'linaria';
 
-import { color, screenSize } from '../_variables.styles';
+import { color, screenSize, SIDEBAR_WIDTH } from '../_variables.styles';
 
 export const profiles = css`
   overflow: scroll;
@@ -16,6 +16,7 @@ export const footer = css`
 
 export const root = css`
   display: grid;
+  grid-template-columns: ${SIDEBAR_WIDTH} calc(100vw - ${SIDEBAR_WIDTH});
   grid-template-rows: repeat(3, auto);
 
   @media all ${screenSize.XL} {
