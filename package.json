@@ -32,7 +32,7 @@
     "gatsby-remark-images": "^3.3.23",
     "gatsby-remark-prismjs": "^3.5.10",
     "gatsby-remark-social-image": "^1.1.0",
-    "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-source-filesystem": "^2.3.27",
     "gatsby-transformer-sharp": "^2.5.12",
     "linaria": "^2.0.0-rc.1",
     "prismjs": "^1.21.0",
