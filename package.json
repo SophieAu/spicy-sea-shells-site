@@ -24,7 +24,7 @@
     "gatsby-plugin-linaria": "^2.1.0",
     "gatsby-plugin-manifest": "^2.4.27",
     "gatsby-plugin-mdx": "^1.2.37",
-    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.31",
     "gatsby-plugin-sitemap": "^2.4.12",
