@@ -15,7 +15,7 @@
     "lint:fix": "eslint 'src/**/*.{tsx,ts,js,jsx}' --ignore-pattern '*.d.ts'  --ignore-pattern 'src/assets/*' --fix && stylelint 'src/**/*.styles.ts' --rd --risd --fix"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.19",
+    "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.19",
     "core-js": "^3.8.0",
     "gatsby": "^2.24.91",
