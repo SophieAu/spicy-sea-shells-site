@@ -18,7 +18,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "core-js": "^3.13.1",
-    "gatsby": "^2.32.12",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-linaria": "^2.2.0",
