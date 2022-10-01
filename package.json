@@ -34,7 +34,7 @@
     "gatsby-remark-social-image": "^1.1.0",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-sharp": "^2.12.1",
-    "linaria": "^2.1.0",
+    "linaria": "^4.1.4",
     "prismjs": "^1.23.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
