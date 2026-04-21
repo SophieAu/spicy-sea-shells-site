@@ -42,6 +42,12 @@ const url = `${BASE_URL}/${slug}`;
     {creator && <meta name="twitter:site" content={creator} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="Spicy Blog" href="/rss.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body
     style={`--pattern-webp: url('${patternWebp.src}'); --pattern-png: url('${patternPng.src}')`}
@@ -66,21 +72,21 @@ const url = `${BASE_URL}/${slug}`;
     --color-footer: #4b7f40;
     --color-text-muted: #737373;
 
-    --font-family: "Source Sans Pro", sans-serif;
-    --font-family-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    --font-family: "Source Sans 3", sans-serif;
+    --font-family-code: source-code-3, Menlo, Monaco, Consolas, "Courier New", monospace;
 
-    --font-footer: 300 1.125rem/var(--footer-height) var(--font-family);
+    --font-footer: 400 1.2rem/var(--footer-height) var(--font-family);
     --font-blog-header-nav: 700 2.25rem var(--font-family);
     --font-about-header-title: 700 3.5rem var(--font-family);
     --font-about-header-body: 400 1.75rem var(--font-family);
     --font-profile-name: 600 1.5rem var(--font-family);
     --font-profile-city: 400 1rem var(--font-family);
-    --font-profile-bio: 400 1rem/1.25rem var(--font-family);
+    --font-profile-bio: 400 1rem/1.375rem var(--font-family);
     --font-post-title: 400 2.5rem var(--font-family);
     --font-post-meta: 300 1.25rem var(--font-family);
     --font-post-body: 400 1.25rem var(--font-family);
     --font-post-code: 400 1rem var(--font-family-code);
-    --font-sidebar-body: 400 1.875rem var(--font-family);
+    --font-sidebar-body: 400 1.75rem var(--font-family);
     --font-hero-title: 700 4rem var(--font-family);
     --font-hero-text: 400 1.5rem var(--font-family);
     --font-post-section-title: 700 3rem var(--font-family);

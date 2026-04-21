@@ -70,7 +70,7 @@ crosspost:
 
 © The Spicy Sea Shells
 
-The site is built using [Astro](https://astro.build/). It is hosted and deployed via [Netlify](https://netlify.com/). The font used is [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+3).
+The site is built using [Astro](https://astro.build/). It is hosted and deployed via [Netlify](https://netlify.com/). The font used is [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3).
 
 ## Maintenance
 
