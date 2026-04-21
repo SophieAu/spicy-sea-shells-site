@@ -31,10 +31,7 @@ const twitterHandle = getSocialMediaHandle(author, "twitter");
     <PostMeta author={author} date={date} />
     {
       crosspost && (
-        <p
-          class="crosspost"
-          set:html={renderInlineMarkdown(strings.crosspost(crosspost.hasPrefix, crosspost.site, crosspost.url))}
-        />
+        <p class="crosspost" set:html={strings.crosspost(crosspost.hasPrefix, crosspost.site, crosspost.url)} />
       )
     }
     <div class="body">

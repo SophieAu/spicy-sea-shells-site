@@ -1,5 +1,8 @@
 import { paths } from './config';
 
+const internalLink = (text: string, url: string) => `<a href="${url}">${text}</a>`
+const externalLink = (text: string, url: string) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`
+
 export const global = {
   footer: {
     preImage: 'Made with',
@@ -12,7 +15,7 @@ export const global = {
       'Who are we? We are a collective of software developers, business analysts and quality analysts who met on a training course by ThoughtWorks',
     introShort:
       'We are a collective of software developers, business analysts and quality analysts.',
-    blogCTA: `Together we're running the [Spicy Blog](${paths.blog})`,
+    blogCTA: `Together we're running the ${internalLink("Spicy Blog", paths.blog)}`,
     logoAlt: 'Spicy Sea Shells logo',
   },
 };
@@ -29,7 +32,7 @@ export const blog = {
   pageDescription:
     'Blog of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
   title: 'Spicy Blog',
-  hero: `We're the [Spicy Sea Shells](${paths.about}) and this is our blog.`,
+  hero: `We're the ${internalLink("Spicy Sea Shells", paths.about)} and this is our blog.`,
   latestHeading: 'Latest',
   homeLinkAlt: 'Homepage / Blog',
   aboutLink: 'About',
@@ -44,7 +47,7 @@ export const home = {
 export const post = {
   pageTitle: (title: string) => `${title} | Spicy Sea Shells`,
   crosspost: (hasPrefix: boolean, site: string, url: string) =>
-    `This is a crosspost from${hasPrefix ? ' the' : ''} [${site}](${url}).`,
+    `This is a crosspost from${hasPrefix ? ' the' : ''} ${externalLink(site, url)}.`,
   author: (name: string) => `By ${name}`,
 };
 
@@ -52,5 +55,5 @@ export const notFound = {
   pageTitle: '404 | Spicy Sea Shells',
   pageDescription: 'Page not found',
   heading: 'Oh No!',
-  body: `This page doesn't seem to exist. Maybe check out the [blog](${paths.blog}) instead?`,
+  body: `This page doesn't seem to exist. Maybe check out the ${internalLink("blog", paths.blog)} instead?`,
 };

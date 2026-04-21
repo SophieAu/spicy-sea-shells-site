@@ -15,7 +15,7 @@ const { Content } = await render(posts[0]);
 <BlogLayout title={blog.pageTitle} description={blog.pageDescription} slug={slugs.blog}>
   <section>
     <h1 class="hero-title">{blog.title}</h1>
-    <p class="hero-text" set:html={renderInlineMarkdown(blog.hero)} />
+    <p class="hero-text" set:html={blog.hero} />
     <p class="hero-text">{global.header.introExtended}</p>
   </section>
 

@@ -1,5 +1,4 @@
 ---
-import { renderInlineMarkdown } from "../utils";
 import { global } from "../strings";
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
 const { class: className, ...props } = Astro.props;
 ---
 
-<p class:list={["cta", className]} {...props} set:html={renderInlineMarkdown(global.header.blogCTA)} />
+<p class:list={["cta", className]} {...props} set:html={global.header.blogCTA} />
 
 <style>
   /* global because the a is set:html so doesn't get the astro data classes */
