@@ -77,6 +77,63 @@ const socialMediaImage = (platform: string) => socialMediaImages[`/assets/social
     margin: 2rem 0.5rem;
   }
 
+  .image {
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .image--side {
+    height: 20rem;
+    width: 10rem;
+  }
+  .image--top {
+    height: 11.25rem;
+    width: 18rem;
+  }
+
+  .profile {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  .name {
+    font: var(--font-profile-name);
+  }
+
+  .city {
+    color: var(--color-text-muted);
+    font: var(--font-profile-city);
+  }
+
+  .bio {
+    font: var(--font-profile-bio);
+    margin: 1rem 0 0;
+  }
+
+  .social-media {
+    display: flex;
+    list-style-type: none;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-primary-dim);
+    img {
+      height: 1.5rem;
+      width: auto;
+      vertical-align: text-bottom;
+    }
+  }
+
   @media (min-width: 1440px) {
     .card {
       flex-direction: row;
@@ -93,130 +150,45 @@ const socialMediaImage = (platform: string) => socialMediaImages[`/assets/social
     }
   }
 
-  @media (max-width: 1023px) {
-    .card {
-      flex-direction: column;
-      height: 28rem;
-      width: 18rem;
-    }
-  }
-
-  .image {
-    line-height: 0;
-  }
-
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .image--side {
-    height: 20rem;
-    width: 10rem;
-  }
-  .image--top {
-    height: 11.25rem;
-    width: 18rem;
-  }
-
   @media (min-width: 1024px) {
     .image--top {
       display: none;
     }
-  }
-
-  @media (max-width: 1023px) {
-    .image--side {
-      display: none;
-    }
-  }
-
-  .profile {
-    display: flex;
-    align-content: space-between;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
-  }
-
-  @media (min-width: 1024px) {
     .profile {
       padding: 2rem 2rem 1.5rem;
     }
-  }
-
-  @media (max-width: 1023px) {
-    .profile {
-      padding: 1rem;
-    }
-    .info {
-      text-align: center;
-    }
-  }
-
-  .info {
-    flex: 1;
-  }
-
-  .name {
-    font: var(--font-profile-name);
-  }
-
-  @media (min-width: 1024px) {
     .name {
       margin: 0.5rem -1rem 0 0;
     }
-  }
-
-  @media (max-width: 1023px) {
-    .name {
-      margin: 0.25rem 0 0;
-    }
-  }
-
-  .city {
-    color: var(--color-text-muted);
-    font: var(--font-profile-city);
-  }
-
-  .bio {
-    font: var(--font-profile-bio);
-    margin: 1rem 0 0;
-  }
-
-  @media (min-width: 1024px) {
     .bio--short {
       display: none;
     }
-  }
-
-  @media (max-width: 1023px) {
-    .bio--long {
-      display: none;
-    }
-  }
-
-  .social-media {
-    display: flex;
-    list-style-type: none;
-    padding-top: 1rem;
-    border-top: 1px solid var(--color-primary-dim);
-  }
-
-  .social-media img {
-    height: 1.5rem;
-    width: auto;
-    vertical-align: text-bottom;
-  }
-
-  @media (min-width: 1024px) {
     .social-media li:not(:last-child) {
       padding-right: 1.5rem;
     }
   }
 
   @media (max-width: 1023px) {
+    .card {
+      flex-direction: column;
+      height: 28rem;
+      width: 18rem;
+    }
+    .image--side {
+      display: none;
+    }
+    .profile {
+      padding: 1rem;
+    }
+    .info {
+      text-align: center;
+    }
+    .name {
+      margin: 0.25rem 0 0;
+    }
+    .bio--long {
+      display: none;
+    }
     .social-media {
       justify-content: space-evenly;
     }
