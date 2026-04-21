@@ -9,7 +9,7 @@ import { paths, slugs } from "../config";
 const posts = await getCollection("posts");
 posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const { Content, headings, remarkPluginFrontmatter } = await render(posts[0]);
+const { Content } = await render(posts[0]);
 ---
 
 <BlogLayout title={blog.pageTitle} description={blog.pageDescription} slug={slugs.blog}>
@@ -26,7 +26,7 @@ const { Content, headings, remarkPluginFrontmatter } = await render(posts[0]);
         posts.map((post) => (
           <li>
             <h3 class="post-title">
-              <a href={`/${paths.articleBase}/${post.data.slug}`}>{post.data.title}</a>
+              <a href={`${paths.articleBase}/${post.data.slug}`}>{post.data.title}</a>
             </h3>
             <PostMeta date={post.data.date} author={post.data.author} />
             <Content className="post-excerpt" />
