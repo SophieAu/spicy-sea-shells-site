@@ -1,5 +1,8 @@
 ---
+import { getImage } from "astro:assets";
 import { BASE_URL, FALLBACK_IMAGE } from "../config";
+import bgPatternPng from "../../assets/bg_pattern.png";
+import bgPatternWebp from "../../assets/bg_pattern.webp";
 
 interface Props {
   title: string;
@@ -8,6 +11,9 @@ interface Props {
   creator?: string;
   ogImage?: string;
 }
+
+const patternWebp = await getImage({ src: bgPatternWebp, format: "webp" });
+const patternPng = await getImage({ src: bgPatternPng, format: "png" });
 
 const { title, description, slug, creator, ogImage } = Astro.props;
 const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`;
@@ -36,10 +42,8 @@ const url = `${BASE_URL}/${slug}`;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="Spicy Blog" href="/rss.xml" />
   </head>
-  <body>
-    <div class="root">
-      <slot />
-    </div>
+  <body style={`--pattern-webp: url('${patternWebp.src}'); --pattern-png: url('${patternPng.src}')`}>
+    <slot />
   </body>
 </html>
 
@@ -112,9 +116,8 @@ const url = `${BASE_URL}/${slug}`;
 </style>
 
 <style>
-  .root {
+  body {
     min-height: 100vh;
-    background: repeat
-      image-set(url("/images/bg_pattern.webp") type("image/webp"), url("/images/bg_pattern.png") type("image/png"));
+    background: repeat image-set(var(--pattern-webp) type("image/webp"), var(--pattern-png) type("image/png"));
   }
 </style>
