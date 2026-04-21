@@ -1,0 +1,124 @@
+---
+import { global } from "../data/strings";
+import BlogCTA from "./BlogCTA.astro";
+import logo from "../"
+
+interface Props {
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props;
+---
+
+<header class:list={["about-header", className]} {...props}>
+  <h1 class="title">{global.header.title}</h1>
+  <p class="text intro intro-extended">{global.header.introExtended}</p>
+  <p class="text intro intro-short">{global.header.introShort}</p>
+  <BlogCTA class="text blog" />
+  <Image class="logo" src="/images/logo.png" alt={global.header.logoAlt} width="384" height="384" />
+</header>
+
+<style>
+  .about-header {
+    background-color: var(--color-primary);
+    display: grid;
+    grid-auto-columns: auto auto;
+    gap: 0.5rem 1rem;
+    justify-content: center;
+    padding: var(--outside-padding);
+  }
+
+  .title {
+    padding-left: 0.5rem;
+    align-self: center;
+    color: var(--color-white);
+    font: var(--font-about-header-title);
+    text-transform: uppercase;
+
+    grid-column: 1 / 2;
+  }
+
+  .text {
+    color: var(--color-white);
+    padding-left: 0.5rem;
+    font: var(--font-about-header-body);
+  }
+
+  .intro {
+    grid-row: 2/3;
+  }
+  .blog {
+    grid-row: 3/4;
+  }
+
+  .logo {
+    grid-column: 2/3;
+    width: var(--logo-height);
+    height: var(--logo-height);
+    place-self: start end;
+
+    object-fit: contain;
+    object-position: top center;
+  }
+
+  @media (min-width: 1024px) {
+    .about-header {
+      --header-font-size: 3.5rem;
+      --info-font-size: 1.75rem;
+      --outside-padding: 2rem;
+    }
+    .intro,
+    .blog {
+      grid-column: 1 / 2;
+    }
+    .intro-short {
+      display: none;
+    }
+    .logo {
+      --logo-height: 12rem;
+      grid-row: 1 / 4;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .about-header {
+      --header-font-size: 2.25rem;
+      --info-font-size: 1.5rem;
+      --outside-padding: 1rem;
+    }
+    .title {
+      font-size: 2.25rem;
+    }
+    .text {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .intro,
+    .blog {
+      grid-column: 1 / 2;
+    }
+    .intro-short {
+      display: none;
+    }
+    .logo {
+      --logo-height: 9rem;
+      grid-row: 1 / 4;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .intro,
+    .blog {
+      grid-column: 1 / 3;
+    }
+    .intro-extended {
+      display: none;
+    }
+    .logo {
+      --logo-height: 3.5rem;
+      grid-row: 1 / 2;
+    }
+  }
+</style>

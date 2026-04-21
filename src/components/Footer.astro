@@ -1,0 +1,44 @@
+---
+import { global } from "../data/strings";
+
+interface Props {
+  variant?: "default" | "sidebar";
+
+  class?: string;
+}
+
+const { variant = "default", class: className, ...props } = Astro.props;
+---
+
+<footer class:list={["footer", className, variant === "sidebar" ? "sidebar" : "default"]} {...props}>
+  {global.footer.preImage}
+  <img src="/images/chili.svg" alt={global.footer.imageAlt} />
+  {global.footer.postImage}
+</footer>
+
+<style>
+  .footer {
+    height: var(--footer-height);
+    text-align: center;
+    color: var(--color-white);
+    font: var(--font-footer);
+
+    img {
+      display: inline-block;
+      height: 2.5rem;
+      margin: 0 0 0.5rem -0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  .default {
+    align-self: flex-start;
+    background-color: var(--color-footer);
+    width: 100vw;
+  }
+
+  .sidebar {
+    padding-bottom: 0.75rem;
+    width: 100%;
+  }
+</style>

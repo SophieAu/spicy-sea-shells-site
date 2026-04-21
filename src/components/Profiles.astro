@@ -1,0 +1,219 @@
+---
+import profiles from "../data/profiles";
+import { sortPlatforms } from "../utils";
+import { about } from "../data/strings";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props;
+---
+
+<main class:list={["profiles", className]} {...props}>
+  {
+    profiles.map((profile) => {
+      const { id, baseInfo, socialMedia } = profile;
+      return (
+        <div class="card">
+          <div class="image image--side">
+            <img src={`/images/profiles/${id}_tall.jpg`} alt={baseInfo.name} width="160" height="320" />
+          </div>
+          <div class="image image--top">
+            <img src={`/images/profiles/${id}_wide.jpg`} alt={baseInfo.name} width="288" height="180" />
+          </div>
+          <div class="profile">
+            <div class="info">
+              <p class="city">{baseInfo.city}</p>
+              <h2 class="name">{baseInfo.name}</h2>
+              <p class="bio bio--long">{baseInfo.bio}</p>
+              <p class="bio bio--short">{baseInfo.bioShort}</p>
+            </div>
+            <ul class="social-media">
+              {socialMedia.sort(sortPlatforms).map((sm) => (
+                <li>
+                  <a href={sm.url} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={`/images/social-media/${sm.platform}.svg`}
+                      alt={about.socialMediaAlt(sm.platform)}
+                      width="24"
+                      height="24"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      );
+    })
+  }
+</main>
+
+<style>
+  .profiles {
+    column-gap: 1rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .card {
+    background: var(--color-white);
+    border-radius: 0.75rem;
+    box-shadow:
+      0 1px 0.25rem 0 rgba(0, 0, 0, 0.3),
+      0 1rem 1.25rem 0 rgba(0, 0, 0, 0.14);
+    display: flex;
+    overflow: hidden;
+    margin: 2rem 0.5rem;
+  }
+
+  @media (min-width: 1440px) {
+    .card {
+      flex-direction: row;
+      height: 20rem;
+      width: 32.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    .card {
+      flex-direction: row;
+      height: 20rem;
+      width: 29rem;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .card {
+      flex-direction: column;
+      height: 28rem;
+      width: 18rem;
+    }
+  }
+
+  .image {
+    line-height: 0;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image--side {
+    height: 20rem;
+    width: 10rem;
+  }
+  .image--top {
+    height: 11.25rem;
+    width: 18rem;
+  }
+
+  @media (min-width: 1024px) {
+    .image--top {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .image--side {
+      display: none;
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  @media (min-width: 1024px) {
+    .profile {
+      padding: 2rem 2rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .profile {
+      padding: 1rem;
+    }
+    .info {
+      text-align: center;
+    }
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  .name {
+    font: var(--font-profile-name);
+  }
+
+  @media (min-width: 1024px) {
+    .name {
+      margin: 0.5rem -1rem 0 0;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .name {
+      margin: 0.25rem 0 0;
+    }
+  }
+
+  .city {
+    color: var(--color-text-muted);
+    font: var(--font-profile-city);
+  }
+
+  .bio {
+    font: var(--font-profile-bio);
+    margin: 1rem 0 0;
+  }
+
+  @media (min-width: 1024px) {
+    .bio--short {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .bio--long {
+      display: none;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    list-style-type: none;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-primary-dim);
+  }
+
+  .social-media img {
+    height: 1.5rem;
+    width: auto;
+    vertical-align: text-bottom;
+  }
+
+  @media (min-width: 1024px) {
+    .social-media li:not(:last-child) {
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .social-media {
+      justify-content: space-evenly;
+    }
+  }
+</style>

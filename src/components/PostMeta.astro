@@ -1,0 +1,43 @@
+---
+import { getName } from "../utils";
+import { post } from "../data/strings";
+import type { Author } from "../types";
+
+interface Props {
+  date: Date;
+  author: Author;
+}
+
+const { date, author } = Astro.props;
+const formattedDate = date.toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+});
+---
+
+<div class="meta">
+  <p>{post.author(getName(author) ?? author)}</p>
+  <p class="date">{formattedDate}</p>
+</div>
+
+<style>
+  .meta {
+    display: flex;
+    font: var(--font-post-meta);
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 767px) {
+    .meta {
+      flex-direction: column-reverse;
+      margin: 1.25rem 0;
+    }
+
+    .date {
+      margin-bottom: 0.5rem;
+      text-align: right;
+    }
+  }
+</style>

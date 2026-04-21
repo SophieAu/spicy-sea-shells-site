@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { notFound } from '../data/strings';
+import { renderInlineMarkdown } from '../utils';
+---
+
+<Layout title={notFound.pageTitle} description={notFound.pageDescription} slug="404">
+  <div class="root">
+    <main class="container">
+      <h1>{notFound.heading}</h1>
+      <p set:html={renderInlineMarkdown(notFound.body)}></p>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .root {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .container {
+    padding-bottom: calc(100vh / 3);
+  }
+
+  .container h1 {
+    font: var(--font-hero-title);
+    padding-bottom: 3rem;
+  }
+
+  .container p {
+    font: var(--font-hero-text);
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+import { BASE_URL, FALLBACK_IMAGE } from '../data/config';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  creator?: string;
+  ogImage?: string;
+}
+
+const { title, description, slug, creator, ogImage } = Astro.props;
+const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`;
+const url = `${BASE_URL}/${slug}`;
+---
+
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImagePath} />
+    <meta property="og:url" content={url} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:image" content={ogImagePath} />
+    <meta name="twitter:description" content={description} />
+    {creator && <meta name="twitter:site" content={creator} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="Spicy Blog" href="/rss.xml" />
+  </head>
+  <body>
+    <div class="root">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --content-width: 66rem;
+    --sidebar-width: 22rem;
+    --footer-height: 4rem;
+    --blog-header-height: 4rem;
+
+    --color-black: #260f0f;
+    --color-white: #fff;
+    --color-primary: #f55;
+    --color-primary-dim: #ffdede;
+    --color-footer: #4b7f40;
+    --color-text-muted: #737373;
+
+    --font-family: 'Source Sans Pro', sans-serif;
+    --font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+    --font-footer:             300 1.125rem/var(--footer-height) var(--font-family);
+    --font-blog-header-nav:    700 2.25rem var(--font-family);
+    --font-about-header-title: 700 3.5rem var(--font-family);
+    --font-about-header-body:  400 1.75rem var(--font-family);
+    --font-profile-name:       600 1.5rem var(--font-family);
+    --font-profile-city:       400 1rem var(--font-family);
+    --font-profile-bio:        400 1rem/1.25rem var(--font-family);
+    --font-post-title:         400 2.5rem var(--font-family);
+    --font-post-meta:          300 1.25rem var(--font-family);
+    --font-post-body:          400 1.25rem var(--font-family);
+    --font-post-code:          400 1rem var(--font-family-code);
+    --font-sidebar-body:       400 1.875rem var(--font-family);
+    --font-hero-title:         700 4rem var(--font-family);
+    --font-hero-text:          400 1.5rem var(--font-family);
+    --font-post-section-title: 700 3rem var(--font-family);
+
+    font-size: 16px;
+  }
+
+  h1, h2, h4, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--color-primary);
+    color: var(--color-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+  }
+
+  a {
+    color: var(--color-black);
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+
+  code, pre {
+    font-family: var(--font-family-code);
+  }
+</style>
+
+<style>
+  .root {
+    min-height: 100vh;
+    background: repeat image-set(
+      url('/images/bg_pattern.webp') type('image/webp'),
+      url('/images/bg_pattern.png') type('image/png')
+    );
+  }
+</style>

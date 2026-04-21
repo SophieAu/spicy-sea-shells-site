@@ -1,0 +1,49 @@
+---
+import Layout from './Layout.astro';
+import HeaderBlog from '../components/HeaderBlog.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  ogImage?: string;
+  creator?: string;
+}
+
+const { title, description, slug, creator, ogImage } = Astro.props;
+---
+
+<Layout title={title} description={description} slug={slug} creator={creator} ogImage={ogImage}>
+  <div class="blog-wrapper">
+    <HeaderBlog />
+    <main class="body">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .blog-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .body {
+    background: var(--color-white);
+    flex: 1;
+    width: calc(100vw - 2 * var(--padding));
+    max-width: calc(var(--content-width) - 2 * var(--padding));
+    padding: var(--padding);
+  }
+
+  @media (min-width: 768px) {
+    .body { --padding: 4rem; }
+  }
+
+  @media (max-width: 767px) {
+    .body { --padding: 1.5rem; }
+  }
+</style>

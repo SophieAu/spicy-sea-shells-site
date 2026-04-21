@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutHeader from "../components/AboutHeader.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Profiles from "../components/Profiles.astro";
+import Footer from "../components/Footer.astro";
+import { about } from "../data/strings";
+---
+
+<Layout title={about.pageTitle} description={about.pageDescription} slug="about">
+  <div class="page">
+    <AboutHeader class="header-area" />
+    <Sidebar class="sidebar-area" />
+    <Profiles  class="profiles-area"/>
+    <Footer class="footer-area" />
+  </>
+</Layout>
+
+<style>
+  .page {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) calc(100vw - var(--sidebar-width));
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .profiles {
+    overflow: scroll;
+  }
+
+  @media (min-width: 1440px) {
+    .page {
+      height: 100vh;
+    }
+    .sidebar-area,
+    .profiles-area {
+      grid-row: span 3;
+    }
+    .header-area,
+    .footer-area {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1439px) {
+    .header-area,
+    .footer-area,
+    .profiles-area {
+      grid-column: span 2;
+    }
+    .sidebar-area {
+      display: none !important;
+    }
+    .footer-area {
+      background-color: var(--color-footer);
+    }
+  }
+</style>

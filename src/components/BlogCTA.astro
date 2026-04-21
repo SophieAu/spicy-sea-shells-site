@@ -1,0 +1,21 @@
+---
+import { renderInlineMarkdown } from "../utils";
+import { global } from "../data/strings";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props;
+---
+
+<p class:list={["cta", className]} {...props} set:html={renderInlineMarkdown(global.header.blogCTA)} />
+
+<style>
+  /* global because the a is set:html so doesn't get the astro data classes */
+  .cta :global(a) {
+    color: var(--color-white);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+</style>

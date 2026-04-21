@@ -1,9 +1,0 @@
-{
-    "defaults": {
-        "includeWarnings": true
-    },
-    "urls":[
-        "http://localhost:8000/about/",
-        "http://localhost:8000/blog/",
-        "http://localhost:8000/article/react-native-storybook"
-]}

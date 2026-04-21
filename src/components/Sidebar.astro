@@ -1,0 +1,52 @@
+---
+import { global } from "../data/strings";
+import BlogCTA from "./BlogCTA.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={["sidebar", className]} {...props}>
+  <header>
+    <img class="logo" src="/images/logo.png" alt={global.header.logoAlt} width="256" height="256" />
+    <div class="text">
+      <p>{global.header.introExtended}</p>
+      <BlogCTA />
+    </div>
+  </header>
+  <Footer variant="sidebar" />
+</div>
+
+<style>
+  .sidebar {
+    background: var(--color-primary);
+    color: var(--color-white);
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sidebar > header {
+    margin: 2rem;
+  }
+
+  .logo {
+    padding: 1rem;
+    width: 16rem;
+    height: auto;
+  }
+
+  .text {
+    font: var(--font-sidebar-body);
+  }
+
+  .text p:first-child {
+    margin: 2rem 0;
+  }
+</style>
