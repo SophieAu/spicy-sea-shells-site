@@ -66,7 +66,7 @@ export default StorybookUIRoot;
 
 If you want, you can control the simulator UI using the Storybook Web UI. To do this, you need to first run `npm run storybook`, When the server has finished launching, run the app as usual with `npm run ios/android`. Note that the actual design elements will never show in the browser UI, only on your device.
 
-![A simulated iPhone and a web browser, both running Storybook](/images/posts/img/react-native-storybook-1_video_control.png)
+![A simulated iPhone and a web browser, both running Storybook](../img/react-native-storybook-1_video_control.png)
 
 ### 3. Run the Storybook UI side by side with the app on your device
 
@@ -116,7 +116,7 @@ import Root from "./src/Root";
 AppRegistry.registerComponent(appName, () => Root);
 ```
 
-![A simulated iPhone showing the dev menu which includes a 'Toggle Storybook' button](/images/posts/img/react-native-storybook-2_dev_toggle.png)
+![A simulated iPhone showing the dev menu which includes a 'Toggle Storybook' button](../img/react-native-storybook-2_dev_toggle.png)
 
 ## Writing Stories and using add-ons
 
