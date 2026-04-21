@@ -1,7 +1,7 @@
 ---
-import Layout from './Layout.astro';
-import HeaderBlog from '../components/HeaderBlog.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "./Layout.astro";
+import HeaderBlog from "../components/HeaderBlog.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -40,10 +40,14 @@ const { title, description, slug, creator, ogImage } = Astro.props;
   }
 
   @media (min-width: 768px) {
-    .body { --padding: 4rem; }
+    .body {
+      --padding: 4rem;
+    }
   }
 
   @media (max-width: 767px) {
-    .body { --padding: 1.5rem; }
+    .body {
+      --padding: 1.5rem;
+    }
   }
 </style>

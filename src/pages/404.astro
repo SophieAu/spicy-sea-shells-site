@@ -1,14 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { notFound } from '../data/strings';
-import { renderInlineMarkdown } from '../utils';
+import Layout from "../layouts/Layout.astro";
+import { notFound } from "../strings";
+import { renderInlineMarkdown } from "../utils";
 ---
 
 <Layout title={notFound.pageTitle} description={notFound.pageDescription} slug="404">
   <div class="root">
     <main class="container">
       <h1>{notFound.heading}</h1>
-      <p set:html={renderInlineMarkdown(notFound.body)}></p>
+      <p set:html={renderInlineMarkdown(notFound.body)} />
     </main>
   </div>
 </Layout>

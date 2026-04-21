@@ -1,13 +1,14 @@
 ---
-import { getCollection, render } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import PostMeta from '../../components/PostMeta.astro';
-import { Post } from '../../data/strings';
-import { getSocialMediaHandle, renderInlineMarkdown, getExcerpt } from '../../utils';
+import { getCollection, render } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
+import { post as strings } from "../../strings";
+import { getSocialMediaHandle, renderInlineMarkdown, getExcerpt } from "../../utils";
+import { paths } from "../../config";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts');
-  return posts.map(post => ({
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({
     params: { slug: post.data.slug },
     props: { post },
   }));
@@ -16,21 +17,26 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { title, slug, author, date, crosspost } = post.data;
 const { Content } = await render(post);
-const twitterHandle = getSocialMediaHandle(author, 'twitter');
+const twitterHandle = getSocialMediaHandle(author, "twitter");
 ---
 
 <BlogLayout
-  title={Post.pageTitle(title)}
-  description={getExcerpt(post.body ?? '')}
-  slug={`article/${slug}`}
+  title={strings.pageTitle(title)}
+  description={getExcerpt(post.body ?? "")}
+  slug={`${paths.articleBase}/${slug}`}
   creator={twitterHandle}
 >
   <article id="post">
     <h1 class="title">{title}</h1>
     <PostMeta author={author} date={date} />
-    {crosspost && (
-      <p class="crosspost" set:html={renderInlineMarkdown(Post.crosspost(crosspost.hasPrefix, crosspost.site, crosspost.url))}></p>
-    )}
+    {
+      crosspost && (
+        <p
+          class="crosspost"
+          set:html={renderInlineMarkdown(strings.crosspost(crosspost.hasPrefix, crosspost.site, crosspost.url))}
+        />
+      )
+    }
     <div class="body">
       <Content />
     </div>
@@ -39,7 +45,9 @@ const twitterHandle = getSocialMediaHandle(author, 'twitter');
 
 <style is:global>
   pre {
-    box-shadow: 0 1px 0.25rem 0 rgba(0,0,0,0.3), 0 1rem 1.25rem 0 rgba(0,0,0,0.14);
+    box-shadow:
+      0 1px 0.25rem 0 rgba(0, 0, 0, 0.3),
+      0 1rem 1.25rem 0 rgba(0, 0, 0, 0.14);
     padding: 1rem;
     overflow-x: auto;
     border-radius: 0.25rem;

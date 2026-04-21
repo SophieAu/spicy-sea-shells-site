@@ -1,4 +1,4 @@
-import type { UserInfo } from '../types';
+import type { UserInfo } from './types';
 
 const profiles: UserInfo[] = [
   {

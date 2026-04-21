@@ -1,4 +1,4 @@
-import profiles from './data/profiles';
+import profiles from './profiles';
 import type { Author, SocialMediaPlatform } from './types';
 
 export const getSocialMediaHandle = (author: Author, platform: SocialMediaPlatform) => {

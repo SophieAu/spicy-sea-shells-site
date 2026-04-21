@@ -4,16 +4,16 @@ import AboutHeader from "../components/AboutHeader.astro";
 import Sidebar from "../components/Sidebar.astro";
 import Profiles from "../components/Profiles.astro";
 import Footer from "../components/Footer.astro";
-import { about } from "../data/strings";
+import { about } from "../strings";
 ---
 
 <Layout title={about.pageTitle} description={about.pageDescription} slug="about">
   <div class="page">
     <AboutHeader class="header-area" />
     <Sidebar class="sidebar-area" />
-    <Profiles  class="profiles-area"/>
+    <Profiles class="profiles-area" />
     <Footer class="footer-area" />
-  </>
+  </div>
 </Layout>
 
 <style>
