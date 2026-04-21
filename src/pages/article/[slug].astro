@@ -21,7 +21,7 @@ const { Content } = await render(post);
 
 <BlogLayout
   title={strings.pageTitle(title)}
-  description={getExcerpt(post.body ?? "")}
+  description={getExcerpt(post, 280)}
   slug={`${paths.articleBase}/${slug}`}
   creator={getTwitterUrl(author)}
 >

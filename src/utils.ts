@@ -1,5 +1,7 @@
+import type { CollectionEntry } from 'astro:content';
 import profiles from './profiles';
 import type { Author, SocialMediaPlatform, UserInfo } from './types';
+import MarkdownIt from 'markdown-it';
 
 export const getTwitterUrl = (author: Author) =>
   profiles.find(user => user.id === author)?.socialMedia.twitter;
@@ -10,12 +12,17 @@ export const getName = (author: Author) =>
 type SocialMediaTuple = [SocialMediaPlatform, string]
 export const getSortedSocialMedia = (socialMedia: UserInfo["socialMedia"]) =>
   (Object.entries(socialMedia) as SocialMediaTuple[]).sort(([a]: SocialMediaTuple, [b]: SocialMediaTuple) => a.localeCompare(b));
-//TODO: FIX THE !. IT SHOULDN'T BE THERE!!!!!
 
-/* THESE ARE NWE AND VERY LIKELY COMPLETE TRASH */
+export const getExcerpt = (post: CollectionEntry<"posts">, limit?: number) => {
+  if (!post.body) return ""
 
-export const renderInlineMarkdown = (text: string): string =>
-  text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+  const excerpt = new MarkdownIt()
+    .render(post.body)
+    .split('\n')
+    .slice(0, 6)
+    .map((str: string) => str.replace(/<\/?[^>]+(>|$)/g, '').split('\n'))
+    .flat()
+    .join(' ');
 
-export const getExcerpt = (body: string, length = 280): string =>
-  body.length > length ? body.slice(0, length) + '...' : body;
+  return excerpt.slice(0, limit)
+}

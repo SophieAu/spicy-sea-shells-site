@@ -3,13 +3,11 @@ import { getCollection, render } from "astro:content";
 import BlogLayout from "../layouts/BlogLayout.astro";
 import PostMeta from "../components/PostMeta.astro";
 import { blog, global } from "../strings";
-import { renderInlineMarkdown, getExcerpt } from "../utils";
+import { getExcerpt } from "../utils";
 import { paths, slugs } from "../config";
 
 const posts = await getCollection("posts");
 posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-const { Content } = await render(posts[0]);
 ---
 
 <BlogLayout title={blog.pageTitle} description={blog.pageDescription} slug={slugs.blog}>
@@ -29,8 +27,7 @@ const { Content } = await render(posts[0]);
               <a href={`${paths.articleBase}/${post.data.slug}`}>{post.data.title}</a>
             </h3>
             <PostMeta date={post.data.date} author={post.data.author} />
-            <Content className="post-excerpt" />
-            <p class="post-excerpt">{renderInlineMarkdown(post.body ?? "")}</p>
+            <p class="post-excerpt">{getExcerpt(post)}</p>
           </li>
         ))
       }
