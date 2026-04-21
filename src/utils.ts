@@ -1,18 +1,15 @@
 import profiles from './profiles';
-import type { Author, SocialMediaPlatform } from './types';
+import type { Author, SocialMediaPlatform, UserInfo } from './types';
 
-export const getSocialMediaHandle = (author: Author, platform: SocialMediaPlatform) => {
-  if (platform !== 'twitter') return undefined;
-  return profiles
-    .find(user => user.id === author)
-    ?.socialMedia.find(media => media.platform === platform)?.url;
-};
-
-export const sortPlatforms = (a: { platform: string }, b: { platform: string }) =>
-  a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0;
+export const getTwitterUrl = (author: Author) =>
+  profiles.find(user => user.id === author)?.socialMedia.twitter;
 
 export const getName = (author: Author) =>
   profiles.find(user => user.id === author)!.baseInfo.name;
+
+type SocialMediaTuple = [SocialMediaPlatform, string]
+export const getSortedSocialMedia = (socialMedia: UserInfo["socialMedia"]) =>
+  (Object.entries(socialMedia) as SocialMediaTuple[]).sort(([a]: SocialMediaTuple, [b]: SocialMediaTuple) => a.localeCompare(b));
 //TODO: FIX THE !. IT SHOULDN'T BE THERE!!!!!
 
 /* THESE ARE NWE AND VERY LIKELY COMPLETE TRASH */

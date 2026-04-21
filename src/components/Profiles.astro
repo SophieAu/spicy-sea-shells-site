@@ -1,52 +1,57 @@
 ---
 import profiles from "../profiles";
-import { sortPlatforms } from "../utils";
+import { getSortedSocialMedia } from "../utils";
 import { about } from "../strings";
+import { Image } from "astro:assets";
 
 interface Props {
   class?: string;
 }
 
 const { class: className, ...props } = Astro.props;
+
+const profileImages = import.meta.glob<{ default: ImageMetadata }>("/assets/profiles/*.{jpeg,jpg,png,gif}");
+const wideImage = (id: string) => profileImages[`/assets/profiles/${id}_wide.jpg`];
+const tallImage = (id: string) => profileImages[`/assets/profiles/${id}_tall.jpg`];
+
+const socialMediaImages = import.meta.glob<{ default: ImageMetadata }>("/assets/social-media/*.{jpeg,jpg,png,gif,svg}");
+const socialMediaImage = (platform: string) => socialMediaImages[`/assets/social-media/${platform}.svg`];
 ---
 
 <main class:list={["profiles", className]} {...props}>
   {
-    profiles.map((profile) => {
-      const { id, baseInfo, socialMedia } = profile;
-      return (
-        <div class="card">
-          <div class="image image--side">
-            <img src={`/images/profiles/${id}_tall.jpg`} alt={baseInfo.name} width="160" height="320" />
-          </div>
-          <div class="image image--top">
-            <img src={`/images/profiles/${id}_wide.jpg`} alt={baseInfo.name} width="288" height="180" />
-          </div>
-          <div class="profile">
-            <div class="info">
-              <p class="city">{baseInfo.city}</p>
-              <h2 class="name">{baseInfo.name}</h2>
-              <p class="bio bio--long">{baseInfo.bio}</p>
-              <p class="bio bio--short">{baseInfo.bioShort}</p>
-            </div>
-            <ul class="social-media">
-              {socialMedia.sort(sortPlatforms).map((sm) => (
-                <li>
-                  <a href={sm.url} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={`/images/social-media/${sm.platform}.svg`}
-                      alt={about.socialMediaAlt(sm.platform)}
-                      width="24"
-                      height="24"
-                    />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+    profiles.map(({ id, baseInfo, socialMedia }) => (
+      <div class="card">
+        <div class="image image--side">
+          <Image src={tallImage(id)()} alt={baseInfo.name} width="160" height="320" />
         </div>
-      );
-    })
+        <div class="image image--top">
+          <Image src={wideImage(id)()} alt={baseInfo.name} width="288" height="180" />
+        </div>
+        <div class="profile">
+          <div class="info">
+            <p class="city">{baseInfo.city}</p>
+            <h2 class="name">{baseInfo.name}</h2>
+            <p class="bio bio--long">{baseInfo.bio}</p>
+            <p class="bio bio--short">{baseInfo.bioShort}</p>
+          </div>
+          <ul class="social-media">
+            {getSortedSocialMedia(socialMedia).map(([platform, url]) => (
+              <li>
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={socialMediaImage(platform)()}
+                    alt={about.socialMediaAlt(platform)}
+                    width="24"
+                    height="24"
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
   }
 </main>
 

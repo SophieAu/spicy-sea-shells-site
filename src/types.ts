@@ -13,7 +13,7 @@ export type SocialMediaPlatform =
 export type UserInfo = {
   id: Author;
   baseInfo: BaseInfo;
-  socialMedia: SocialMedia[];
+  socialMedia: Partial<Record<SocialMediaPlatform, string>>;
 };
 
 type BaseInfo = {

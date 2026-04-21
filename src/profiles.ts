@@ -10,13 +10,13 @@ const profiles: UserInfo[] = [
       bioShort:
         "I'm a full-stack developer and web designer with a passion for user experience design and agile consulting. When I'm not coding or designing, I'm exploring Berlin.",
     },
-    socialMedia: [
-      { platform: 'github', url: 'https://github.com/SophieAu' },
-      { platform: 'website', url: 'https://sophieau.com' },
-      { platform: 'dribbble', url: 'https://dribbble.com/solviau' },
-      { platform: 'linkedin', url: 'https://www.linkedin.com/in/sophie-au' },
-      { platform: 'twitter', url: 'https://twitter.com/solviau' },
-    ],
+    socialMedia: {
+      github: 'https://github.com/SophieAu',
+      website: 'https://sophieau.com',
+      dribbble: 'https://dribbble.com/solviau',
+      linkedin: 'https://www.linkedin.com/in/sophie-au',
+      twitter: 'https://twitter.com/solviau',
+    },
   },
   {
     id: 'jean',
@@ -27,11 +27,11 @@ const profiles: UserInfo[] = [
       bioShort:
         "I'm a consultant developer focused on building web solutions for real-life problems, most of the time using JavaScript. I'm currently working for ThoughtWorks.",
     },
-    socialMedia: [
-      { platform: 'github', url: 'https://github.com/jeanbauer' },
-      { platform: 'twitter', url: 'https://twitter.com/jeanbauerr' },
-      { platform: 'medium', url: 'https://medium.com/@jeanbauer/' },
-    ],
+    socialMedia: {
+      github: 'https://github.com/jeanbauer',
+      twitter: 'https://twitter.com/jeanbauerr',
+      medium: 'https://medium.com/@jeanbauer/',
+    },
   },
   {
     id: 'ellie',
@@ -42,9 +42,9 @@ const profiles: UserInfo[] = [
       bioShort:
         "I'm a business analyst living in Brisbane. I have a Bachelor of Information Technology from the University of Queensland focussing on web and user experience design.",
     },
-    socialMedia: [
-      { platform: 'linkedin', url: 'https://www.linkedin.com/in/elloise-przybylo-2ab00b143/' },
-    ],
+    socialMedia: {
+      linkedin: 'https://www.linkedin.com/in/elloise-przybylo-2ab00b143/',
+    },
   },
   {
     id: 'jackie',
@@ -55,12 +55,12 @@ const profiles: UserInfo[] = [
       bioShort:
         "I'm a software developer from Slidell, Louisiana. Fun Facts: I'm an identical twin. I love Android. I have serious obsession with music. Did I mention I love Android?",
     },
-    socialMedia: [
-      { platform: 'facebook', url: 'https://www.facebook.com/jackie.robinson.7' },
-      { platform: 'instagram', url: 'https://www.instagram.com/jakalak/' },
-      { platform: 'linkedin', url: 'https://www.linkedin.com/in/jackierobinsonm/' },
-      { platform: 'github', url: 'https://github.com/jackierobinson' },
-    ],
+    socialMedia: {
+      facebook: 'https://www.facebook.com/jackie.robinson.7',
+      instagram: 'https://www.instagram.com/jakalak/',
+      linkedin: 'https://www.linkedin.com/in/jackierobinsonm/',
+      github: 'https://github.com/jackierobinson',
+    },
   },
   {
     id: 'kamala',
@@ -71,13 +71,13 @@ const profiles: UserInfo[] = [
       bioShort:
         "I'm a full-stack developer with a passion for back-end development, data analytics and agile consulting. When not coding, you can find me, the gardener, the gamer, the artist!",
     },
-    socialMedia: [
-      { platform: 'github', url: 'https://github.com/KamalashreeNagaraj' },
-      { platform: 'facebook', url: 'https://www.facebook.com/kamalashreen' },
-      { platform: 'linkedin', url: 'https://www.linkedin.com/in/kamalashree-nagaraj-2a69b9ab/' },
-      { platform: 'instagram', url: 'https://www.instagram.com/kamalashree_n/' },
-      { platform: 'twitter', url: 'https://twitter.com/Kamalashree5' },
-    ],
+    socialMedia: {
+      github: 'https://github.com/KamalashreeNagaraj',
+      facebook: 'https://www.facebook.com/kamalashreen',
+      linkedin: 'https://www.linkedin.com/in/kamalashree-nagaraj-2a69b9ab/',
+      instagram: 'https://www.instagram.com/kamalashree_n/',
+      twitter: 'https://twitter.com/Kamalashree5',
+    },
   },
   {
     id: 'andrei',
@@ -88,12 +88,12 @@ const profiles: UserInfo[] = [
       bioShort:
         'Tennis fan with a big passion for trains and DevOps (Terraform and AWS). Doing AR in iOS as a hobby. Pushing to launch my first mobile app and speak at a conference.',
     },
-    socialMedia: [
-      { platform: 'instagram', url: 'https://www.instagram.com/justakid94' },
-      { platform: 'linkedin', url: 'https://www.linkedin.com/in/andreialexandrucartan' },
-      { platform: 'twitter', url: 'https://twitter.com/justakid94' },
-      { platform: 'website', url: 'https://andreicartan.com' },
-    ],
+    socialMedia: {
+      instagram: 'https://www.instagram.com/justakid94',
+      linkedin: 'https://www.linkedin.com/in/andreialexandrucartan',
+      twitter: 'https://twitter.com/justakid94',
+      website: 'https://andreicartan.com',
+    },
   },
   {
     id: 'nimish',
@@ -104,10 +104,10 @@ const profiles: UserInfo[] = [
       bioShort:
         'I enjoy looking through different technologies and tools. I am a sincere guy who thrives in a team environment. I also enjoy making pencil sketches and reading books.',
     },
-    socialMedia: [
-      { platform: 'github', url: 'https://www.github.com/Nimish-Singh' },
-      { platform: 'linkedin', url: 'https://www.linkedin.com/in/nimish-singh' },
-    ],
+    socialMedia: {
+      github: 'https://www.github.com/Nimish-Singh',
+      linkedin: 'https://www.linkedin.com/in/nimish-singh',
+    },
   },
 ];
 

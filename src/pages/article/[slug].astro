@@ -3,7 +3,7 @@ import { getCollection, render } from "astro:content";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import PostMeta from "../../components/PostMeta.astro";
 import { post as strings } from "../../strings";
-import { getSocialMediaHandle, renderInlineMarkdown, getExcerpt } from "../../utils";
+import { getTwitterUrl, getExcerpt } from "../../utils";
 import { paths } from "../../config";
 
 export async function getStaticPaths() {
@@ -17,14 +17,13 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { title, slug, author, date, crosspost } = post.data;
 const { Content } = await render(post);
-const twitterHandle = getSocialMediaHandle(author, "twitter");
 ---
 
 <BlogLayout
   title={strings.pageTitle(title)}
   description={getExcerpt(post.body ?? "")}
   slug={`${paths.articleBase}/${slug}`}
-  creator={twitterHandle}
+  creator={getTwitterUrl(author)}
 >
   <article id="post">
     <h1 class="title">{title}</h1>
@@ -39,17 +38,6 @@ const twitterHandle = getSocialMediaHandle(author, "twitter");
     </div>
   </article>
 </BlogLayout>
-
-<style is:global>
-  pre {
-    box-shadow:
-      0 1px 0.25rem 0 rgba(0, 0, 0, 0.3),
-      0 1rem 1.25rem 0 rgba(0, 0, 0, 0.14);
-    padding: 1rem;
-    overflow-x: auto;
-    border-radius: 0.25rem;
-  }
-</style>
 
 <style>
   .title {
@@ -66,18 +54,26 @@ const twitterHandle = getSocialMediaHandle(author, "twitter");
   .body {
     font: var(--font-post-body);
     margin: 3rem 0 0;
-  }
 
-  .body :global(p) {
-    margin: 1rem 0;
-  }
+    p {
+      margin: 1rem 0;
+    }
+    code {
+      font: var(--font-post-code);
+    }
 
-  .body :global(code) {
-    font: var(--font-post-code);
-  }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-  .body :global(img) {
-    max-width: 100%;
-    height: auto;
+    pre {
+      box-shadow:
+        0 1px 0.25rem 0 rgba(0, 0, 0, 0.3),
+        0 1rem 1.25rem 0 rgba(0, 0, 0, 0.14);
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 0.25rem;
+    }
   }
 </style>
