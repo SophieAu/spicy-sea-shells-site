@@ -1,136 +1,92 @@
 <p align="center">
-    <img alt="Spicy Sea Shells" src="/data/img/logo.png" width="80" />
+    <img alt="Spicy Sea Shells" src="assets/logo.png" width="80" />
 </p>
 <h1 align="center">
   Spicy Sea Shells Website
 </h1>
 
-This is the website for the Spicy Sea Shells, built with [Gatsby](https://www.gatsbyjs.org/).
+Website for the Spicy Sea Shells crew. Built with Astro, deployed on Netlify.
 
+[Setup](#setup) | [Commands](#commands) | [Content](#content) | [Meta](#meta) | [Maintenance](#maintenance)
 
-## 🚀 Quick start
+## Setup
 
-1.  **Run `npm install`.**
-
-2.  **Run the Development Build.**
-
-    `gatsby develop`
-
-    You can now continue editing and the site will auto-update. It's running on `http://localhost:8000`.
-
-3.  **Build for Production.**
-
-    _Note: You don't need this to deploy to production. This is only for debugging._ To build a production-like environment, run `gatsby build`. To inspect that page, run `gatsby serve`.
-
-4. **Deploy to Production.**
-
-    To deploy to production, simply commit your changes to master and push to GitHub. A web hook will take care of everything and re-deploy the site automatically.
-
-
-## 🙂 Updating a Profile
-
-Updating a profile works by editing the `profiles.ts` file in the `data` folder. The fields (which are all required) are:
-
-* `name`: the name you want displayed
-* `image`: the prefix you are using in the supplied profile images. Suggested is the first name so that the files are named: _firstname\_tall.jpg_ and _firstname\_wide.jpg_. More on the profile images below.
-* `city`: The city you are based in. The format 'city, country' or 'city, state' might be helpful for people who visit the site.
-* `bio` and `bioShort`: a short blur about yourself, one for the desktop-width profile card and one for the mobile-width card. For the maximum length, please check how it is rendered but as a guideline max. 180 characters for `bio` and 160 characters for `bioShort` are recommended.
-* `socialMedia`: Any links to social media accounts you would like displayed. Please do not add more than five links. The following platforms are currently supported:
-    * dribbble
-    * facebook
-    * github
-    * instagram
-    * linkedin
-    * medium
-    * twitter
-    * your personal website (called `website`)
-
-### Profile Images
-
-Profile images __need__ to be located in the folder `data/img/profiles` and there __need__ to be two of them called `name_tall.jpg` and `name_wide.jpg`. The name is based on what is defined in the `image` field of the `profile.ts`. The required dimensions are:
-* __tall__: 160px x 320px
-* __wide__: 288px x 180px
-
-It is preferred that both images are cropped from the same source image however this is not required.
-
-
-## 📝 Adding Blog Posts
-
-Blog posts live in the following folder:
-
-`data/content/posts`
-
-They should be plain markdown saved with the extension `.md`. The name of the file has no hard requirements however `YYYY-MM-DD-slug.md` is recommended as a best practice.
-
-The following frontmatter has to be supplied:
-
-* `title`: The title of the blog post
-* `date`: The release date in YYYY-MM-DD
-* `slug`: The "slug" (last part of the link) of the post. For examples check existing posts.
-* `author`: The author of the post. Please use the same name as is defined in the `name` field of the `profiles.json` file.
-
-### Asset Handling
-
-Images and other assets should be saved in `data/content/posts/img` and `data/content/posts/assets` respectively. To link to an image, use this format: ` ./img/image_name.jpg`.
-
-
-## 🎓 Learning Gatsby
-
-If you want to learn more about how Gatsby works, check out their [tutorials](https://www.gatsbyjs.org/tutorial/) and [docs](https://www.gatsbyjs.org/docs/).
-
-
-
-# Astro Starter Kit: Basics
+**Prerequisites:** Node.js v20+, npm
 
 ```sh
-npm create astro@latest -- --template basics
+npm install
+npm run dev     # http://localhost:4321
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Commands
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Command | Description |
+|---|---|
+| `npm run dev` | Start local dev server |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build locally |
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Content
 
-## 🚀 Project Structure
+### Updating a Profile
 
-Inside of your Astro project, you'll see the following folders and files:
+Edit `src/profiles.ts`. Fields:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+* `id`: unique identifier, used as the image filename prefix (e.g. `sophie` → `sophie_tall.jpg`, `sophie_wide.jpg`)
+* `name`: the name displayed on the site
+* `city`: where you're based — format as `City, Country` or `City, State`
+* `bio` and `bioShort`: a blurb about yourself — `bio` for desktop, `bioShort` for mobile. Recommended max: 180 and 160 characters respectively.
+* `socialMedia`: an object with any platforms you want displayed (all optional, max 5). Supported keys: `dribbble`, `facebook`, `github`, `instagram`, `linkedin`, `medium`, `twitter`, `website`
+
+Profile images go in `assets/profiles/` and must be named `{id}_tall.jpg` and `{id}_wide.jpg`. Required minimum dimensions:
+* **tall**: 160px × 320px (1:2)
+* **wide**: 288px × 180px (8:5)
+
+### Adding Blog Posts
+
+Posts live in `content/posts/` as `.md` files. Filename has no hard requirements but `YYYY-MM-DD-slug.md` is recommended.
+
+Required frontmatter:
+
+```yaml
+title: "Post Title"
+date: YYYY-MM-DD
+slug: "url-slug"
+author: "id-from-profiles"
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Images and other assets go in `content/img/` and should be referenced as `../img/image_name.jpg`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Optional frontmatter:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```yaml
+crosspost:
+  url: https://example.com/post
+  site: "Site Name"
+  hasPrefix: false   # true → "This is a crosspost from the X", false → "This is a crosspost from X"
+```
 
-## 🧞 Commands
+## Meta
 
-All commands are run from the root of the project, from a terminal:
+© The Spicy Sea Shells
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+The site is built using [Astro](https://astro.build/). It is hosted and deployed via [Netlify](https://netlify.com/). The font used is [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+3).
 
-## 👀 Want to learn more?
+## Maintenance
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Functionality:**
+
+- [ ] Visit the site and click through all main pages - anything broken, missing, or visually off?
+- [ ] Test on mobile - responsive layout can break silently after dependency updates
+- [ ] Check for console errors in production (browser devtools)
+
+**Dependencies & Security:**
+
+- [ ] Run `npm outdated` - review available updates
+- [ ] Run `npm audit` - address any security advisories
+- [ ] Update non-breaking deps (patch/minor)
+- [ ] Update breaking deps in a separate commit/deploy
+
+**Infrastructure:**
+
+- [ ] Check Netlify dashboard - recent builds succeeding? Any errors or warnings?
