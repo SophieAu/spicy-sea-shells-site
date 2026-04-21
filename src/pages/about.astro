@@ -5,15 +5,14 @@ import Sidebar from "../components/Sidebar.astro";
 import Profiles from "../components/Profiles.astro";
 import Footer from "../components/Footer.astro";
 import { about } from "../strings";
+import { slugs } from "../config";
 ---
 
-<Layout title={about.pageTitle} description={about.pageDescription} slug="about">
-  <div class="page">
-    <AboutHeader class="header-area" />
-    <Sidebar class="sidebar-area" />
-    <Profiles class="profiles-area" />
-    <Footer class="footer-area" />
-  </div>
+<Layout title={about.pageTitle} description={about.pageDescription} slug={slugs.about} class="page">
+  <AboutHeader class="header-area" />
+  <Sidebar class="sidebar-area" />
+  <Profiles class="profiles-area" />
+  <Footer class="footer-area" />
 </Layout>
 
 <style>

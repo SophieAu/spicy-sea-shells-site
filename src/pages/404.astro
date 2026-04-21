@@ -1,16 +1,15 @@
 ---
+import { slugs } from "../config";
 import Layout from "../layouts/Layout.astro";
 import { notFound } from "../strings";
 import { renderInlineMarkdown } from "../utils";
 ---
 
-<Layout title={notFound.pageTitle} description={notFound.pageDescription} slug="404">
-  <div class="root">
-    <main class="container">
-      <h1>{notFound.heading}</h1>
-      <p set:html={renderInlineMarkdown(notFound.body)} />
-    </main>
-  </div>
+<Layout title={notFound.pageTitle} description={notFound.pageDescription} slug={slugs.notFound} class="root">
+  <main class="container">
+    <h1>{notFound.heading}</h1>
+    <p set:html={renderInlineMarkdown(notFound.body)} />
+  </main>
 </Layout>
 
 <style>
@@ -23,14 +22,14 @@ import { renderInlineMarkdown } from "../utils";
 
   .container {
     padding-bottom: calc(100vh / 3);
-  }
 
-  .container h1 {
-    font: var(--font-hero-title);
-    padding-bottom: 3rem;
-  }
+    h1 {
+      font: var(--font-hero-title);
+      padding-bottom: 3rem;
+    }
 
-  .container p {
-    font: var(--font-hero-text);
+    p {
+      font: var(--font-hero-text);
+    }
   }
 </style>

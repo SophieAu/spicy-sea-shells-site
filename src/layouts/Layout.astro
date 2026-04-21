@@ -10,12 +10,13 @@ interface Props {
   slug: string;
   creator?: string;
   ogImage?: string;
+  class?: string;
 }
 
 const patternWebp = await getImage({ src: bgPatternWebp, format: "webp" });
 const patternPng = await getImage({ src: bgPatternPng, format: "png" });
 
-const { title, description, slug, creator, ogImage } = Astro.props;
+const { title, description, slug, creator, ogImage, class: className, ...props } = Astro.props;
 const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`;
 const url = `${BASE_URL}/${slug}`;
 ---
@@ -42,7 +43,11 @@ const url = `${BASE_URL}/${slug}`;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="Spicy Blog" href="/rss.xml" />
   </head>
-  <body style={`--pattern-webp: url('${patternWebp.src}'); --pattern-png: url('${patternPng.src}')`}>
+  <body
+    style={`--pattern-webp: url('${patternWebp.src}'); --pattern-png: url('${patternPng.src}')`}
+    class={className}
+    {...props}
+  >
     <slot />
   </body>
 </html>

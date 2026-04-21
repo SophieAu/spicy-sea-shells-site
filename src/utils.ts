@@ -12,7 +12,8 @@ export const sortPlatforms = (a: { platform: string }, b: { platform: string }) 
   a.platform > b.platform ? 1 : b.platform > a.platform ? -1 : 0;
 
 export const getName = (author: Author) =>
-  profiles.find(user => user.id === author)?.baseInfo.name;
+  profiles.find(user => user.id === author)!.baseInfo.name;
+//TODO: FIX THE !. IT SHOULDN'T BE THERE!!!!!
 
 /* THESE ARE NWE AND VERY LIKELY COMPLETE TRASH */
 

@@ -2,6 +2,7 @@
 import { global } from "../strings";
 import BlogCTA from "./BlogCTA.astro";
 import { Image } from "astro:assets";
+import logo from "../../assets/logo.png";
 
 interface Props {
   class?: string;
@@ -15,7 +16,7 @@ const { class: className, ...props } = Astro.props;
   <p class="text intro intro-extended">{global.header.introExtended}</p>
   <p class="text intro intro-short">{global.header.introShort}</p>
   <BlogCTA class="text blog" />
-  <Image class="logo" src="/images/logo.png" alt={global.header.logoAlt} width="384" height="384" />
+  <Image class="logo" src={logo} alt={global.header.logoAlt} inferSize />
 </header>
 
 <style>

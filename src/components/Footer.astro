@@ -1,5 +1,7 @@
 ---
 import { global } from "../strings";
+import chili from "../../assets/chili.svg";
+import { Image } from "astro:assets";
 
 interface Props {
   variant?: "default" | "sidebar";
@@ -10,9 +12,9 @@ interface Props {
 const { variant = "default", class: className, ...props } = Astro.props;
 ---
 
-<footer class:list={["footer", className, variant === "sidebar" ? "sidebar" : "default"]} {...props}>
+<footer class:list={["footer", className, variant === "sidebar" ? "footer-sidebar" : "footer-default"]} {...props}>
   {global.footer.preImage}
-  <img src="/images/chili.svg" alt={global.footer.imageAlt} />
+  <Image src={chili} alt={global.footer.imageAlt} />
   {global.footer.postImage}
 </footer>
 
@@ -31,13 +33,13 @@ const { variant = "default", class: className, ...props } = Astro.props;
     }
   }
 
-  .default {
+  .footer-default {
     align-self: flex-start;
     background-color: var(--color-footer);
     width: 100vw;
   }
 
-  .sidebar {
+  .footer-sidebar {
     padding-bottom: 0.75rem;
     width: 100%;
   }

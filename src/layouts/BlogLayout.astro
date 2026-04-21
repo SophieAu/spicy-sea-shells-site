@@ -14,14 +14,12 @@ interface Props {
 const { title, description, slug, creator, ogImage } = Astro.props;
 ---
 
-<Layout title={title} description={description} slug={slug} creator={creator} ogImage={ogImage}>
-  <div class="blog-wrapper">
-    <HeaderBlog />
-    <main class="body">
-      <slot />
-    </main>
-    <Footer />
-  </div>
+<Layout title={title} description={description} slug={slug} creator={creator} ogImage={ogImage} class="blog-wrapper">
+  <HeaderBlog />
+  <main class="body">
+    <slot />
+  </main>
+  <Footer />
 </Layout>
 
 <style>
