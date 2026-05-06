@@ -22,8 +22,3 @@ type BaseInfo = {
   bio: string;
   bioShort: string;
 };
-
-export type SocialMedia = {
-  platform: SocialMediaPlatform;
-  url: string;
-};

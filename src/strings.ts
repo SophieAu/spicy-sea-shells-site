@@ -38,12 +38,6 @@ export const blog = {
   aboutLink: 'About',
 };
 
-export const home = {
-  pageTitle: 'Spicy Sea Shells',
-  pageDescription:
-    'Homepage of the Spicy Sea Shells, a collective of software developers, business analysts and quality analysts',
-};
-
 export const post = {
   pageTitle: (title: string) => `${title} | Spicy Sea Shells`,
   crosspost: (hasPrefix: boolean, site: string, url: string) =>
