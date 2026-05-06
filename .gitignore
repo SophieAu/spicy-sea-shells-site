@@ -25,3 +25,4 @@ pnpm-debug.log*
 # gatsby files
 .linaria-cache/
 .cache/
+.fallow/
