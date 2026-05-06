@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
+    "@astrojs/mdx": "^5.0.3",
     "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.1.8",
     "markdown-it": "^14.1.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/markdown-it": "^14.1.2",
-    "@astrojs/mdx": "^5.0.3",
-    "@astrojs/sitemap": "^3.7.2"
+    "@types/markdown-it": "^14.1.2"
   }
 }
