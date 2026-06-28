@@ -3,11 +3,11 @@ import { getCollection } from "astro:content";
 import BlogLayout from "../layouts/BlogLayout.astro";
 import PostMeta from "../components/PostMeta.astro";
 import { blog, global } from "../strings";
-import { getExcerpt } from "../utils";
+import { getExcerpt, sortPosts } from "../utils";
 import { paths, slugs } from "../config";
 
 const posts = await getCollection("posts");
-posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const sortedPosts = sortPosts(posts);
 ---
 
 <BlogLayout title={blog.pageTitle} description={blog.pageDescription} slug={slugs.blog}>
@@ -21,7 +21,7 @@ posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
     <h2 class="posts-title">{blog.latestHeading}</h2>
     <ul class="post-list">
       {
-        posts.map((post) => (
+        sortedPosts.map((post) => (
           <li>
             <h3 class="post-title">
               <a href={`${paths.articleBase}/${post.data.slug}`}>{post.data.title}</a>

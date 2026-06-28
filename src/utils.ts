@@ -33,3 +33,6 @@ export const getExcerpt = (post: CollectionEntry<"posts">, limit?: number) => {
 
   return excerpt.slice(0, limit);
 };
+
+export const sortPosts = (posts: CollectionEntry<"posts">[]) =>
+  posts.toSorted((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
