@@ -1,11 +1,14 @@
-export type Author =
-  | "kamala"
-  | "sophie"
-  | "jean"
-  | "jackie"
-  | "nimish"
-  | "andrei"
-  | "ellie";
+export const authorIds = [
+  "kamala",
+  "sophie",
+  "jean",
+  "jackie",
+  "nimish",
+  "andrei",
+  "ellie",
+] as const;
+
+export type Author = (typeof authorIds)[number];
 
 export type SocialMediaPlatform =
   | "twitter"

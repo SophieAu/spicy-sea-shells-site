@@ -11,7 +11,7 @@ Website for the Spicy Sea Shells crew. Built with Astro, deployed on Netlify.
 
 ## Setup
 
-**Prerequisites:** Node.js v20+, npm
+**Prerequisites:** Node.js, npm
 
 ```sh
 npm install
@@ -36,7 +36,7 @@ Edit `src/profiles.ts`. Fields:
 * `name`: the name displayed on the site
 * `city`: where you're based — format as `City, Country` or `City, State`
 * `bio` and `bioShort`: a blurb about yourself — `bio` for desktop, `bioShort` for mobile. Recommended max: 180 and 160 characters respectively.
-* `socialMedia`: an object with any platforms you want displayed (all optional, max 5). Supported keys: `dribbble`, `facebook`, `github`, `instagram`, `linkedin`, `medium`, `twitter`, `website`
+* `socialMedia`: an object with any platforms you want displayed (all optional, max 5). Supported keys: `dribbble`, `facebook`, `github`, `instagram`, `linkedin`, `medium`, `twitter`, `website`. Every value is a full URL **except** `twitter`, which is the handle only (e.g. `solviau`, not the URL) — it doubles as the `twitter:creator` meta tag.
 
 Profile images go in `assets/profiles/` and must be named `{id}_tall.jpg` and `{id}_wide.jpg`. Required minimum dimensions:
 * **tall**: 160px × 320px (1:2)
