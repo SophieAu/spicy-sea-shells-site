@@ -109,7 +109,9 @@ const url = `${BASE_URL}/${slug}`;
   }
 
   body {
-    background: var(--color-primary);
+    min-height: 100vh;
+    background: var(--color-primary)
+      image-set(var(--pattern-webp) type("image/webp"), var(--pattern-png) type("image/png")) repeat;
     color: var(--color-black);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -128,13 +130,5 @@ const url = `${BASE_URL}/${slug}`;
   code,
   pre {
     font-family: var(--font-family-code);
-  }
-</style>
-
-<style>
-  body {
-    min-height: 100vh;
-    background: var(--color-primary)
-      image-set(var(--pattern-webp) type("image/webp"), var(--pattern-png) type("image/png")) repeat;
   }
 </style>
