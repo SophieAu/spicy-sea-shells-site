@@ -3,14 +3,10 @@
     "editor.defaultFormatter": "astro-build.astro-vscode",
     "editor.formatOnSave": true,
   },
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode",
-    "editor.formatOnSave": true
-  },
   "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno",
     "editor.formatOnSave": true
   },
-
   "prettier.printWidth": 120,
   "biome.enabled": false
 }
