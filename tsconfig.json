@@ -1,4 +1,4 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "exclude": ["_gatsby", "node_modules"]
+  "exclude": ["node_modules"]
 }

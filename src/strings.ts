@@ -21,6 +21,7 @@ export const global = {
       internalLink("Spicy Blog", paths.blog)
     }`,
     logoAlt: "Spicy Sea Shells logo",
+    logoAsTitleAlt: "Spicy Sea Shells",
   },
 };
 

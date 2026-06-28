@@ -14,7 +14,9 @@ const { class: className, ...props } = Astro.props;
 
 <div class:list={["sidebar", className]} {...props}>
   <header>
-    <Image class="logo" src={logo} alt={global.header.logoAlt} inferSize />
+    <h1>
+      <Image class="logo" src={logo} alt={global.header.logoAsTitleAlt} inferSize />
+    </h1>
     <div class="text">
       <p>{global.header.introExtended}</p>
       <BlogCTA />
@@ -28,7 +30,7 @@ const { class: className, ...props } = Astro.props;
     background: var(--color-primary);
     color: var(--color-white);
     height: 100vh;
-    overflow: scroll;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

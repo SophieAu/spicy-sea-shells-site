@@ -19,7 +19,7 @@ const posts = defineCollection({
     ]),
     crosspost: z
       .object({
-        url: z.string(),
+        url: z.url(),
         site: z.string(),
         hasPrefix: z.boolean(),
       })

@@ -4,7 +4,7 @@ import type { Author, SocialMediaPlatform, UserInfo } from "./types";
 import MarkdownIt from "markdown-it";
 
 export const getTwitterHandle = (author: Author) =>
-  profiles.find((user) => user.id === author)?.socialMedia.twitter;
+  profiles.find((user) => user.id === author)!.socialMedia.twitter;
 
 export const getName = (author: Author) =>
   profiles.find((user) => user.id === author)!.baseInfo.name;
