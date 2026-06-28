@@ -20,18 +20,34 @@ export const getSortedSocialMedia = (socialMedia: UserInfo["socialMedia"]) => {
   return entriesWithTwitterUrl.sort(([a], [b]) => a.localeCompare(b));
 };
 
+const decodeHTMLEncodedSpecialChars = (str: string) =>
+  str
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#(?:39|x27);/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&");
+
 export const getExcerpt = (post: CollectionEntry<"posts">, limit?: number) => {
   if (!post.body) return "";
 
-  const excerpt = new MarkdownIt()
+  const rawExcerpt = new MarkdownIt()
     .render(post.body)
     .split("\n")
     .slice(0, 6)
-    .map((str: string) => str.replace(/<\/?[^>]+(>|$)/g, "").split("\n"))
-    .flat()
-    .join(" ");
+    .join(" ")
+    .replace(/<\/?[^>]+(>|$)/g, "");
 
-  return excerpt.slice(0, limit);
+  const text = decodeHTMLEncodedSpecialChars(rawExcerpt)
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!limit || text.length <= limit) return text;
+
+  const cut = text.lastIndexOf(" ", limit);
+  return (cut > 0 ? text.slice(0, cut) : text.slice(0, limit)).trimEnd() +
+    "…";
 };
 
 export const sortPosts = (posts: CollectionEntry<"posts">[]) =>
