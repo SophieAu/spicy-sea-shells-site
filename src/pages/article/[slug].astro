@@ -4,7 +4,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 import PostMeta from "../../components/PostMeta.astro";
 import { post as strings } from "../../strings";
 import { getTwitterUrl, getExcerpt } from "../../utils";
-import { paths } from "../../config";
+import { slugs } from "../../config";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -22,7 +22,7 @@ const { Content } = await render(post);
 <BlogLayout
   title={strings.pageTitle(title)}
   description={getExcerpt(post, 280)}
-  slug={`${paths.articleBase}/${slug}`}
+  slug={`${slugs.articleBase}/${slug}`}
   creator={getTwitterUrl(author)}
 >
   <article id="post">

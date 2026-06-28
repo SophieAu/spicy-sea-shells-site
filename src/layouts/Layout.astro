@@ -17,7 +17,7 @@ const patternWebp = await getImage({ src: bgPatternWebp, format: "webp" });
 const patternPng = await getImage({ src: bgPatternPng, format: "png" });
 
 const { title, description, slug, creator, ogImage, class: className, ...props } = Astro.props;
-const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`;
+const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`; //TODO: create a proper fallback image currently dead link
 const url = `${BASE_URL}/${slug}`;
 ---
 
@@ -39,7 +39,7 @@ const url = `${BASE_URL}/${slug}`;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:image" content={ogImagePath} />
     <meta name="twitter:description" content={description} />
-    {creator && <meta name="twitter:site" content={creator} />}
+    {creator && <meta name="twitter:creator" content={creator} />}
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 110%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>"
