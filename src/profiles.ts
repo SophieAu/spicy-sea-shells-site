@@ -16,7 +16,7 @@ const profiles: UserInfo[] = [
       website: "https://sophieau.com",
       dribbble: "https://dribbble.com/solviau",
       linkedin: "https://www.linkedin.com/in/sophie-au",
-      twitter: "@solviau",
+      twitter: "solviau",
     },
   },
   {
@@ -31,7 +31,7 @@ const profiles: UserInfo[] = [
     },
     socialMedia: {
       github: "https://github.com/jeanbauer",
-      twitter: "@jeanbauerr",
+      twitter: "jeanbauerr",
       medium: "https://medium.com/@jeanbauer/",
     },
   },
@@ -81,7 +81,7 @@ const profiles: UserInfo[] = [
       facebook: "https://www.facebook.com/kamalashreen",
       linkedin: "https://www.linkedin.com/in/kamalashree-nagaraj-2a69b9ab/",
       instagram: "https://www.instagram.com/kamalashree_n/",
-      twitter: "@Kamalashree5",
+      twitter: "Kamalashree5",
     },
   },
   {
@@ -97,7 +97,7 @@ const profiles: UserInfo[] = [
     socialMedia: {
       instagram: "https://www.instagram.com/justakid94",
       linkedin: "https://www.linkedin.com/in/andreialexandrucartan",
-      twitter: "@justakid94",
+      twitter: "justakid94",
       website: "https://andreicartan.com",
     },
   },

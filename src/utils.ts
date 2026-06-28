@@ -9,9 +9,16 @@ export const getTwitterHandle = (author: Author) =>
 export const getName = (author: Author) =>
   profiles.find((user) => user.id === author)!.baseInfo.name;
 
-type SocialMediaTuple = [SocialMediaPlatform, string]
-export const getSortedSocialMedia = (socialMedia: UserInfo["socialMedia"]) =>
-  (Object.entries(socialMedia) as SocialMediaTuple[]).sort(([a]: SocialMediaTuple, [b]: SocialMediaTuple) => a.localeCompare(b));
+type SocialMediaTuple = [SocialMediaPlatform, string];
+export const getSortedSocialMedia = (socialMedia: UserInfo["socialMedia"]) => {
+  const entries = Object.entries(socialMedia) as SocialMediaTuple[];
+
+  const entriesWithTwitterUrl = entries.map((sm) =>
+    (sm[0] === "twitter") ? ["twitter", `https://twitter.com/${sm[1]}`] : sm
+  ) as SocialMediaTuple[];
+
+  return entriesWithTwitterUrl.sort(([a], [b]) => a.localeCompare(b));
+};
 
 export const getExcerpt = (post: CollectionEntry<"posts">, limit?: number) => {
   if (!post.body) return "";
