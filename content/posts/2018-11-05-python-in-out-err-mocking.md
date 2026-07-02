@@ -9,7 +9,7 @@ crosspost:
   hasPrefix: false
 ---
 
-Working on my latest project, [todoster](github.com/sophieau/todoster), forced me to learn all about input/output mocking using python's built-in `unittest` library.
+Working on my latest project, [todoster](https://github.com/sophieau/todoster), forced me to learn all about input/output mocking using python's built-in `unittest` library.
 
 
 ## Mocking Output to stdout or stderr
