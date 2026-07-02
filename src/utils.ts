@@ -37,9 +37,11 @@ const decodeHTMLEncodedSpecialChars = (str: string) =>
 export const getExcerpt = (post: CollectionEntry<"posts">, limit?: number) => {
   if (!post.body) return "";
 
-  const rawExcerpt = new MarkdownIt()
+  const paragraphs = new MarkdownIt()
     .render(post.body)
-    .split("\n")
+    .match(/<p>[\s\S]*?<\/p>/g);
+
+  const rawExcerpt = (paragraphs ?? [])
     .slice(0, 6)
     .join(" ")
     .replace(/<\/?[^>]+(>|$)/g, "");
