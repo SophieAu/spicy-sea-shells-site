@@ -1,7 +1,8 @@
 ---
 import { getImage } from "astro:assets";
-import { BASE_URL, FALLBACK_IMAGE } from "../config";
+import { BASE_URL } from "../config";
 import bgPatternPng from "../../assets/bg_pattern.png";
+import logo from "../../assets/logo.png";
 
 interface Props {
   title: string;
@@ -14,7 +15,7 @@ interface Props {
 const bgPatternWebp = await getImage({ src: bgPatternPng, format: "webp" });
 
 const { title, description, creator, ogImage, class: className, ...props } = Astro.props;
-const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`; //TODO: create a proper fallback image currently dead link
+const ogImagePath = new URL(ogImage ?? logo.src, BASE_URL);
 const url = new URL(Astro.url.pathname, BASE_URL);
 ---
 
