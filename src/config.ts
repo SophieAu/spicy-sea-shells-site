@@ -17,3 +17,5 @@ export const paths = {
 export const BASE_URL = "https://spicyseashells.com";
 
 export const FALLBACK_IMAGE = "/socialImage.png";
+
+export const articlePath = (slug: string) => `${paths.articleBase}/${slug}`;

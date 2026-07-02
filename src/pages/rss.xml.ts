@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { blog } from "../strings";
 import { getExcerpt, sortPosts } from "../utils";
-import { BASE_URL, paths } from "../config";
+import { articlePath, BASE_URL } from "../config";
 
 export async function GET() {
   const posts = await getCollection("posts");
@@ -16,7 +16,7 @@ export async function GET() {
       title: post.data.title,
       pubDate: post.data.date,
       description: getExcerpt(post),
-      link: `${BASE_URL}${paths.articleBase}/${post.data.slug}`,
+      link: articlePath(post.data.slug),
     })),
   });
 }

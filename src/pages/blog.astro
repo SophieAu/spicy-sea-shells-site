@@ -4,7 +4,7 @@ import BlogLayout from "../layouts/BlogLayout.astro";
 import PostMeta from "../components/PostMeta.astro";
 import { blog, global } from "../strings";
 import { getExcerpt, sortPosts } from "../utils";
-import { paths, slugs } from "../config";
+import { articlePath } from "../config";
 
 const posts = await getCollection("posts");
 const sortedPosts = sortPosts(posts);
@@ -24,7 +24,7 @@ const sortedPosts = sortPosts(posts);
         sortedPosts.map((post) => (
           <li>
             <h3 class="post-title">
-              <a href={`${paths.articleBase}/${post.data.slug}`}>{post.data.title}</a>
+              <a href={articlePath(post.data.slug)}>{post.data.title}</a>
             </h3>
             <PostMeta date={post.data.date} author={post.data.author} />
             <p class="post-excerpt">{getExcerpt(post)}</p>
