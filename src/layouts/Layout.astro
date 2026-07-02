@@ -7,7 +7,6 @@ import bgPatternWebp from "../../assets/bg_pattern.webp";
 interface Props {
   title: string;
   description: string;
-  slug: string;
   creator?: string;
   ogImage?: string;
   class?: string;
@@ -16,9 +15,9 @@ interface Props {
 const patternWebp = await getImage({ src: bgPatternWebp, format: "webp" });
 const patternPng = await getImage({ src: bgPatternPng, format: "png" });
 
-const { title, description, slug, creator, ogImage, class: className, ...props } = Astro.props;
+const { title, description, creator, ogImage, class: className, ...props } = Astro.props;
 const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`; //TODO: create a proper fallback image currently dead link
-const url = `${BASE_URL}/${slug}`;
+const url = `${BASE_URL}/${Astro.url.pathname}`;
 ---
 
 <!doctype html>

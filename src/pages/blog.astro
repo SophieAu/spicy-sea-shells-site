@@ -10,7 +10,7 @@ const posts = await getCollection("posts");
 const sortedPosts = sortPosts(posts);
 ---
 
-<BlogLayout title={blog.pageTitle} description={blog.pageDescription} slug={slugs.blog}>
+<BlogLayout title={blog.pageTitle} description={blog.pageDescription}>
   <section>
     <h1 class="hero-title">{blog.title}</h1>
     <p class="hero-text" set:html={blog.hero} />

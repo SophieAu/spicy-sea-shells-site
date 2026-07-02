@@ -1,10 +1,9 @@
 ---
-import { slugs } from "../config";
 import Layout from "../layouts/Layout.astro";
 import { notFound } from "../strings";
 ---
 
-<Layout title={notFound.pageTitle} description={notFound.pageDescription} slug={slugs.notFound} class="root">
+<Layout title={notFound.pageTitle} description={notFound.pageDescription} class="root">
   <main class="container">
     <h1>{notFound.heading}</h1>
     <p set:html={notFound.body} />

@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import { paths } from './src/config';
+import { BASE_URL, paths } from './src/config';
 
 export default defineConfig({
-  site: 'https://spicyseashells.com',
+  site: BASE_URL,
   redirects: { '/': paths.blog },
   integrations: [mdx(), sitemap()],
 });
