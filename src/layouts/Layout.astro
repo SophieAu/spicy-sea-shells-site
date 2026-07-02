@@ -15,7 +15,7 @@ const bgPatternWebp = await getImage({ src: bgPatternPng, format: "webp" });
 
 const { title, description, creator, ogImage, class: className, ...props } = Astro.props;
 const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`; //TODO: create a proper fallback image currently dead link
-const url = `${BASE_URL}/${Astro.url.pathname}`;
+const url = new URL(Astro.url.pathname, BASE_URL);
 ---
 
 <!doctype html>
