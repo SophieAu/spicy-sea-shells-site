@@ -3,11 +3,16 @@ import profiles from "./profiles";
 import type { Author, SocialMediaPlatform, UserInfo } from "./types";
 import MarkdownIt from "markdown-it";
 
-export const getTwitterHandle = (author: Author) =>
-  profiles.find((user) => user.id === author)!.socialMedia.twitter;
+const getProfile = (author: Author) => {
+  const profile = profiles.find((user) => user.id === author);
+  if (!profile) throw new Error(`No profile entry for author "${author}"`);
+  return profile;
+};
 
-export const getName = (author: Author) =>
-  profiles.find((user) => user.id === author)!.baseInfo.name;
+export const getTwitterHandle = (author: Author) =>
+  getProfile(author).socialMedia.twitter;
+
+export const getName = (author: Author) => getProfile(author).baseInfo.name;
 
 type SocialMediaTuple = [SocialMediaPlatform, string];
 export const getSortedSocialMedia = (socialMedia: UserInfo["socialMedia"]) => {
