@@ -10,11 +10,11 @@ interface Props {
 
 const { class: className, ...props } = Astro.props;
 
-const profileImages = import.meta.glob<{ default: ImageMetadata }>("/assets/profiles/*.{jpeg,jpg,png,gif}");
+const profileImages = import.meta.glob<{ default: ImageMetadata }>("/assets/profiles/*.jpg");
 const wideImage = (id: string) => profileImages[`/assets/profiles/${id}_wide.jpg`];
 const tallImage = (id: string) => profileImages[`/assets/profiles/${id}_tall.jpg`];
 
-const socialMediaImages = import.meta.glob<{ default: ImageMetadata }>("/assets/social-media/*.{jpeg,jpg,png,gif,svg}");
+const socialMediaImages = import.meta.glob<{ default: ImageMetadata }>("/assets/social-media/*.svg");
 const socialMediaImage = (platform: string) => socialMediaImages[`/assets/social-media/${platform}.svg`];
 ---
 

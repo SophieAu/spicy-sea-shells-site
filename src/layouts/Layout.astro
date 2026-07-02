@@ -2,7 +2,6 @@
 import { getImage } from "astro:assets";
 import { BASE_URL, FALLBACK_IMAGE } from "../config";
 import bgPatternPng from "../../assets/bg_pattern.png";
-import bgPatternWebp from "../../assets/bg_pattern.webp";
 
 interface Props {
   title: string;
@@ -12,8 +11,7 @@ interface Props {
   class?: string;
 }
 
-const patternWebp = await getImage({ src: bgPatternWebp, format: "webp" });
-const patternPng = await getImage({ src: bgPatternPng, format: "png" });
+const bgPatternWebp = await getImage({ src: bgPatternPng, format: "webp" });
 
 const { title, description, creator, ogImage, class: className, ...props } = Astro.props;
 const ogImagePath = `${BASE_URL}${ogImage ?? FALLBACK_IMAGE}`; //TODO: create a proper fallback image currently dead link
@@ -53,7 +51,7 @@ const url = `${BASE_URL}/${Astro.url.pathname}`;
     />
   </head>
   <body
-    style={`--pattern-webp: url('${patternWebp.src}'); --pattern-png: url('${patternPng.src}')`}
+    style={`--pattern-webp: url('${bgPatternWebp.src}'); --pattern-png: url('${bgPatternPng.src}')`}
     class={className}
     {...props}
   >
